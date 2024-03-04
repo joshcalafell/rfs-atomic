@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { UiComponent } from './ui.component';
+import { ButtonComponent } from '@rfs-atomic/button';
 
 describe('UiComponent', () => {
   let component: UiComponent;
@@ -7,7 +8,7 @@ describe('UiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UiComponent],
+      imports: [UiComponent, ButtonComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(UiComponent);

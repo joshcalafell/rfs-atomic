@@ -12,7 +12,7 @@ import { ButtonComponent } from 'libs/button/src';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'Angular Store';
+  title = 'Atomic Design';
 
 
   onButtonClick(event: unknown) {

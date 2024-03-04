@@ -1,1 +1,12 @@
-<p>ui works!</p>
+<h2>Buttons</h2>
+
+<div class="button-wrapper" style="margin: 8px 16px; vertical-align: baseline;">
+  <rfs-atomic-button *ngFor="let button of buttons"
+    [label]="button.label"
+    [type]="button.type"
+    [palleteColor]="button.palleteColor"
+    [size]="button.size"
+    [disabled]="button.disabled"
+    (onClick)="onButtonClick($event)"
+  ></rfs-atomic-button>
+</div>

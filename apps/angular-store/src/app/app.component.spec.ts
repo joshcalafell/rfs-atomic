@@ -16,13 +16,13 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Angular Store'
+      'Atomic Design'
     );
   });
 
-  it(`should have as title 'Angular Store'`, () => {
+  it(`should have as title 'Atomic Design'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angular Store');
+    expect(app.title).toEqual('Atomic Design');
   });
 });

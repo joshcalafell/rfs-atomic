@@ -1,31 +1,31 @@
 <button
-	class="ui-button"
-	style="vertical-align: middle"
-	type="button"
-	[ngClass]="{
-		'ui-button--animated-arrow': type === 'animated-arrow',
-		'ui-button--primary': palleteColor === 'primary',
-		'ui-button--secondary': palleteColor === 'secondary',
-		'ui-button--tertiary': palleteColor === 'tertiary',
-		'ui-button--danger': palleteColor === 'danger',
-		'ui-button--warning': palleteColor === 'warning',
-		'ui-button--success': palleteColor === 'success',
-		'ui-button--info': palleteColor === 'info',
-		'ui-button--light': palleteColor === 'light',
-		'ui-button--dark': palleteColor === 'dark',
-		'ui-button--small': size === 'small',
-		'ui-button--medium': size === 'medium',
-		'ui-button--large': size === 'large',
-		'ui-button--small--animated-arrow':
-			size === 'small' && type === 'animated-arrow',
-		'ui-button--medium--animated-arrow':
-			size === 'medium' && type === 'animated-arrow',
-		'ui-button--large--animated-arrow':
-			size === 'large' && type === 'animated-arrow',
-		'ui-button--disabled': disabled
-	}"
-	[disabled]="disabled"
-	(click)="onClick($event)"
+  class="ui-button"
+  style="vertical-align: middle"
+  type="button"
+  [ngClass]="{
+    'ui-button--animated-arrow': type === 'animated-arrow',
+    'ui-button--primary': palleteColor === 'primary',
+    'ui-button--secondary': palleteColor === 'secondary',
+    'ui-button--tertiary': palleteColor === 'tertiary',
+    'ui-button--danger': palleteColor === 'danger',
+    'ui-button--warning': palleteColor === 'warning',
+    'ui-button--success': palleteColor === 'success',
+    'ui-button--info': palleteColor === 'info',
+    'ui-button--light': palleteColor === 'light',
+    'ui-button--dark': palleteColor === 'dark',
+    'ui-button--small': size === 'small',
+    'ui-button--medium': size === 'medium',
+    'ui-button--large': size === 'large',
+    'ui-button--small--animated-arrow':
+      size === 'small' && type === 'animated-arrow',
+    'ui-button--medium--animated-arrow':
+      size === 'medium' && type === 'animated-arrow',
+    'ui-button--large--animated-arrow':
+      size === 'large' && type === 'animated-arrow',
+    'ui-button--disabled': disabled
+  }"
+  [disabled]="disabled"
+  (click)="onClick($event)"
 >
-	<span>{{ label }} </span>
+  <span>{{ label | titlecase }} </span>
 </button>

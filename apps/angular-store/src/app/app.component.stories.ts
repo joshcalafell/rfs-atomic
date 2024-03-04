@@ -13,17 +13,17 @@ type Story = StoryObj<AppComponent>;
 
 export const Primary: Story = {
   args: {
-    title: 'Angular Store',
+    title: 'Atomic Design',
 
   },
 };
 
 export const Heading: Story = {
   args: {
-    title: 'Angular Store',
+    title: 'Atomic Design',
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText(/Angular Store/gi)).toBeTruthy();
+    expect(canvas.getByText(/Atomic Design/gi)).toBeTruthy();
   },
 };
