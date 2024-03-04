@@ -1,0 +1,57 @@
+{
+  "name": "desktop-menu",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/desktop-menu/src",
+  "prefix": "rfs-atomic",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/desktop-menu/.storybook",
+        "browserTarget": "desktop-menu:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/desktop-menu",
+        "configDir": "libs/desktop-menu/.storybook",
+        "browserTarget": "desktop-menu:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c libs/desktop-menu/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "desktop-menu:build-storybook",
+        "staticFilePath": "dist/storybook/desktop-menu"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "desktop-menu:build-storybook:ci"
+        }
+      }
+    }
+  }
+}

@@ -1,12 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterTestingModule } from '@angular/router/testing';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { ButtonComponent } from 'libs/button/src'; // <== TODO: ???
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent, NxWelcomeComponent, RouterTestingModule],
+      imports: [AppComponent, RouterTestingModule, ButtonComponent],
     }).compileComponents();
   });
 
@@ -15,13 +16,13 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome angular-store'
+      'Angular Store'
     );
   });
 
-  it(`should have as title 'angular-store'`, () => {
+  it(`should have as title 'Angular Store'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-store');
+    expect(app.title).toEqual('Angular Store');
   });
 });

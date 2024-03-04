@@ -1,1 +1,39 @@
-<rfs-atomic-nx-welcome></rfs-atomic-nx-welcome> <router-outlet></router-outlet>
+<h1>{{ title }}</h1>
+
+<br />
+<hr />
+<br />
+
+<h2>Atomic Design</h2>
+
+<ul class="rfs-atomic-list">
+  <li class="rfs-atomic-list__item">
+    <!--<a routerLink="/atoms" routerLinkActive="active">Atoms</a> -->
+    <rfs-atomic-button
+      [label]="'Login / Signup'"
+      [type]="'animated-arrow'"
+      [palleteColor]="'primary'"
+      [size]="'large'"
+      [disabled]="false"
+      (onClick)="onButtonClick($event)"
+    >
+    </rfs-atomic-button>
+  </li>
+  <li class="rfs-atomic-list__item">
+    <a href="#" disabled="true">Molecules</a>
+  </li>
+  <li class="rfs-atomic" class="rfs-atomic-list__item">
+    <a href="#" disabled="true">Organisms</a>
+  </li>
+
+  <li class="rfs-atomic-list__item">
+    <a href="#" disabled="true">Templates</a>
+  </li>
+
+  <li class="rfs-atomic-list__item">
+    <!--<a routerLink="/pages" routerLinkActive="active">Pages</a>-->
+    <a href="#" disabled="true">Pages</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

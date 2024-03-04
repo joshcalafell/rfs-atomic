@@ -1,0 +1,57 @@
+{
+  "name": "drag-drop",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/drag-drop/src",
+  "prefix": "rfs-atomic",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/drag-drop/.storybook",
+        "browserTarget": "drag-drop:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/drag-drop",
+        "configDir": "libs/drag-drop/.storybook",
+        "browserTarget": "drag-drop:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c libs/drag-drop/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "drag-drop:build-storybook",
+        "staticFilePath": "dist/storybook/drag-drop"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "drag-drop:build-storybook:ci"
+        }
+      }
+    }
+  }
+}

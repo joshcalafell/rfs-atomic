@@ -14,7 +14,26 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@rfs-atomic/button": ["libs/button/src/index.ts"],
+      "@rfs-atomic/chip": ["libs/chip/src/index.ts"],
+      "@rfs-atomic/description-list": ["libs/description-list/src/index.ts"],
+      "@rfs-atomic/desktop-menu": ["libs/desktop-menu/src/index.ts"],
+      "@rfs-atomic/drag-drop": ["libs/drag-drop/src/index.ts"],
+      "@rfs-atomic/footer": ["libs/footer/src/index.ts"],
+      "@rfs-atomic/hash": ["libs/hash/src/index.ts"],
+      "@rfs-atomic/header": ["libs/header/src/index.ts"],
+      "@rfs-atomic/product-card": ["libs/product-card/src/index.ts"],
+      "@rfs-atomic/product-card-header": [
+        "libs/product-card-header/src/index.ts"
+      ],
+      "@rfs-atomic/product-description-list": [
+        "libs/product-description-list/src/index.ts"
+      ],
+      "@rfs-atomic/product-ratings": ["libs/product-ratings/src/index.ts"],
+      "@rfs-atomic/sort-table": ["libs/sort-table/src/index.ts"],
+      "@rfs-atomic/ui": ["libs/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

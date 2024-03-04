@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { ButtonComponent } from 'libs/button/src';
+
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [RouterModule, ButtonComponent],
   selector: 'rfs-atomic-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'angular-store';
+  title = 'Angular Store';
+
+
+  onButtonClick(event: unknown) {
+    console.log('Button clicked', event);
+  }
 }

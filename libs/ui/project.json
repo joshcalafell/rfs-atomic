@@ -1,0 +1,9 @@
+{
+  "name": "ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/src",
+  "prefix": "rfs-atomic",
+  "tags": [],
+  "projectType": "library",
+  "targets": {}
+}
