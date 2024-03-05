@@ -1,1 +1,14 @@
-<p>chip works!</p>
+<div
+	class="ui-chip"
+	[ngClass]="{
+		'ui-chip--primary': color === 'primary',
+		'ui-chip--secondary': color === 'secondary',
+		'ui-chip--tertiary': color === 'tertiary',
+		'ui-chip--danger': color === 'danger',
+		'ui-chip--warning': color === 'warning',
+		'ui-chip--success': color === 'success',
+
+	}"
+>
+	<span class="ui-chip-text">{{ label }}</span>
+</div>

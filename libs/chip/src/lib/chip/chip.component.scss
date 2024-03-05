@@ -1,0 +1,157 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+  // #a164d3
+  $primary: #26bfcd;
+  $secondary: #333333;
+  $tertiary: #ff6666;
+  $danger: #dc3545;
+  $warning: #ffc107;
+  $success: #28a745;
+  $info: #dcda68;
+  $light: #f8f9fa;
+  $dark: #343a40;
+  $white: #ffffff;
+  $disabled: #6c757d;
+  $black: #000000;
+  $gray: #6c757d;
+
+  @mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .ui-chip {
+    border-radius: 0.775rem;
+    cursor: inherit;
+    font-size: 1rem;
+    padding: 8px 8px;
+    text-align: left;
+    text-decoration: underline;
+    transition: all 0.15s ease-in-out;
+    user-select: none;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+
+    @include flex-row-center;
+
+    .ui-chip-text {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.5;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      vertical-align: baseline;
+      cursor: inherit;
+      user-select: none;
+    }
+
+    &--small {
+      font-size: 0.75rem;
+      padding: 4px 8px;
+    }
+
+    &--medium {
+      font-size: 1rem;
+      padding: 8px 16px;
+      width: 140px;
+    }
+
+    &--large {
+      font-size: 2rem;
+      padding: 16px 32px;
+    }
+
+    &--primary {
+      color: scale-color(
+        $color: $primary,
+
+        $saturation: 0%,
+        $lightness: 0%,
+        $alpha: 0.5%
+      );
+      border: solid
+        scale-color(
+          $color: $primary,
+
+          $saturation: 0%,
+          $lightness: 0%,
+          $alpha: 0.5%
+        )
+        1px !important;
+    }
+
+    &--secondary {
+      color: scale-color(
+        $color: $secondary,
+
+        $saturation: 0%,
+        $lightness: 0%,
+        $alpha: 0.5%
+      );
+      border: scale-color(
+        $color: $secondary,
+
+        $saturation: 0%,
+        $lightness: 100%,
+        $alpha: 1%
+      );
+      border-width: 2px;
+    }
+
+    &--tertiary {
+      color: scale-color(
+        $color: $tertiary,
+
+        $saturation: 0%,
+        $lightness: 0%,
+        $alpha: 0.5%
+      );
+      border: scale-color(
+        $color: $tertiary,
+
+        $saturation: 0%,
+        $lightness: 100%,
+        $alpha: 1%
+      );
+      border-width: 2px;
+    }
+
+    &--danger {
+      background-color: $danger;
+      color: $white;
+    }
+
+    &--warning {
+      background-color: $warning;
+      color: $white;
+    }
+
+    &--success {
+      background-color: $success;
+      color: $white;
+    }
+
+    &--info {
+      background-color: $info;
+      color: $white;
+    }
+
+    &--light {
+      background-color: $light;
+      color: $black;
+    }
+
+    &--dark {
+      background-color: $dark;
+      color: $white;
+    }
+
+    &--disabled {
+      background-color: $disabled;
+      color: $white;
+    }
+  }

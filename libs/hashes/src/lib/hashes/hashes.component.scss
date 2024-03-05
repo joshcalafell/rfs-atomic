@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+$primary: #26bfcd;
+$secondary: #333333;
+$tertiary: #ff6666;
+$danger: #dc3545;
+$warning: #ffc107;
+$success: #28a745;
+$info: #dcda68;
+$light: #f8f9fa;
+$dark: #343a40;
+$white: #ffffff;
+$disabled: #6c757d;
+$black: #000000;
+$gray: #6c757d;
+
+$transparent: transparent;
+
+$font-family: 'Inter', sans-serif;
+$font-weight: 400;
+$font-size-medium: 1rem;
+$font-size-small: 0.75rem;
+$font-size-large: 1.23rem;
+
+$padding-button-small: 4px 8px;
+$padding-button-medium: 8px 16px;
+$padding-button-large: 12px 20px;
+
+$button-border: solid 1px $dark;
+$transition-duration: 0.3s;
+$transition-style: 0.3s ease-in-out;
+
+$height-base: 60px;
+$width-base: 210px;
+$padding-right-base: 22px;
+$psuedoclass-offset-base: 18px;
+
+@mixin font() {
+  font-family: $font-family;
+  font-weight: $font-weight;
+}
+
+ul, li {
+  text-decoration: none;
+}
+
+ul.hash-group {
+  display: flex;
+  flex-wrap: wrap;
+
+
+
+  li.hash-group__item {
+    margin-top: 8px;
+    background-color: #f1f1f1;
+    color: #333333;
+    padding: 6px;
+    margin-right: 6px;
+    border-radius: 3px;
+    list-style: none;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #333333;
+      color: white;
+    }
+
+    &--primary {
+      background-color: $primary;
+      color: $white;
+    }
+
+    &--secondary {
+      background-color: $secondary;
+      color: $white;
+    }
+
+    &--tertiary {
+      background-color: $tertiary;
+      color: $white;
+    }
+
+    &--danger {
+      background-color: $danger;
+      color: $white;
+    }
+
+    &--warning {
+      background-color: $warning;
+      color: $white;
+    }
+
+    &--success {
+      background-color: $success;
+      color: $white;
+    }
+
+    &--info {
+      background-color: $info;
+      color: $dark;
+    }
+
+    &--light {
+      background-color: $light;
+      color: $dark;
+    }
+
+    &--dark {
+      background-color: $dark;
+      color: $light;
+    }
+
+    span.hash__label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.932rem;
+      font-weight: 500;
+    }
+  }
+}

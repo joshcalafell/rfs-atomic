@@ -21,7 +21,7 @@
       "@rfs-atomic/desktop-menu": ["libs/desktop-menu/src/index.ts"],
       "@rfs-atomic/drag-drop": ["libs/drag-drop/src/index.ts"],
       "@rfs-atomic/footer": ["libs/footer/src/index.ts"],
-      "@rfs-atomic/hash": ["libs/hash/src/index.ts"],
+      "@rfs-atomic/hashes": ["libs/hashes/src/index.ts"],
       "@rfs-atomic/header": ["libs/header/src/index.ts"],
       "@rfs-atomic/product-card": ["libs/product-card/src/index.ts"],
       "@rfs-atomic/product-card-header": [

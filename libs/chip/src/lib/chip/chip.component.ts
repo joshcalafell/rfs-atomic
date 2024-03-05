@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './chip.component.html',
-  styleUrl: './chip.component.css',
+  styleUrl: './chip.component.scss',
 })
 export class ChipComponent {}

@@ -1,1 +1,6 @@
-<p>description-list works!</p>
+<ul class="card-details" *ngIf="items">
+  <li class="detail-item" *ngFor="let item of items; let i = index">
+    <span class="detail-item-label">{{ item.label }}:</span>
+    <span class="detail-item-value">{{ item.value }}</span>
+  </li>
+</ul>
