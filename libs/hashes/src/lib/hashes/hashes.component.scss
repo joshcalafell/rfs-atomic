@@ -54,20 +54,12 @@ ul.hash-group {
 
   li.hash-group__item {
     margin-top: 8px;
-    background-color: #f1f1f1;
-    color: #a164d3;
-;
+
+
     padding: 6px;
     margin-right: 6px;
     border-radius: 3px;
     list-style: none;
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: #a164d3;
-;
-      color: white;
-    }
 
     &--primary {
       background-color: $primary;

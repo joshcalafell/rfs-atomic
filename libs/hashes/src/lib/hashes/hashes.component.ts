@@ -10,5 +10,5 @@ import { Component, Input } from '@angular/core';
 })
 export class HashesComponent {
   @Input() hashes: string[] = [];
-  @Input() paletteColor = 'primary';
+  @Input() paletteColor!: string;
 }
