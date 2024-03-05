@@ -11,10 +11,6 @@ const meta: Meta<UiComponent> = {
 export default meta;
 type Story = StoryObj<UiComponent>;
 
-export const Primary: Story = {
-  args: {},
-};
-
 export const PrimaryButtons: Story = {
   args: {
     buttons: [

@@ -2,7 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ButtonComponent, IAtomicUiButton } from '@rfs-atomic/button';
 import { ChipComponent, IChip } from '@rfs-atomic/chip';
-import { DescriptionListComponent, IDescriptionListItem } from '@rfs-atomic/description-list';
+import {
+  DescriptionListComponent,
+  IDescriptionListItem,
+} from '@rfs-atomic/description-list';
 import { HashesComponent } from '@rfs-atomic/hashes';
 
 @Component({
@@ -13,7 +16,7 @@ import { HashesComponent } from '@rfs-atomic/hashes';
     ButtonComponent,
     HashesComponent,
     DescriptionListComponent,
-    ChipComponent
+    ChipComponent,
   ],
   templateUrl: './ui.component.html',
   styleUrl: './ui.component.scss',
@@ -118,57 +121,9 @@ export class UiComponent implements OnInit {
     { label: 'Dimensions', value: '3x4x6', valueType: 'dimensions' },
     { label: 'SKU', value: '#2330009738763', valueType: 'dimensions' },
     { label: 'Weight', value: '3.5 lbs', valueType: 'weight' },
-  ]
-
-
-  chips: IChip[] = [
-    {
-      label: 'Primary',
-      color: 'primary',
-      size: 'medium',
-    },
-    {
-      label: 'Secondary',
-      color: 'secondary',
-      size: 'medium',
-    },
-    {
-      label: 'Tertiary',
-      color: 'tertiary',
-      size: 'medium',
-    },
-    {
-      label: 'Danger',
-      color: 'danger',
-      size: 'medium',
-    },
-    {
-      label: 'Warning',
-      color: 'warning',
-      size: 'medium',
-    },
-    {
-      label: 'Success',
-      color: 'success',
-      size: 'medium',
-    },
-    {
-      label: 'Info',
-      color: 'info',
-      size: 'medium',
-    },
-    {
-      label: 'Light',
-      color: 'light',
-      size: 'medium',
-    },
-    {
-      label: 'Dark',
-      color: 'dark',
-      size: 'medium',
-    },
-
   ];
+
+  chips: IChip[] = [];
 
   buttons: IAtomicUiButton[] = [];
 
@@ -216,6 +171,23 @@ export class UiComponent implements OnInit {
       }
     }
 
-
+    for (const color of colors) {
+      for (const size of sizes) {
+        this.chips.push({
+          label: `${color} ${size}`,
+          color: color.toString() as
+            | 'primary'
+            | 'secondary'
+            | 'tertiary'
+            | 'danger'
+            | 'warning'
+            | 'success'
+            | 'info'
+            | 'light'
+            | 'dark',
+          size: size.toString() as 'small' | 'medium' | 'large',
+        });
+      }
+    }
   }
 }

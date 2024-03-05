@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export type IChipVariant = 'price' | 'date' | 'label' | 'status' | 'default' | 'stock'
+
+export type TChipSize = 'small' | 'medium' | 'large'
 export interface IChip {
 	label: string
 	color:
@@ -15,7 +17,7 @@ export interface IChip {
   | 'dark'
   | 'info'
 	variant?: IChipVariant
-  size: 'small' | 'medium' | 'large'
+  size: TChipSize
 }
 @Component({
   selector: 'rfs-atomic-chip',
@@ -25,7 +27,7 @@ export interface IChip {
   styleUrl: './chip.component.scss',
 })
 export class ChipComponent implements OnInit {
-  @Input() label: IChip['label'] = ' '
+  @Input() label!: IChip['label']
 	@Input() color: IChip['color'] = 'primary'
   @Input() size: IChip['size'] = 'medium'
   @Input() closeable = 'true';

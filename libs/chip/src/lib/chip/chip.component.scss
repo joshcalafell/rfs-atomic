@@ -22,10 +22,10 @@ $gray: #6c757d;
 }
 
 .ui-chip {
-  border-radius: 0.775rem;
+  border-radius: 5px;;
   cursor: inherit;
-  font-size: 1rem;
   padding: 8px 8px;
+  margin: 8px 16px;
   text-align: left;
   text-decoration: underline;
   transition: all 0.15s ease-in-out;
@@ -36,6 +36,22 @@ $gray: #6c757d;
   font-family: 'Inter', sans-serif;
 
   @include flex-row-center;
+
+  @mixin chip-color($color, $background) {
+    background-color: $color;
+    color: scale-color(
+      $color:  $background,
+      $saturation: 0%,
+      $lightness: 0%,
+      $alpha: 0.5%
+    );
+    border: solid scale-color(
+      $color:  $background,
+      $saturation: 0%,
+      $lightness: 0%,
+      $alpha: 1%
+    ) 1px;
+  }
 
   .ui-chip-text {
     font-size: 1rem;
@@ -49,110 +65,77 @@ $gray: #6c757d;
     user-select: none;
   }
 
+
+
   &--small {
-    font-size: 0.75rem;
-    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    .ui-chip-text {
+      font-size: 0.66rem;
+    }
+    padding: 6px 8px;
+    vertical-align: middle;
   }
 
   &--medium {
-    font-size: 1rem;
-    padding: 8px 16px;
-    width: 140px;
+   display: flex;
+    align-items: center;
+    .ui-chip-text {
+      font-size: 1rem;
+    }
+    padding: 6px 10px;
+    vertical-align: middle;
   }
 
   &--large {
-    font-size: 2rem;
-    padding: 16px 32px;
-  }
+    display: flex;
+     align-items: center;
+     .ui-chip-text {
+       font-size: 1.5rem;
+     }
+     padding: 10px 14px;
+     vertical-align: middle;
+   }
 
   &--primary {
-    color: scale-color(
-      $color: $primary,
-
-      $saturation: 0%,
-      $lightness: 0%,
-      $alpha: 0.5%
-    );
-    border: solid
-      scale-color(
-        $color: $primary,
-
-        $saturation: 0%,
-        $lightness: 0%,
-        $alpha: 0.5%
-      )
-      1px !important;
+   @include chip-color($primary, $white);
   }
 
   &--secondary {
-    color: scale-color(
-      $color: $secondary,
-
-      $saturation: 0%,
-      $lightness: 0%,
-      $alpha: 0.5%
-    );
-    border: scale-color(
-      $color: $secondary,
-
-      $saturation: 0%,
-      $lightness: 100%,
-      $alpha: 1%
-    );
-    border-width: 2px;
+   @include chip-color($secondary, $white);
   }
 
   &--tertiary {
-    color: scale-color(
-      $color: $tertiary,
-
-      $saturation: 0%,
-      $lightness: 0%,
-      $alpha: 0.5%
-    );
-    border: scale-color(
-      $color: $tertiary,
-
-      $saturation: 0%,
-      $lightness: 100%,
-      $alpha: 1%
-    );
-    border-width: 2px;
+    @include chip-color($tertiary, $white);
   }
 
   &--danger {
-    background-color: $danger;
-    color: $white;
+    @include chip-color($danger, $white);
   }
 
   &--warning {
-    background-color: $warning;
-    color: $white;
+    @include chip-color($warning, $white);
   }
 
   &--success {
-    background-color: $success;
-    color: $white;
+    @include chip-color($success, $white);
   }
 
   &--info {
-    background-color: $info;
-    color: $white;
+    @include chip-color($info, $white);
   }
 
   &--light {
-    background-color: $light;
-    color: $black;
+    @include chip-color($light, $dark);
   }
 
   &--dark {
-    background-color: $dark;
-    color: $white;
+    @include chip-color($dark, $white);
   }
 
   &--disabled {
-    background-color: $disabled;
-    color: $white;
+    @include chip-color($disabled, $white);
+    cursor: not-allowed; // <--- Add this line
   }
 
   .ui-chip-close {
