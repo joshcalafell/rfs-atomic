@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './product-ratings.component.html',
-  styleUrl: './product-ratings.component.css',
+  styleUrl: './product-ratings.component.scss',
 })
 export class ProductRatingsComponent {}

@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './sort-table.component.html',
-  styleUrl: './sort-table.component.css',
+  styleUrl: './sort-table.component.scss',
 })
 export class SortTableComponent {}
