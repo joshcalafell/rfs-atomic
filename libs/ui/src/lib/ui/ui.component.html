@@ -1,8 +1,10 @@
-
-
-<section class="section-wrapper" style="margin: 8px 16px; vertical-align: baseline;">
+<section
+  class="section-wrapper"
+  style="margin: 8px 16px; vertical-align: baseline"
+>
   <h2>Buttons</h2>
-  <rfs-atomic-button *ngFor="let button of buttons"
+  <rfs-atomic-button
+    *ngFor="let button of buttons"
     [label]="button.label"
     [type]="button.type"
     [palleteColor]="button.palleteColor"
@@ -12,19 +14,34 @@
   ></rfs-atomic-button>
 </section>
 
-
-
-
-
-<section class="section-wrapper" style="margin: 8px 16px; vertical-align: baseline;">
+<section
+  class="section-wrapper"
+  style="margin: 8px 16px; vertical-align: baseline"
+>
   <h2>Hashes</h2>
   <rfs-atomic-hashes [hashes]="hashes"></rfs-atomic-hashes>
 </section>
 
-
-
-
-<section class="section-wrapper" style="margin: 8px 16px; vertical-align: baseline;">
+<section
+  class="section-wrapper"
+  style="margin: 8px 16px; vertical-align: baseline"
+>
   <h2>Description List</h2>
-  <rfs-atomic-description-list [items]="listItems"></rfs-atomic-description-list>
+  <rfs-atomic-description-list
+    [items]="listItems"
+  ></rfs-atomic-description-list>
+</section>
+
+<section
+  class="section-wrapper"
+  style="margin: 8px 16px; vertical-align: baseline"
+>
+  <h2>Chips</h2>
+  <div *ngFor="let chip of chips">
+    <rfs-atomic-chip
+      [label]="chip.label"
+      [size]="chip.size"
+      [color]="chip.color"
+    ></rfs-atomic-chip>
+  </div>
 </section>

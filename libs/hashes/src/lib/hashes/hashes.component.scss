@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
 $primary: #26bfcd;
-$secondary: #333333;
-$tertiary: #ff6666;
+$secondary: #a164d3;
+;
+$tertiary: #333333;
+
 $danger: #dc3545;
 $warning: #ffc107;
 $success: #28a745;
@@ -53,7 +55,8 @@ ul.hash-group {
   li.hash-group__item {
     margin-top: 8px;
     background-color: #f1f1f1;
-    color: #333333;
+    color: #a164d3;
+;
     padding: 6px;
     margin-right: 6px;
     border-radius: 3px;
@@ -61,7 +64,8 @@ ul.hash-group {
     &:hover,
     &:active,
     &:focus {
-      background-color: #333333;
+      background-color: #a164d3;
+;
       color: white;
     }
 

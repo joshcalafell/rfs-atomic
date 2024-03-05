@@ -3,6 +3,7 @@ import { ButtonComponent } from '@rfs-atomic/button';
 import { HashesComponent } from '@rfs-atomic/hashes';
 import { UiComponent } from './ui.component';
 import { DescriptionListComponent } from '@rfs-atomic/description-list';
+import { ChipComponent } from '@rfs-atomic/chip';
 
 describe('UiComponent', () => {
   let component: UiComponent;
@@ -15,6 +16,7 @@ describe('UiComponent', () => {
         ButtonComponent,
         HashesComponent,
         DescriptionListComponent,
+        ChipComponent
       ],
     }).compileComponents();
 

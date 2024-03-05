@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ButtonComponent, IAtomicUiButton } from '@rfs-atomic/button';
+import { ChipComponent, IChip } from '@rfs-atomic/chip';
 import { DescriptionListComponent, IDescriptionListItem } from '@rfs-atomic/description-list';
 import { HashesComponent } from '@rfs-atomic/hashes';
 
@@ -12,6 +13,7 @@ import { HashesComponent } from '@rfs-atomic/hashes';
     ButtonComponent,
     HashesComponent,
     DescriptionListComponent,
+    ChipComponent
   ],
   templateUrl: './ui.component.html',
   styleUrl: './ui.component.scss',
@@ -118,6 +120,56 @@ export class UiComponent implements OnInit {
     { label: 'Weight', value: '3.5 lbs', valueType: 'weight' },
   ]
 
+
+  chips: IChip[] = [
+    {
+      label: 'Primary',
+      color: 'primary',
+      size: 'medium',
+    },
+    {
+      label: 'Secondary',
+      color: 'secondary',
+      size: 'medium',
+    },
+    {
+      label: 'Tertiary',
+      color: 'tertiary',
+      size: 'medium',
+    },
+    {
+      label: 'Danger',
+      color: 'danger',
+      size: 'medium',
+    },
+    {
+      label: 'Warning',
+      color: 'warning',
+      size: 'medium',
+    },
+    {
+      label: 'Success',
+      color: 'success',
+      size: 'medium',
+    },
+    {
+      label: 'Info',
+      color: 'info',
+      size: 'medium',
+    },
+    {
+      label: 'Light',
+      color: 'light',
+      size: 'medium',
+    },
+    {
+      label: 'Dark',
+      color: 'dark',
+      size: 'medium',
+    },
+
+  ];
+
   buttons: IAtomicUiButton[] = [];
 
   onButtonClick(event: unknown) {
@@ -163,5 +215,7 @@ export class UiComponent implements OnInit {
         }
       }
     }
+
+
   }
 }
