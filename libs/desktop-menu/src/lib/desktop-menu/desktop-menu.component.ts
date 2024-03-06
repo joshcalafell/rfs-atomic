@@ -16,10 +16,6 @@ export class DesktopMenuComponent {
 
 	isOpen = true
 
-	constructor() {
-		this.menuItems = [...mockDesktopMenuItems]
-	}
-
 	public onMenuItemClick(menuItemPath: string): void {
 		console.log(menuItemPath)
 	}

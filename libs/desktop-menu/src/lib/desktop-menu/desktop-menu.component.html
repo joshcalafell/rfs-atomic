@@ -1,13 +1,11 @@
-<div class="desktop-menu" [ngClass]="{ 'desktop-menu--open': isOpen }">
-	<ul class="desktop-menu-list">
-		<li class="desktop-menu-item" *ngFor="let menuItem of menuItems">
-			<a
-				class="desktop-menu-link"
-				[routerLink]="menuItem.path"
-				(click)="onMenuItemClick(menuItem.path)"
-			>
-				{{ menuItem.label || 'Label' }}
-			</a>
-		</li>
-	</ul>
+<div class="dropdown">
+	<div *ngFor="let item of menuItems" class="dropdown-content">
+		<a href="#">{{ item.label }}</a>
+		<div
+			class="dropdown-content"
+			*ngIf="item.children && item.children.length > 0"
+		>
+			<a href="#" *ngFor="let subitem of item.children">{{ subitem.label }}</a>
+		</div>
+	</div>
 </div>
