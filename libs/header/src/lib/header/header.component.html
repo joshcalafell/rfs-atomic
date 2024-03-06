@@ -1,1 +1,22 @@
-<p>header works!</p>
+<header class="header">
+	<div class="header-logo">
+		<h1 class="header-title">
+			<a class="header-title-link" routerLink="/">{{ title | uppercase }}</a>
+		</h1>
+	</div>
+	<div class="flex-row-section">
+		<nav class="nav">
+			<ul class="nav-list">
+				<li class="nav-item">
+					<a class="nav-link" routerLink="/home">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" routerLink="/about">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" routerLink="/contact">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>

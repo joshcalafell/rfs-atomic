@@ -1,0 +1,10 @@
+.desktop-menu-item {
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: black;
+	cursor: pointer;
+	transition: all 0.3s;
+	&:hover {
+		color: #ff6666;
+	}
+}

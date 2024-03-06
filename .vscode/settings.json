@@ -1,0 +1,39 @@
+{
+	"editor.fontSize": 16,
+	"terminal.integrated.fontSize": 18,
+	"editor.tabSize": 2,
+	"editor.formatOnSave": true,
+	"editor.wordWrap": "on",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.fontFamily": "'Operator Mono', Monaco, 'Courier New', monospace",
+
+	"files.autoSave": "onFocusChange",
+
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "es5",
+	"prettier.semi": false,
+
+	"javascript.format.enable": false,
+	"javascript.validate.enable": false,
+
+	"git.enableSmartCommit": true,
+	"git.confirmSync": false,
+	"workbench.iconTheme": "vscode-icons",
+
+	"js/ts.implicitProjectConfig.checkJs": true,
+	"javascript.suggest.autoImports": true,
+
+	"files.exclude": {
+		"**/.git": true,
+		"**/node_modules": true
+	},
+
+	"files.watcherExclude": {
+		"**/node_modules/**": true
+	},
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"vsicons.dontShowNewVersionMessage": true,
+	"workbench.colorTheme": "One Dark Pro",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"git.autofetch": true
+}

@@ -1,47 +1,68 @@
 <section
-  class="section-wrapper"
-  style="margin: 8px 16px; vertical-align: baseline"
+	class="section-wrapper"
+	style="margin: 8px 16px; vertical-align: baseline"
 >
-  <h2>Buttons</h2>
-  <rfs-atomic-button
-    *ngFor="let button of buttons"
-    [label]="button.label"
-    [type]="button.type"
-    [palleteColor]="button.palleteColor"
-    [size]="button.size"
-    [disabled]="button.disabled"
-    (onClick)="onButtonClick($event)"
-  ></rfs-atomic-button>
+	<h2>Buttons</h2>
+	<rfs-atomic-button
+		*ngFor="let button of buttons"
+		[label]="button.label"
+		[type]="button.type"
+		[palleteColor]="button.palleteColor"
+		[size]="button.size"
+		[disabled]="button.disabled"
+		(onClick)="onButtonClick($event)"
+	></rfs-atomic-button>
 </section>
 
 <section
-  class="section-wrapper"
-  style="margin: 8px 16px; vertical-align: baseline"
+	class="section-wrapper"
+	style="margin: 8px 16px; vertical-align: baseline"
 >
-  <h2>Hashes</h2>
-  <rfs-atomic-hashes [hashes]="hashes"></rfs-atomic-hashes>
+	<h2>Hashes</h2>
+	<rfs-atomic-hashes [hashes]="hashes"></rfs-atomic-hashes>
 </section>
 
 <section
-  class="section-wrapper"
-  style="margin: 8px 16px; vertical-align: baseline"
+	class="section-wrapper"
+	style="margin: 8px 16px; vertical-align: baseline"
 >
-  <h2>Description List</h2>
-  <rfs-atomic-description-list
-    [items]="listItems"
-  ></rfs-atomic-description-list>
+	<h2>Description List</h2>
+	<rfs-atomic-description-list
+		[items]="listItems"
+	></rfs-atomic-description-list>
 </section>
 
 <section
-  class="section-wrapper"
-  style="margin: 8px 16px; vertical-align: baseline"
+	class="section-wrapper"
+	style="margin: 8px 16px; vertical-align: baseline"
 >
-  <h2>Chips</h2>
-  <div *ngFor="let chip of chips">
-    <rfs-atomic-chip
-      [label]="chip.label"
-      [size]="chip.size"
-      [color]="chip.color"
-    ></rfs-atomic-chip>
-  </div>
+	<h2>Chips</h2>
+	<div *ngFor="let chip of chips">
+		<rfs-atomic-chip
+			[label]="chip.label"
+			[size]="chip.size"
+			[color]="chip.color"
+		></rfs-atomic-chip>
+	</div>
+</section>
+
+<section
+	class="section-wrapper"
+	style="margin: 8px 16px; vertical-align: baseline"
+>
+	<h2>Header</h2>
+	<rfs-atomic-header
+		[title]="'Header Title'"
+		[menuItems]="menuItems"
+		[user]="user"
+	>
+	</rfs-atomic-header>
+</section>
+
+<section
+	class="section-wrapper"
+	style="margin: 8px 16px; vertical-align: baseline"
+>
+	<h2>Desktop Menu</h2>
+	<rfs-atomic-desktop-menu [menuItems]="menuItems"></rfs-atomic-desktop-menu>
 </section>

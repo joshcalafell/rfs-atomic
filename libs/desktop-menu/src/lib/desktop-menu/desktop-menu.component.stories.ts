@@ -1,24 +1,27 @@
-import type { Meta, StoryObj } from '@storybook/angular';
-import { DesktopMenuComponent } from './desktop-menu.component';
+import type { Meta, StoryObj } from '@storybook/angular'
+import { DesktopMenuComponent } from './desktop-menu.component'
 
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { within } from '@storybook/testing-library'
+import { expect } from '@storybook/jest'
+import { mockDesktopMenuItems } from './IDesktopMenuItem.mock.ts'
 
 const meta: Meta<DesktopMenuComponent> = {
-  component: DesktopMenuComponent,
-  title: 'DesktopMenuComponent',
-};
-export default meta;
-type Story = StoryObj<DesktopMenuComponent>;
+	component: DesktopMenuComponent,
+	title: 'DesktopMenuComponent',
+}
+export default meta
+type Story = StoryObj<DesktopMenuComponent>
 
 export const Primary: Story = {
-  args: {},
-};
+	args: {
+		menuItems: mockDesktopMenuItems,
+		isOpen: true,
+	},
+}
 
 export const Heading: Story = {
-  args: {},
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    expect(canvas.getByText(/desktop-menu works!/gi)).toBeTruthy();
-  },
-};
+	args: {
+		menuItems: mockDesktopMenuItems,
+		isOpen: true,
+	},
+}

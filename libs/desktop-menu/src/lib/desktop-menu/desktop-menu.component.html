@@ -1,1 +1,13 @@
-<p>desktop-menu works!</p>
+<div class="desktop-menu" [ngClass]="{ 'desktop-menu--open': isOpen }">
+	<ul class="desktop-menu-list">
+		<li class="desktop-menu-item" *ngFor="let menuItem of menuItems">
+			<a
+				class="desktop-menu-link"
+				[routerLink]="menuItem.path"
+				(click)="onMenuItemClick(menuItem.path)"
+			>
+				{{ menuItem.label || 'Label' }}
+			</a>
+		</li>
+	</ul>
+</div>
