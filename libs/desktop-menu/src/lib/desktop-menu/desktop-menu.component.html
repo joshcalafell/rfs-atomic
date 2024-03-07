@@ -1,11 +1,5 @@
-<div class="dropdown">
-	<div *ngFor="let item of menuItems" class="dropdown-content">
-		<a href="#">{{ item.label }}</a>
-		<div
-			class="dropdown-content"
-			*ngIf="item.children && item.children.length > 0"
-		>
-			<a href="#" *ngFor="let subitem of item.children">{{ subitem.label }}</a>
-		</div>
-	</div>
-</div>
+<ul class="topnav">
+	<li *ngFor="let menuItem of menuItems">
+		<rfs-atomic-link [link]="menuItem"></rfs-atomic-link>
+	</li>
+</ul>

@@ -1,39 +1,40 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2020", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@rfs-atomic/button": ["libs/button/src/index.ts"],
-      "@rfs-atomic/chip": ["libs/chip/src/index.ts"],
-      "@rfs-atomic/description-list": ["libs/description-list/src/index.ts"],
-      "@rfs-atomic/desktop-menu": ["libs/desktop-menu/src/index.ts"],
-      "@rfs-atomic/drag-drop": ["libs/drag-drop/src/index.ts"],
-      "@rfs-atomic/footer": ["libs/footer/src/index.ts"],
-      "@rfs-atomic/hashes": ["libs/hashes/src/index.ts"],
-      "@rfs-atomic/header": ["libs/header/src/index.ts"],
-      "@rfs-atomic/product-card": ["libs/product-card/src/index.ts"],
-      "@rfs-atomic/product-card-header": [
-        "libs/product-card-header/src/index.ts"
-      ],
-      "@rfs-atomic/product-description-list": [
-        "libs/product-description-list/src/index.ts"
-      ],
-      "@rfs-atomic/product-ratings": ["libs/product-ratings/src/index.ts"],
-      "@rfs-atomic/sort-table": ["libs/sort-table/src/index.ts"],
-      "@rfs-atomic/ui": ["libs/ui/src/index.ts"]
-    }
-  },
-  "exclude": ["node_modules", "tmp"]
+	"compileOnSave": false,
+	"compilerOptions": {
+		"rootDir": ".",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"importHelpers": true,
+		"target": "es2015",
+		"module": "esnext",
+		"lib": ["es2020", "dom"],
+		"skipLibCheck": true,
+		"skipDefaultLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@rfs-atomic/button": ["libs/button/src/index.ts"],
+			"@rfs-atomic/chip": ["libs/chip/src/index.ts"],
+			"@rfs-atomic/description-list": ["libs/description-list/src/index.ts"],
+			"@rfs-atomic/desktop-menu": ["libs/desktop-menu/src/index.ts"],
+			"@rfs-atomic/drag-drop": ["libs/drag-drop/src/index.ts"],
+			"@rfs-atomic/footer": ["libs/footer/src/index.ts"],
+			"@rfs-atomic/hashes": ["libs/hashes/src/index.ts"],
+			"@rfs-atomic/header": ["libs/header/src/index.ts"],
+			"@rfs-atomic/link": ["libs/link/src/index.ts"],
+			"@rfs-atomic/product-card": ["libs/product-card/src/index.ts"],
+			"@rfs-atomic/product-card-header": [
+				"libs/product-card-header/src/index.ts"
+			],
+			"@rfs-atomic/product-description-list": [
+				"libs/product-description-list/src/index.ts"
+			],
+			"@rfs-atomic/product-ratings": ["libs/product-ratings/src/index.ts"],
+			"@rfs-atomic/sort-table": ["libs/sort-table/src/index.ts"],
+			"@rfs-atomic/ui": ["libs/ui/src/index.ts"]
+		}
+	},
+	"exclude": ["node_modules", "tmp"]
 }

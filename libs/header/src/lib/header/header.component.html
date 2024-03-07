@@ -6,17 +6,15 @@
 	</div>
 	<div class="flex-row-section">
 		<nav class="nav">
-			<ul class="nav-list">
-				<li class="nav-item">
-					<a class="nav-link" routerLink="/home">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" routerLink="/about">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" routerLink="/contact">Contact</a>
-				</li>
-			</ul>
+			<rfs-atomic-desktop-menu
+				[menuItems]="menuItems"
+			></rfs-atomic-desktop-menu>
 		</nav>
+		<rfs-atomic-button
+			[label]="'Login'"
+			[palleteColor]="'primary'"
+			[size]="'medium'"
+			[disabled]="false"
+		></rfs-atomic-button>
 	</div>
 </header>

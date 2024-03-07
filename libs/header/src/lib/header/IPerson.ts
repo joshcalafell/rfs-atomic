@@ -85,7 +85,7 @@ export const mockPerson = (<IPerson>{
 		},
 	},
 	gender: 'Female',
-	dateOfBirth: new Date(),
+	dateOfBirth: new Date('08/23/1981'),
 	images: {
 		avatar: 'https://imgur.com/EYzmAVr.png',
 		cover: 'https://imgur.com/cHHHHrh.png',

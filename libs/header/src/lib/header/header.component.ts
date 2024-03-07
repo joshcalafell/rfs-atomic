@@ -4,11 +4,13 @@ import { DesktopMenuComponent } from '@rfs-atomic/desktop-menu'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { IDesktopMenuItem } from 'libs/desktop-menu/src/lib/desktop-menu/IDesktopMenuItem'
 import { IPerson } from './IPerson'
+import { ButtonComponent } from '@rfs-atomic/button'
+import { RouterModule } from '@angular/router'
 
 @Component({
 	selector: 'rfs-atomic-header',
 	standalone: true,
-	imports: [CommonModule, DesktopMenuComponent],
+	imports: [CommonModule, DesktopMenuComponent, ButtonComponent, RouterModule],
 	templateUrl: './header.component.html',
 	styleUrl: './header.component.scss',
 })

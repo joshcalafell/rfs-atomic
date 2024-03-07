@@ -4,6 +4,7 @@ import { DesktopMenuComponent } from '@rfs-atomic/desktop-menu'
 import { mockPerson } from './IPerson'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { mockDesktopMenuItems } from 'libs/desktop-menu/src/lib/desktop-menu/IDesktopMenuItem.mock.ts'
+import { RouterTestingModule } from '@angular/router/testing'
 
 describe('HeaderComponent', () => {
 	let component: HeaderComponent
@@ -11,10 +12,18 @@ describe('HeaderComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [HeaderComponent, DesktopMenuComponent],
+			imports: [HeaderComponent, DesktopMenuComponent, RouterTestingModule],
+			providers: [
+				{
+					provide: 'activateRoute',
+					useValue: { snapshot: { url: [{ path: '/primary' }] } },
+				},
+			],
 		}).compileComponents()
 		fixture = TestBed.createComponent(HeaderComponent)
 		component = fixture.componentInstance
+
+		// title of the header
 		component.title = 'INVENTORY'
 		// IPeson
 		component.user = mockPerson
