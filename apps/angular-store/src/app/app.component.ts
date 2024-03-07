@@ -1,19 +1,87 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common'
+import { Component } from '@angular/core'
+import { RouterModule } from '@angular/router'
+import { FooterComponent } from '@rfs-atomic/footer'
+import { HeaderComponent } from '@rfs-atomic/header'
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { ButtonComponent } from 'libs/button/src';
+import { ButtonComponent } from 'libs/button/src'
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { IPerson } from 'libs/header/src/lib/header/IPerson'
 
 @Component({
-  standalone: true,
-  imports: [RouterModule, ButtonComponent],
-  selector: 'rfs-atomic-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+	standalone: true,
+	imports: [
+		CommonModule,
+		RouterModule,
+		ButtonComponent,
+		HeaderComponent,
+		FooterComponent,
+	],
+	selector: 'rfs-atomic-root',
+	templateUrl: './app.component.html',
+	styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'Atomic Design';
+	title = 'Angular Store'
 
-  onButtonClick(event: unknown) {
-    console.log('Button clicked', event);
-  }
+	menuItems = [
+		{
+			label: 'Dashboard',
+			path: '/primary',
+		},
+		{
+			label: 'Inventory',
+			path: '/inventory',
+		},
+		{
+			label: 'Orders',
+			path: '/orders',
+		},
+		{
+			label: 'Wishlist',
+			path: '/wishlist',
+		},
+		{
+			label: 'Settings',
+			path: '/settings',
+		},
+	]
+
+	colorScheme = 'light'
+
+	user = (<IPerson>{
+		name: {
+			prefix: 'Miss',
+			first: 'Ada',
+			middle: 'Mary',
+			last: 'Lovelace',
+			suffix: 'Esq.',
+		},
+		contactInfo: {
+			email: 'aloveless@someting.com',
+			phoneNumber: '+13334445555',
+			socialMedia: {
+				github: '#',
+				linkedIn: '#',
+				instagram: '#',
+			},
+		},
+		gender: 'Female',
+		dateOfBirth: new Date('08/23/1981'),
+		images: {
+			avatar: 'https://imgur.com/EYzmAVr.png',
+			cover: 'https://imgur.com/cHHHHrh.png',
+		},
+		address: {
+			street: '29324 Applewood Blossom Lane',
+			city: 'Eugene',
+			state: 'Oregon',
+			zip: '90210',
+			country: 'United States',
+		},
+	}) as IPerson
+
+	onButtonClick(event: unknown) {
+		console.log('Button clicked', event)
+	}
 }

@@ -6,7 +6,6 @@
 	<rfs-atomic-button
 		*ngFor="let button of buttons"
 		[label]="button.label"
-		[type]="button.type"
 		[palleteColor]="button.palleteColor"
 		[size]="button.size"
 		[disabled]="button.disabled"
@@ -55,14 +54,5 @@
 		[title]="'Header Title'"
 		[menuItems]="menuItems"
 		[user]="user"
-	>
-	</rfs-atomic-header>
-</section>
-
-<section
-	class="section-wrapper"
-	style="margin: 8px 16px; vertical-align: baseline"
->
-	<h2>Desktop Menu</h2>
-	<rfs-atomic-desktop-menu [menuItems]="menuItems"></rfs-atomic-desktop-menu>
+	></rfs-atomic-header>
 </section>

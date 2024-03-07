@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { Component, OnInit } from '@angular/core'
+import { RouterModule } from '@angular/router'
 import { ButtonComponent, IAtomicUiButton } from '@rfs-atomic/button'
 import { ChipComponent, IChip } from '@rfs-atomic/chip'
 import {
@@ -26,7 +27,7 @@ import { IPerson, mockPerson } from 'libs/header/src/lib/header/IPerson'
 		DescriptionListComponent,
 		ChipComponent,
 		HeaderComponent,
-		DesktopMenuComponent,
+		RouterModule,
 	],
 	templateUrl: './ui.component.html',
 	styleUrl: './ui.component.scss',
@@ -137,7 +138,100 @@ export class UiComponent implements OnInit {
 
 	buttons: IAtomicUiButton[] = []
 
-	menuItems: IDesktopMenuItem[] = mockDesktopMenuItems
+	menuItems: IDesktopMenuItem[] = [
+		{
+			label: 'Dashboard',
+			path: '/dashboard',
+			icon: 'dashboard',
+			paletteColor: 'primary',
+			children: [
+				{
+					label: 'Dashboard 1',
+					path: '/dashboard/dashboard-1',
+					icon: 'dashboard-1',
+					paletteColor: 'primary',
+					children: [],
+				},
+				{
+					label: 'Dashboard 2',
+					path: '/dashboard/dashboard-2',
+					icon: 'dashboard-2',
+					paletteColor: 'primary',
+					children: [],
+				},
+			],
+		},
+		{
+			label: 'Inventory',
+			path: '/inventory',
+			icon: 'inventory',
+			paletteColor: 'secondary',
+			children: [
+				{
+					label: 'Products',
+					path: '/inventory/products',
+					icon: 'products',
+					paletteColor: 'secondary',
+					children: [],
+				},
+				{
+					label: 'Categories',
+					path: '/inventory/categories',
+					icon: 'categories',
+					paletteColor: 'secondary',
+					children: [],
+				},
+				{
+					label: 'Stock',
+					path: '/inventory/stock',
+					icon: 'stock',
+					paletteColor: 'secondary',
+					children: [],
+				},
+			],
+		},
+		{
+			label: 'Orders',
+			path: '/orders',
+			icon: 'orders',
+			paletteColor: 'tertiary',
+			children: [
+				{
+					label: 'Orders 1',
+					path: '/orders/orders-1',
+					icon: 'orders-1',
+					paletteColor: 'tertiary',
+					children: [],
+				},
+				{
+					label: 'Orders 2',
+					path: '/orders/orders-2',
+					icon: 'orders-2',
+					paletteColor: 'tertiary',
+					children: [],
+				},
+			],
+		},
+		{
+			label: 'Customers',
+			path: '/customers',
+			icon: 'customers',
+			paletteColor: 'danger',
+			children: [
+				{
+					label: 'Customers 1',
+					path: '/customers/customers-1',
+					icon: 'customers-1',
+					paletteColor: 'danger',
+					children: [],
+				},
+				{
+					label: 'Customers 2',
+					path: '/customers/customers',
+				},
+			],
+		},
+	]
 
 	user: IPerson = mockPerson
 

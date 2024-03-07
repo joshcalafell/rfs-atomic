@@ -1,58 +1,17 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="content">
-        <h1>{{ title }} (Example App)</h1>
-      </div>
-    </div>
+<rfs-atomic-header
+	[title]="'Angular Store'"
+	[menuItems]="menuItems"
+	[user]="user"
+></rfs-atomic-header>
 
-    <h2>Example App</h2>
-
-    <br />
-
-    <h3>Example "Primary" color Login /Signup Button</h3>
-    <br /><br />
-
-    <div class="flex-row">
-      <rfs-atomic-button
-        [label]="'Login / Signup'"
-        [type]="'animated-arrow'"
-        [palleteColor]="'primary'"
-        [size]="'large'"
-        [disabled]="false"
-        (onClick)="onButtonClick($event)"
-      >
-      </rfs-atomic-button>
-    </div>
-
-    <br />
-    <br />
-
-    <br />
-
-    <h3>Atomic Categories</h3>
-
-    <ul class="rfs-atomic-list">
-      <li class="rfs-atomic-list__item">
-        <!--<a routerLink="/atoms" routerLinkActive="active">Atoms</a> -->
-      </li>
-      <li class="rfs-atomic-list__item">
-        <a href="#" disabled="true">Molecules</a>
-      </li>
-      <li class="rfs-atomic" class="rfs-atomic-list__item">
-        <a href="#" disabled="true">Organisms</a>
-      </li>
-
-      <li class="rfs-atomic-list__item">
-        <a href="#" disabled="true">Templates</a>
-      </li>
-
-      <li class="rfs-atomic-list__item">
-        <!--<a routerLink="/pages" routerLinkActive="active">Pages</a>-->
-        <a href="#" disabled="true">Pages</a>
-      </li>
-    </ul>
-
-    <router-outlet></router-outlet>
-  </div>
+<div
+	class="container"
+	[ngStyle]="{
+  'light': colorScheme === 'light',
+  'dark': colorScheme === 'dark',
+}"
+>
+	<router-outlet></router-outlet>
 </div>
+
+<rfs-atomic-footer></rfs-atomic-footer>

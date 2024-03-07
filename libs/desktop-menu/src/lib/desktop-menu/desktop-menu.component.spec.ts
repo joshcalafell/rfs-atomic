@@ -2,13 +2,16 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { DesktopMenuComponent } from './desktop-menu.component'
 import { ActivatedRoute } from '@angular/router'
 import { mockDesktopMenuItems } from './IDesktopMenuItem.mock.ts'
+import { RouterTestingModule } from '@angular/router/testing'
+import { LinkComponent } from '@rfs-atomic/link'
+
 describe('DesktopMenuComponent', () => {
 	let component: DesktopMenuComponent
 	let fixture: ComponentFixture<DesktopMenuComponent>
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [DesktopMenuComponent],
+			imports: [DesktopMenuComponent, RouterTestingModule, LinkComponent],
 			providers: [
 				{
 					provide: ActivatedRoute,
