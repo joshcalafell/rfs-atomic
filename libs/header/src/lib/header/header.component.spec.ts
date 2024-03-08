@@ -1,10 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { HeaderComponent } from './header.component'
 import { DesktopMenuComponent } from '@rfs-atomic/desktop-menu'
-import { mockPerson } from './IPerson'
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { mockDesktopMenuItems } from 'libs/desktop-menu/src/lib/desktop-menu/IDesktopMenuItem.mock.ts'
+import { HeaderComponent } from './header.component'
+
 import { RouterTestingModule } from '@angular/router/testing'
+
+import { ButtonComponent } from '@rfs-atomic/button'
+import { ActivatedRoute } from '@angular/router'
 
 describe('HeaderComponent', () => {
 	let component: HeaderComponent
@@ -12,23 +13,96 @@ describe('HeaderComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [HeaderComponent, DesktopMenuComponent, RouterTestingModule],
+			imports: [
+				DesktopMenuComponent,
+				RouterTestingModule,
+				HeaderComponent,
+				ButtonComponent,
+			],
 			providers: [
 				{
-					provide: 'activateRoute',
-					useValue: { snapshot: { url: [{ path: '/primary' }] } },
+					provide: ActivatedRoute,
+					useValue: {
+						snapshot: {
+							data: {
+								menuItems: {
+									label: 'Dashboard',
+									paletteColor: 'primary',
+									path: '/primary',
+								},
+							},
+						},
+					},
 				},
 			],
 		}).compileComponents()
+
 		fixture = TestBed.createComponent(HeaderComponent)
+
 		component = fixture.componentInstance
 
 		// title of the header
 		component.title = 'INVENTORY'
 		// IPeson
-		component.user = mockPerson
+		component.user = {
+			name: {
+				prefix: 'Miss',
+				first: 'Ada',
+				middle: 'Mary',
+				last: 'Lovelace',
+				suffix: 'Esq.',
+			},
+			contactInfo: {
+				email: 'aloveless@someting.com',
+				phoneNumber: '+13334445555',
+				socialMedia: {
+					github: '#',
+					linkedIn: '#',
+					instagram: '#',
+				},
+			},
+			gender: 'Female',
+			dateOfBirth: new Date('08/23/1981'),
+			images: {
+				avatar: 'https://imgur.com/EYzmAVr.png',
+				cover: 'https://imgur.com/cHHHHrh.png',
+			},
+			address: {
+				street: '29324 Applewood Blossom Lane',
+				city: 'Eugene',
+				state: 'Oregon',
+				zip: '90210',
+				country: 'United States',
+			},
+		}
 		// IDesktopMenuItem
-		component.menuItems = mockDesktopMenuItems
+		component.menuItems = [
+			{
+				label: 'Dashboard',
+				paletteColor: 'primary',
+				path: '/primary',
+			},
+			{
+				label: 'Inventory',
+				paletteColor: 'primary',
+				path: '/inventory',
+			},
+			{
+				label: 'Orders',
+				paletteColor: 'primary',
+				path: '/orders',
+			},
+			{
+				label: 'Wishlist',
+				paletteColor: 'primary',
+				path: '/wishlist',
+			},
+			{
+				label: 'Settings',
+				paletteColor: 'primary',
+				path: '/settings',
+			},
+		]
 		fixture.detectChanges()
 	})
 

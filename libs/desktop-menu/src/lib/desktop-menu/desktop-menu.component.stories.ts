@@ -1,9 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular'
 import { DesktopMenuComponent } from './desktop-menu.component'
 
-import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
-import { mockDesktopMenuItems } from './IDesktopMenuItem.mock.ts'
 
 const meta: Meta<DesktopMenuComponent> = {
 	component: DesktopMenuComponent,
@@ -14,14 +12,44 @@ type Story = StoryObj<DesktopMenuComponent>
 
 export const Primary: Story = {
 	args: {
-		menuItems: mockDesktopMenuItems,
-		isOpen: true,
+		menuItems: [
+			{
+				label: 'Home',
+				path: '/home',
+			},
+			{
+				label: 'About',
+				path: '/about',
+			},
+			{
+				label: 'Contact',
+				path: '/contact',
+			},
+		],
+	},
+	play: async ({ canvasElement }) => {
+		expect(canvasElement).toBeTruthy()
 	},
 }
 
 export const Heading: Story = {
 	args: {
-		menuItems: mockDesktopMenuItems,
-		isOpen: true,
+		menuItems: [
+			{
+				label: 'Home',
+				path: '/home',
+			},
+			{
+				label: 'About',
+				path: '/about',
+			},
+			{
+				label: 'Contact',
+				path: '/contact',
+			},
+		],
+	},
+	play: async ({ canvasElement }) => {
+		expect(canvasElement).toBeTruthy()
 	},
 }

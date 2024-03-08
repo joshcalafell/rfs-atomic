@@ -3,9 +3,6 @@ import { HeaderComponent } from './header.component'
 
 import { expect } from '@storybook/jest'
 import { within } from '@storybook/testing-library'
-import { IPerson, mockPerson } from './IPerson'
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { mockDesktopMenuItems } from 'libs/desktop-menu/src/lib/desktop-menu/IDesktopMenuItem.mock.ts'
 
 const meta: Meta<HeaderComponent> = {
 	component: HeaderComponent,
@@ -18,27 +15,169 @@ type Story = StoryObj<HeaderComponent>
 export const Primary: Story = {
 	args: {
 		title: 'INVENTORY',
-		user: <IPerson>mockPerson,
-		menuItems: mockDesktopMenuItems,
+		menuItems: [
+			{
+				label: 'Dashboard',
+				paletteColor: 'primary',
+				path: '/primary',
+			},
+			{
+				label: 'Inventory',
+				paletteColor: 'primary',
+				path: '/inventory',
+			},
+			{
+				label: 'Orders',
+				paletteColor: 'primary',
+				path: '/orders',
+			},
+		],
+		user: {
+			name: {
+				prefix: 'Miss',
+				first: 'Ada',
+				middle: 'Mary',
+				last: 'Lovelace',
+				suffix: 'Esq.',
+			},
+			contactInfo: {
+				email: 'aloveless@someting.com',
+				phoneNumber: '+13334445555',
+				socialMedia: {
+					github: '#',
+					linkedIn: '#',
+					instagram: '#',
+				},
+			},
+			gender: 'Female',
+			dateOfBirth: new Date('08/23/1981'),
+			images: {
+				avatar: 'https://imgur.com/EYzmAVr.png',
+				cover: 'https://imgur.com/cHHHHrh.png',
+			},
+			address: {
+				street: '29324 Applewood Blossom Lane',
+				city: 'Eugene',
+				state: 'Oregon',
+				zip: '90210',
+				country: 'United States',
+			},
+		},
 	},
 }
 
 export const Heading: Story = {
 	args: {
 		title: 'INVENTORY',
-		user: <IPerson>mockPerson,
-		menuItems: mockDesktopMenuItems,
+		user: {
+			name: {
+				prefix: 'Miss',
+				first: 'Ada',
+				middle: 'Mary',
+				last: 'Lovelace',
+				suffix: 'Esq.',
+			},
+			contactInfo: {
+				email: 'aloveless@someting.com',
+				phoneNumber: '+13334445555',
+				socialMedia: {
+					github: '#',
+					linkedIn: '#',
+					instagram: '#',
+				},
+			},
+			gender: 'Female',
+			dateOfBirth: new Date('08/23/1981'),
+			images: {
+				avatar: 'https://imgur.com/EYzmAVr.png',
+				cover: 'https://imgur.com/cHHHHrh.png',
+			},
+			address: {
+				street: '29324 Applewood Blossom Lane',
+				city: 'Eugene',
+				state: 'Oregon',
+				zip: '90210',
+				country: 'United States',
+			},
+		},
+		menuItems: [
+			{
+				label: 'Dashboard',
+				paletteColor: 'primary',
+				path: '/primary',
+			},
+			{
+				label: 'Inventory',
+				paletteColor: 'primary',
+				path: '/inventory',
+			},
+			{
+				label: 'Orders',
+				paletteColor: 'primary',
+				path: '/orders',
+			},
+		],
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/Dashboard/gi)).toBeTruthy()
+		expect(canvas.getByText(/INVENTORY/gi)).toBeTruthy()
 	},
 }
 
 export const WithUser: Story = {
 	args: {
 		title: 'INVENTORY',
-		user: mockPerson,
-		menuItems: mockDesktopMenuItems,
+		user: {
+			name: {
+				prefix: 'Miss',
+				first: 'Ada',
+				middle: 'Mary',
+				last: 'Lovelace',
+				suffix: 'Esq.',
+			},
+			contactInfo: {
+				email: 'aloveless@someting.com',
+				phoneNumber: '+13334445555',
+				socialMedia: {
+					github: '#',
+					linkedIn: '#',
+					instagram: '#',
+				},
+			},
+			gender: 'Female',
+			dateOfBirth: new Date('08/23/1981'),
+			images: {
+				avatar: 'https://imgur.com/EYzmAVr.png',
+				cover: 'https://imgur.com/cHHHHrh.png',
+			},
+			address: {
+				street: '29324 Applewood Blossom Lane',
+				city: 'Eugene',
+				state: 'Oregon',
+				zip: '90210',
+				country: 'United States',
+			},
+		},
+		menuItems: [
+			{
+				label: 'Dashboard',
+				paletteColor: 'primary',
+				path: '/primary',
+			},
+			{
+				label: 'Inventory',
+				paletteColor: 'primary',
+				path: '/inventory',
+			},
+			{
+				label: 'Orders',
+				paletteColor: 'primary',
+				path: '/orders',
+			},
+		],
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas.getByText(/INVENTORY/gi)).toBeTruthy()
 	},
 }

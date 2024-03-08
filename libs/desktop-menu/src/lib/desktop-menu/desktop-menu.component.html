@@ -1,5 +1,5 @@
-<ul class="topnav">
-	<li *ngFor="let menuItem of menuItems">
-		<rfs-atomic-link [link]="menuItem"></rfs-atomic-link>
+<ul class="topnav" *ngIf="menuItems && menuItems.length > 0">
+	<li *ngFor="let item of menuItems">
+		<rfs-atomic-link [link]="item" role="button"></rfs-atomic-link>
 	</li>
 </ul>

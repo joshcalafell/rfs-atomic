@@ -14,34 +14,5 @@ import { IAtomicLink, LinkComponent } from '@rfs-atomic/link'
 	styleUrl: './desktop-menu.component.scss',
 })
 export class DesktopMenuComponent {
-	@Input() menuItems: IAtomicLink[] = [
-		{
-			label: 'Dashboard',
-			path: '/primary',
-		},
-		{
-			label: 'Inventory',
-			path: '/inventory',
-		},
-		{
-			label: 'Orders',
-			path: '/orders',
-		},
-		{
-			label: 'Customers',
-			path: '/customers',
-		},
-		{
-			label: 'Reports',
-			path: '/reports',
-		},
-		{
-			label: 'Settings',
-			path: '/settings',
-		},
-		{
-			label: 'Logout',
-			path: '/logout',
-		},
-	]
+	@Input() menuItems: IAtomicLink[] = [] as IAtomicLink[]
 }

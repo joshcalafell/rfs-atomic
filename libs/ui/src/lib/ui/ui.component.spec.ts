@@ -1,16 +1,14 @@
 /* eslint-disable @nx/enforce-module-boundaries */
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { ButtonComponent } from '@rfs-atomic/button'
-import { HashesComponent } from '@rfs-atomic/hashes'
-import { UiComponent } from './ui.component'
-import { DescriptionListComponent } from '@rfs-atomic/description-list'
-import { ChipComponent } from '@rfs-atomic/chip'
 import { ActivatedRoute } from '@angular/router'
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { mockDesktopMenuItems } from 'libs/desktop-menu/src/lib/desktop-menu/IDesktopMenuItem.mock.ts'
-import { HeaderComponent } from '@rfs-atomic/header'
 import { RouterTestingModule } from '@angular/router/testing'
-import { mockPerson } from 'libs/header/src/lib/header/IPerson'
+import { ButtonComponent } from '@rfs-atomic/button'
+import { ChipComponent } from '@rfs-atomic/chip'
+import { DescriptionListComponent } from '@rfs-atomic/description-list'
+import { HashesComponent } from '@rfs-atomic/hashes'
+import { HeaderComponent } from '@rfs-atomic/header'
+import { UiComponent } from './ui.component'
+
 describe('UiComponent', () => {
 	let component: UiComponent
 	let fixture: ComponentFixture<UiComponent>
@@ -29,13 +27,7 @@ describe('UiComponent', () => {
 			providers: [
 				{
 					provide: ActivatedRoute,
-					useValue: {
-						snapshot: {
-							data: {
-								menuItems: mockDesktopMenuItems,
-							},
-						},
-					},
+					useValue: { snapshot: { url: [{ path: '/primary' }] } },
 				},
 			],
 		}).compileComponents()
@@ -68,8 +60,60 @@ describe('UiComponent', () => {
 			'techno',
 		]
 
-		component.user = mockPerson
-		component.menuItems = mockDesktopMenuItems
+		component.user = {
+			name: {
+				prefix: 'Miss',
+				first: 'Ada',
+				middle: 'Mary',
+				last: 'Lovelace',
+				suffix: 'Esq.',
+			},
+			contactInfo: {
+				email: 'aloveless@someting.com',
+				phoneNumber: '+13334445555',
+				socialMedia: {
+					github: '#',
+					linkedIn: '#',
+					instagram: '#',
+				},
+			},
+			gender: 'Female',
+			dateOfBirth: new Date('08/23/1981'),
+			images: {
+				avatar: 'https://imgur.com/EYzmAVr.png',
+				cover: 'https://imgur.com/cHHHHrh.png',
+			},
+			address: {
+				street: '29324 Applewood Blossom Lane',
+				city: 'Eugene',
+				state: 'Oregon',
+				zip: '90210',
+				country: 'United States',
+			},
+		}
+
+		component.menuItems = [
+			{
+				label: 'Dashboard',
+				path: '/primary',
+			},
+			{
+				label: 'Inventory',
+				path: '/inventory',
+			},
+			{
+				label: 'Orders',
+				path: '/orders',
+			},
+			{
+				label: 'Wishlist',
+				path: '/wishlist',
+			},
+			{
+				label: 'Settings',
+				path: '/settings',
+			},
+		]
 
 		fixture.detectChanges()
 	})
