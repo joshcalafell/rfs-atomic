@@ -15,27 +15,9 @@ export const Primary: Story = {
 	args: {
 		link: {
 			label: 'Label',
-			path: '',
+			path: '#',
 			target: '_blank',
-			href: '',
-			color: 'black',
-			download: '',
-			isActive: false,
-			rel: 'noopener noreferrer',
-			onClick: () => {
-				console.log('Link clicked')
-			},
-		},
-	},
-}
-
-export const Heading: Story = {
-	args: {
-		link: {
-			label: 'Label',
-			path: '',
-			target: '_blank',
-			href: '',
+			href: '#',
 			color: 'black',
 			download: '',
 			isActive: false,
@@ -47,6 +29,28 @@ export const Heading: Story = {
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/link works!/gi)).toBeTruthy()
+		expect(canvas.getByText(/Label/gi)).toBeTruthy()
+	},
+}
+
+export const Heading: Story = {
+	args: {
+		link: {
+			label: 'Label',
+			path: '#',
+			target: '_blank',
+			href: '#',
+			color: 'black',
+			download: '',
+			isActive: false,
+			rel: 'noopener noreferrer',
+			onClick: () => {
+				console.log('Link clicked')
+			},
+		},
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas.getByText(/Label/gi)).toBeTruthy()
 	},
 }

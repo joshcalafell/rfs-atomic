@@ -1,21 +1,18 @@
 import { CommonModule } from '@angular/common'
 import { Component, OnInit } from '@angular/core'
-import { RouterModule } from '@angular/router'
 import { ButtonComponent, IAtomicUiButton } from '@rfs-atomic/button'
 import { ChipComponent, IChip } from '@rfs-atomic/chip'
 import {
 	DescriptionListComponent,
 	IDescriptionListItem,
 } from '@rfs-atomic/description-list'
-import { DesktopMenuComponent } from '@rfs-atomic/desktop-menu'
+
 import { HashesComponent } from '@rfs-atomic/hashes'
 import { HeaderComponent } from '@rfs-atomic/header'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { IDesktopMenuItem } from 'libs/desktop-menu/src/lib/desktop-menu/IDesktopMenuItem'
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { mockDesktopMenuItems } from 'libs/desktop-menu/src/lib/desktop-menu/IDesktopMenuItem.mock.ts'
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { IPerson, mockPerson } from 'libs/header/src/lib/header/IPerson'
+import { IPerson } from 'libs/header/src/lib/header/IPerson'
 
 @Component({
 	selector: 'rfs-atomic-ui',
@@ -27,7 +24,6 @@ import { IPerson, mockPerson } from 'libs/header/src/lib/header/IPerson'
 		DescriptionListComponent,
 		ChipComponent,
 		HeaderComponent,
-		RouterModule,
 	],
 	templateUrl: './ui.component.html',
 	styleUrl: './ui.component.scss',
@@ -138,102 +134,40 @@ export class UiComponent implements OnInit {
 
 	buttons: IAtomicUiButton[] = []
 
-	menuItems: IDesktopMenuItem[] = [
-		{
-			label: 'Dashboard',
-			path: '/dashboard',
-			icon: 'dashboard',
-			paletteColor: 'primary',
-			children: [
-				{
-					label: 'Dashboard 1',
-					path: '/dashboard/dashboard-1',
-					icon: 'dashboard-1',
-					paletteColor: 'primary',
-					children: [],
-				},
-				{
-					label: 'Dashboard 2',
-					path: '/dashboard/dashboard-2',
-					icon: 'dashboard-2',
-					paletteColor: 'primary',
-					children: [],
-				},
-			],
-		},
-		{
-			label: 'Inventory',
-			path: '/inventory',
-			icon: 'inventory',
-			paletteColor: 'secondary',
-			children: [
-				{
-					label: 'Products',
-					path: '/inventory/products',
-					icon: 'products',
-					paletteColor: 'secondary',
-					children: [],
-				},
-				{
-					label: 'Categories',
-					path: '/inventory/categories',
-					icon: 'categories',
-					paletteColor: 'secondary',
-					children: [],
-				},
-				{
-					label: 'Stock',
-					path: '/inventory/stock',
-					icon: 'stock',
-					paletteColor: 'secondary',
-					children: [],
-				},
-			],
-		},
-		{
-			label: 'Orders',
-			path: '/orders',
-			icon: 'orders',
-			paletteColor: 'tertiary',
-			children: [
-				{
-					label: 'Orders 1',
-					path: '/orders/orders-1',
-					icon: 'orders-1',
-					paletteColor: 'tertiary',
-					children: [],
-				},
-				{
-					label: 'Orders 2',
-					path: '/orders/orders-2',
-					icon: 'orders-2',
-					paletteColor: 'tertiary',
-					children: [],
-				},
-			],
-		},
-		{
-			label: 'Customers',
-			path: '/customers',
-			icon: 'customers',
-			paletteColor: 'danger',
-			children: [
-				{
-					label: 'Customers 1',
-					path: '/customers/customers-1',
-					icon: 'customers-1',
-					paletteColor: 'danger',
-					children: [],
-				},
-				{
-					label: 'Customers 2',
-					path: '/customers/customers',
-				},
-			],
-		},
-	]
+	menuItems = [] as IDesktopMenuItem[]
 
-	user: IPerson = mockPerson
+	user: IPerson = {
+		name: {
+			prefix: 'Miss',
+			first: 'Ada',
+			middle: 'Mary',
+			last: 'Lovelace',
+			suffix: 'Esq.',
+		},
+		contactInfo: {
+			email: '',
+			phoneNumber: '',
+			socialMedia: {
+				github: '',
+				linkedIn: '',
+				instagram: '',
+			},
+		},
+
+		gender: 'Female',
+		dateOfBirth: new Date('08/23/1981'),
+		images: {
+			avatar: 'https://imgur.com/EYzmAVr.png',
+			cover: 'https://imgur.com/cHHHHrh.png',
+		},
+		address: {
+			street: '29324 Applewood Blossom Lane',
+			city: 'Eugene',
+			state: 'Oregon',
+			zip: '90210',
+			country: 'United States',
+		},
+	} as IPerson
 
 	onButtonClick(event: unknown) {
 		console.log('Button clicked', event)

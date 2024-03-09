@@ -1,7 +1,9 @@
-import { Route } from '@angular/router';
-
+import { Route } from '@angular/router'
 
 export const appRoutes: Route[] = [
-
-
-];
+	{ path: '', redirectTo: 'home', pathMatch: 'full' },
+	{
+		path: 'home',
+		component: void 0,
+	},
+]

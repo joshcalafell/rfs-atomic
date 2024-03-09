@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
-import { RouterModule } from '@angular/router'
+import { ActivatedRoute, RouterModule } from '@angular/router'
 import { FooterComponent } from '@rfs-atomic/footer'
 import { HeaderComponent } from '@rfs-atomic/header'
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -12,10 +12,21 @@ import { IPerson } from 'libs/header/src/lib/header/IPerson'
 	standalone: true,
 	imports: [
 		CommonModule,
-		RouterModule,
 		ButtonComponent,
 		HeaderComponent,
 		FooterComponent,
+		RouterModule,
+	],
+
+	providers: [
+		{
+			provide: ActivatedRoute,
+			useValue: {
+				snapshot: {
+					data: { path: 'home' },
+				},
+			},
+		},
 	],
 	selector: 'rfs-atomic-root',
 	templateUrl: './app.component.html',

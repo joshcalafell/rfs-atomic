@@ -1,6 +1,5 @@
 /* eslint-disable @nx/enforce-module-boundaries */
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { ActivatedRoute } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
 import { ButtonComponent } from '@rfs-atomic/button'
 import { ChipComponent } from '@rfs-atomic/chip'
@@ -8,6 +7,8 @@ import { DescriptionListComponent } from '@rfs-atomic/description-list'
 import { HashesComponent } from '@rfs-atomic/hashes'
 import { HeaderComponent } from '@rfs-atomic/header'
 import { UiComponent } from './ui.component'
+import { IPerson } from 'libs/header/src/lib/header/IPerson'
+import { ActivatedRoute } from '@angular/router'
 
 describe('UiComponent', () => {
 	let component: UiComponent
@@ -27,7 +28,11 @@ describe('UiComponent', () => {
 			providers: [
 				{
 					provide: ActivatedRoute,
-					useValue: { snapshot: { url: [{ path: '/primary' }] } },
+					useValue: {
+						snapshot: {
+							data: { path: '/primary' },
+						},
+					},
 				},
 			],
 		}).compileComponents()
@@ -60,7 +65,7 @@ describe('UiComponent', () => {
 			'techno',
 		]
 
-		component.user = {
+		component.user = <IPerson>{
 			name: {
 				prefix: 'Miss',
 				first: 'Ada',
@@ -69,14 +74,15 @@ describe('UiComponent', () => {
 				suffix: 'Esq.',
 			},
 			contactInfo: {
-				email: 'aloveless@someting.com',
-				phoneNumber: '+13334445555',
+				email: '',
+				phoneNumber: '',
 				socialMedia: {
-					github: '#',
-					linkedIn: '#',
-					instagram: '#',
+					github: '',
+					linkedIn: '',
+					instagram: '',
 				},
 			},
+
 			gender: 'Female',
 			dateOfBirth: new Date('08/23/1981'),
 			images: {
@@ -96,22 +102,37 @@ describe('UiComponent', () => {
 			{
 				label: 'Dashboard',
 				path: '/primary',
+				paletteColor: 'primary',
+				icon: 'dashboard',
+				children: [],
 			},
 			{
 				label: 'Inventory',
 				path: '/inventory',
+				paletteColor: 'primary',
+				icon: 'dashboard',
+				children: [],
 			},
 			{
 				label: 'Orders',
 				path: '/orders',
+				paletteColor: 'primary',
+				icon: 'dashboard',
+				children: [],
 			},
 			{
 				label: 'Wishlist',
 				path: '/wishlist',
+				paletteColor: 'primary',
+				icon: 'dashboard',
+				children: [],
 			},
 			{
 				label: 'Settings',
 				path: '/settings',
+				paletteColor: 'primary',
+				icon: 'dashboard',
+				children: [],
 			},
 		]
 

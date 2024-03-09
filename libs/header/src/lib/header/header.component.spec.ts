@@ -5,6 +5,8 @@ import { HeaderComponent } from './header.component'
 import { RouterTestingModule } from '@angular/router/testing'
 
 import { ButtonComponent } from '@rfs-atomic/button'
+import exp = require('constants')
+import { IPerson } from './IPerson'
 import { ActivatedRoute } from '@angular/router'
 
 describe('HeaderComponent', () => {
@@ -24,13 +26,7 @@ describe('HeaderComponent', () => {
 					provide: ActivatedRoute,
 					useValue: {
 						snapshot: {
-							data: {
-								menuItems: {
-									label: 'Dashboard',
-									paletteColor: 'primary',
-									path: '/primary',
-								},
-							},
+							data: { path: 'home' },
 						},
 					},
 				},
@@ -44,7 +40,7 @@ describe('HeaderComponent', () => {
 		// title of the header
 		component.title = 'INVENTORY'
 		// IPeson
-		component.user = {
+		component.user = <IPerson>{
 			name: {
 				prefix: 'Miss',
 				first: 'Ada',
@@ -120,7 +116,7 @@ describe('HeaderComponent', () => {
 	})
 
 	it('should have a user name', () => {
-		expect(component.user.name).toBeTruthy()
+		expect(component.user.name.first).toBeTruthy()
 	})
 
 	it('should have a user email', () => {

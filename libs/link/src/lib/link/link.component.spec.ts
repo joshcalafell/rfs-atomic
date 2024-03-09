@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { RouterTestingModule } from '@angular/router/testing'
 
 import { LinkComponent } from './link.component'
+import { ActivatedRoute } from '@angular/router'
 
 describe('LinkComponent', () => {
 	let component: LinkComponent
@@ -9,12 +10,14 @@ describe('LinkComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [RouterTestingModule],
+			imports: [LinkComponent, RouterTestingModule],
 			providers: [
 				{
-					provide: 'activateRoute',
+					provide: ActivatedRoute,
 					useValue: {
-						snapshot: { url: [{ path: '/primary' }] },
+						snapshot: {
+							data: { path: '/primary' },
+						},
 					},
 				},
 			],

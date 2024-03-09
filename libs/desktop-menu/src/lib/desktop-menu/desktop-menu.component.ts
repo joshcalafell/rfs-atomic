@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { RouterModule } from '@angular/router'
-import { mockDesktopMenuItems } from './IDesktopMenuItem.mock.ts'
-import { IDesktopMenuItem } from './IDesktopMenuItem'
+import { Component, Input } from '@angular/core'
+import { ActivatedRoute, RouterModule } from '@angular/router'
 import { IAtomicLink, LinkComponent } from '@rfs-atomic/link'
 
 @Component({

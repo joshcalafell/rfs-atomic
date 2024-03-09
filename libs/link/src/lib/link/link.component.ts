@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { NavigationEnd, Router, RouterModule } from '@angular/router'
+import { Component, Input } from '@angular/core'
+import { RouterModule } from '@angular/router'
 
 type IAtomicLinkPaletteColor =
 	| 'primary'
@@ -37,20 +37,8 @@ export interface IAtomicLink {
 	templateUrl: './link.component.html',
 	styleUrl: './link.component.scss',
 })
-export class LinkComponent implements OnInit {
-	@Input() link: IAtomicLink = {
-		label: 'Label',
-		path: '',
-		target: '_blank',
-		href: '',
-		color: 'black',
-		download: '',
-		isActive: false,
-		rel: 'noopener noreferrer',
-		onClick: () => {
-			console.log('Link clicked')
-		},
-	}
+export class LinkComponent {
+	@Input() link: IAtomicLink = {} as IAtomicLink
 
 	private _isActive = false
 
@@ -60,18 +48,6 @@ export class LinkComponent implements OnInit {
 
 	public set isActive(value) {
 		this._isActive = value
-	}
-
-	constructor(private router: Router) {
-		this.router.events.subscribe((event) => {
-			if (event instanceof NavigationEnd) {
-				this.isActive = event.url === this.link.path
-			}
-		})
-	}
-
-	ngOnInit() {
-		this.isActive = this.router.url === this.link.path
 	}
 
 	onClick() {

@@ -5,6 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing'
 import { ButtonComponent } from 'libs/button/src' // <== TODO: ???
 import { HeaderComponent } from '@rfs-atomic/header'
 import { FooterComponent } from '@rfs-atomic/footer'
+import { ActivatedRoute, RouterModule } from '@angular/router'
 
 describe('AppComponent', () => {
 	beforeEach(async () => {
@@ -15,6 +16,17 @@ describe('AppComponent', () => {
 				ButtonComponent,
 				HeaderComponent,
 				FooterComponent,
+				RouterModule,
+			],
+			providers: [
+				{
+					provide: ActivatedRoute,
+					useValue: {
+						snapshot: {
+							data: { path: 'home' },
+						},
+					},
+				},
 			],
 		}).compileComponents()
 	})
