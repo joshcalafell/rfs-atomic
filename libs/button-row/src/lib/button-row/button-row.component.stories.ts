@@ -34,6 +34,44 @@ export const Primary: Story = {
 			},
 		],
 	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas.getByText(/Button 3/gi)).toBeTruthy()
+		expect(document.querySelector('.ui-button')).toBeTruthy()
+	},
+}
+
+export const PrimaryArrows: Story = {
+	args: {
+		buttons: [
+			{
+				label: 'Button 1',
+				palleteColor: 'primary',
+				size: 'medium',
+				disabled: false,
+				type: 'animated-arrow',
+			},
+			{
+				label: 'Button 2',
+				palleteColor: 'secondary',
+				size: 'medium',
+				disabled: false,
+				type: 'animated-arrow',
+			},
+			{
+				label: 'Button 3',
+				palleteColor: 'tertiary',
+				size: 'medium',
+				disabled: false,
+				type: 'animated-arrow',
+			},
+		],
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas.getByText(/Button 3/gi)).toBeTruthy()
+		expect(document.querySelector('.animated-arrow')).toBeTruthy()
+	},
 }
 
 export const Small: Story = {
