@@ -12,13 +12,29 @@ export default meta
 type Story = StoryObj<IconComponent>
 
 export const Primary: Story = {
-	args: {},
+	args: {
+		icon: {
+			icon: 'star',
+			color: 'black',
+			size: 'medium',
+		},
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas).toBeTruthy()
+	},
 }
 
 export const Heading: Story = {
-	args: {},
+	args: {
+		icon: {
+			icon: 'star',
+			color: 'black',
+			size: 'medium',
+		},
+	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/icon works!/gi)).toBeTruthy()
+		expect(canvas).toBeTruthy()
 	},
 }

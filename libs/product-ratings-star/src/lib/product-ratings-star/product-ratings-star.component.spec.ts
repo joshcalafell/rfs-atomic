@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ProductRatingsStarComponent } from './product-ratings-star.component'
+import { IconComponent } from '@rfs-atomic/icon'
 
 describe('ProductRatingsStarComponent', () => {
 	let component: ProductRatingsStarComponent
@@ -7,7 +8,7 @@ describe('ProductRatingsStarComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [ProductRatingsStarComponent],
+			imports: [ProductRatingsStarComponent, IconComponent],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(ProductRatingsStarComponent)
