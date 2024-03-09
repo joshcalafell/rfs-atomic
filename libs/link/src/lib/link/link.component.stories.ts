@@ -14,8 +14,8 @@ type Story = StoryObj<LinkComponent>
 export const Primary: Story = {
 	args: {
 		link: {
-			label: 'Label',
-			path: '#',
+			label: 'Home',
+			path: '/home',
 			target: '_blank',
 			href: '#',
 			color: 'black',
@@ -36,8 +36,8 @@ export const Primary: Story = {
 export const Heading: Story = {
 	args: {
 		link: {
-			label: 'Label',
-			path: '#',
+			label: 'Home',
+			path: '/home',
 			target: '_blank',
 			href: '#',
 			color: 'black',

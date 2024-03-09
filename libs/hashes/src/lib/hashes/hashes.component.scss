@@ -2,7 +2,6 @@
 
 $primary: #26bfcd;
 $secondary: #a164d3;
-;
 $tertiary: #333333;
 
 $danger: #dc3545;
@@ -38,78 +37,77 @@ $padding-right-base: 22px;
 $psuedoclass-offset-base: 18px;
 
 @mixin font() {
-  font-family: $font-family;
-  font-weight: $font-weight;
+	font-family: $font-family;
+	font-weight: $font-weight;
 }
 
-ul, li {
-  text-decoration: none;
+ul,
+li {
+	text-decoration: none;
 }
 
 ul.hash-group {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 
+	li.hash-group__item {
+		margin-top: 8px;
+		background-color: #e0e0e0;
 
+		padding: 6px;
+		margin-right: 6px;
+		border-radius: 3px;
+		list-style: none;
 
-  li.hash-group__item {
-    margin-top: 8px;
+		&--primary {
+			background-color: $primary;
+			color: $white;
+		}
 
+		&--secondary {
+			background-color: $secondary;
+			color: $white;
+		}
 
-    padding: 6px;
-    margin-right: 6px;
-    border-radius: 3px;
-    list-style: none;
+		&--tertiary {
+			background-color: $tertiary;
+			color: $white;
+		}
 
-    &--primary {
-      background-color: $primary;
-      color: $white;
-    }
+		&--danger {
+			background-color: $danger;
+			color: $white;
+		}
 
-    &--secondary {
-      background-color: $secondary;
-      color: $white;
-    }
+		&--warning {
+			background-color: $warning;
+			color: $white;
+		}
 
-    &--tertiary {
-      background-color: $tertiary;
-      color: $white;
-    }
+		&--success {
+			background-color: $success;
+			color: $white;
+		}
 
-    &--danger {
-      background-color: $danger;
-      color: $white;
-    }
+		&--info {
+			background-color: $info;
+			color: $dark;
+		}
 
-    &--warning {
-      background-color: $warning;
-      color: $white;
-    }
+		&--light {
+			background-color: $light;
+			color: $dark;
+		}
 
-    &--success {
-      background-color: $success;
-      color: $white;
-    }
+		&--dark {
+			background-color: $dark;
+			color: $light;
+		}
 
-    &--info {
-      background-color: $info;
-      color: $dark;
-    }
-
-    &--light {
-      background-color: $light;
-      color: $dark;
-    }
-
-    &--dark {
-      background-color: $dark;
-      color: $light;
-    }
-
-    span.hash__label {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.932rem;
-      font-weight: 500;
-    }
-  }
+		span.hash__label {
+			font-family: 'Inter', sans-serif;
+			font-size: 0.932rem;
+			font-weight: 500;
+		}
+	}
 }

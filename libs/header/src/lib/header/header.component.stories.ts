@@ -14,12 +14,12 @@ type Story = StoryObj<HeaderComponent>
 
 export const Primary: Story = {
 	args: {
-		title: 'INVENTORY',
+		title: 'Header',
 		menuItems: [
 			{
-				label: 'Dashboard',
+				label: 'Home',
 				paletteColor: 'primary',
-				path: '/primary',
+				path: '/home',
 			},
 			{
 				label: 'Inventory',
@@ -63,12 +63,16 @@ export const Primary: Story = {
 				country: 'United States',
 			},
 		},
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas.getByText(/Home/gi)).toBeTruthy()
 	},
 }
 
 export const Heading: Story = {
 	args: {
-		title: 'INVENTORY',
+		title: 'Header',
 		user: {
 			name: {
 				prefix: 'Miss',
@@ -102,9 +106,9 @@ export const Heading: Story = {
 		},
 		menuItems: [
 			{
-				label: 'Dashboard',
+				label: 'Home',
 				paletteColor: 'primary',
-				path: '/primary',
+				path: '/home',
 			},
 			{
 				label: 'Inventory',
@@ -120,13 +124,13 @@ export const Heading: Story = {
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/INVENTORY/gi)).toBeTruthy()
+		expect(canvas.getByText(/Home/gi)).toBeTruthy()
 	},
 }
 
 export const WithUser: Story = {
 	args: {
-		title: 'INVENTORY',
+		title: 'Header',
 		user: {
 			name: {
 				prefix: 'Miss',
@@ -160,9 +164,9 @@ export const WithUser: Story = {
 		},
 		menuItems: [
 			{
-				label: 'Dashboard',
+				label: 'Home',
 				paletteColor: 'primary',
-				path: '/primary',
+				path: '/home',
 			},
 			{
 				label: 'Inventory',
@@ -178,6 +182,6 @@ export const WithUser: Story = {
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/INVENTORY/gi)).toBeTruthy()
+		expect(canvas.getByText(/Home/gi)).toBeTruthy()
 	},
 }

@@ -134,40 +134,9 @@ export class UiComponent implements OnInit {
 
 	buttons: IAtomicUiButton[] = []
 
-	menuItems = [] as IDesktopMenuItem[]
+	menuItems!: IDesktopMenuItem[]
 
-	user: IPerson = {
-		name: {
-			prefix: 'Miss',
-			first: 'Ada',
-			middle: 'Mary',
-			last: 'Lovelace',
-			suffix: 'Esq.',
-		},
-		contactInfo: {
-			email: '',
-			phoneNumber: '',
-			socialMedia: {
-				github: '',
-				linkedIn: '',
-				instagram: '',
-			},
-		},
-
-		gender: 'Female',
-		dateOfBirth: new Date('08/23/1981'),
-		images: {
-			avatar: 'https://imgur.com/EYzmAVr.png',
-			cover: 'https://imgur.com/cHHHHrh.png',
-		},
-		address: {
-			street: '29324 Applewood Blossom Lane',
-			city: 'Eugene',
-			state: 'Oregon',
-			zip: '90210',
-			country: 'United States',
-		},
-	} as IPerson
+	user!: IPerson
 
 	onButtonClick(event: unknown) {
 		console.log('Button clicked', event)

@@ -16,24 +16,87 @@ export const Primary: Story = {
 		buttons: [
 			{
 				label: 'small',
-				palleteColor: 'primary',
+				palleteColor: 'tertiary',
 				disabled: false,
 				size: 'small',
-				type: 'button',
+				type: 'animated-arrow',
 			},
 			{
 				label: 'medium',
-				palleteColor: 'primary',
+				palleteColor: 'tertiary',
 				disabled: false,
 				size: 'medium',
-				type: 'button',
+				type: 'animated-arrow',
 			},
 			{
 				label: 'large',
-				palleteColor: 'primary',
+				palleteColor: 'tertiary',
 				disabled: false,
 				size: 'large',
-				type: 'button',
+				type: 'animated-arrow',
+			},
+		],
+
+		user: {
+			name: {
+				prefix: 'Miss',
+				first: 'Ada',
+				middle: 'Mary',
+				last: 'Lovelace',
+				suffix: 'Esq.',
+			},
+			contactInfo: {
+				email: 'aloveless@someting.com',
+				phoneNumber: '+13334445555',
+				socialMedia: {
+					github: '#',
+					linkedIn: '#',
+					instagram: '#',
+				},
+			},
+			gender: 'Female',
+			dateOfBirth: new Date('08/23/1981'),
+			images: {
+				avatar: 'https://imgur.com/EYzmAVr.png',
+				cover: 'https://imgur.com/cHHHHrh.png',
+			},
+			address: {
+				street: '29324 Applewood Blossom Lane',
+				city: 'Eugene',
+				state: 'Oregon',
+				zip: '90210',
+				country: 'United States',
+			},
+		},
+		chips: [
+			{
+				label: 'small',
+				color: 'primary',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'primary',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'primary',
+				size: 'large',
+			},
+		],
+		menuItems: [
+			{
+				label: 'Home',
+				path: '/home',
+			},
+			{
+				label: 'About',
+				path: '/about',
+			},
+			{
+				label: 'Contact',
+				path: '/contact',
 			},
 		],
 	},
@@ -49,24 +112,87 @@ export const SecondaryButtons: Story = {
 		buttons: [
 			{
 				label: 'small',
-				palleteColor: 'secondary',
+				palleteColor: 'tertiary',
 				disabled: false,
 				size: 'small',
 				type: 'animated-arrow',
 			},
 			{
 				label: 'medium',
-				palleteColor: 'secondary',
+				palleteColor: 'tertiary',
 				disabled: false,
 				size: 'medium',
 				type: 'animated-arrow',
 			},
 			{
 				label: 'large',
-				palleteColor: 'secondary',
+				palleteColor: 'tertiary',
 				disabled: false,
 				size: 'large',
 				type: 'animated-arrow',
+			},
+		],
+
+		user: {
+			name: {
+				prefix: 'Miss',
+				first: 'Ada',
+				middle: 'Mary',
+				last: 'Lovelace',
+				suffix: 'Esq.',
+			},
+			contactInfo: {
+				email: 'aloveless@someting.com',
+				phoneNumber: '+13334445555',
+				socialMedia: {
+					github: '#',
+					linkedIn: '#',
+					instagram: '#',
+				},
+			},
+			gender: 'Female',
+			dateOfBirth: new Date('08/23/1981'),
+			images: {
+				avatar: 'https://imgur.com/EYzmAVr.png',
+				cover: 'https://imgur.com/cHHHHrh.png',
+			},
+			address: {
+				street: '29324 Applewood Blossom Lane',
+				city: 'Eugene',
+				state: 'Oregon',
+				zip: '90210',
+				country: 'United States',
+			},
+		},
+		chips: [
+			{
+				label: 'small',
+				color: 'primary',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'primary',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'primary',
+				size: 'large',
+			},
+		],
+		menuItems: [
+			{
+				label: 'Home',
+				path: '/home',
+			},
+			{
+				label: 'About',
+				path: '/about',
+			},
+			{
+				label: 'Contact',
+				path: '/contact',
 			},
 		],
 	},
@@ -100,6 +226,69 @@ export const TertiaryButtons: Story = {
 				disabled: false,
 				size: 'large',
 				type: 'animated-arrow',
+			},
+		],
+
+		user: {
+			name: {
+				prefix: 'Miss',
+				first: 'Ada',
+				middle: 'Mary',
+				last: 'Lovelace',
+				suffix: 'Esq.',
+			},
+			contactInfo: {
+				email: 'aloveless@someting.com',
+				phoneNumber: '+13334445555',
+				socialMedia: {
+					github: '#',
+					linkedIn: '#',
+					instagram: '#',
+				},
+			},
+			gender: 'Female',
+			dateOfBirth: new Date('08/23/1981'),
+			images: {
+				avatar: 'https://imgur.com/EYzmAVr.png',
+				cover: 'https://imgur.com/cHHHHrh.png',
+			},
+			address: {
+				street: '29324 Applewood Blossom Lane',
+				city: 'Eugene',
+				state: 'Oregon',
+				zip: '90210',
+				country: 'United States',
+			},
+		},
+		chips: [
+			{
+				label: 'small',
+				color: 'primary',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'primary',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'primary',
+				size: 'large',
+			},
+		],
+		menuItems: [
+			{
+				label: 'Home',
+				path: '/home',
+			},
+			{
+				label: 'About',
+				path: '/about',
+			},
+			{
+				label: 'Contact',
+				path: '/contact',
 			},
 		],
 	},

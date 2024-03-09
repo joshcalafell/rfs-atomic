@@ -26,22 +26,22 @@ a {
 	font-family: 'Inter', sans-serif;
 	font-weight: 400;
 	transition: all 0.333s ease-in-out;
-	color: white !important;
+	color: white;
 
 	&.active {
-		color: $primary !important;
+		color: $primary;
 	}
 
 	&.primary {
-		color: var(--primary-color);
+		color: $primary;
 	}
 
 	&:secondary {
-		color: var(--secondary-color);
+		color: $secondary;
 	}
 
 	&.tertiary {
-		color: var(--tertiary-color);
+		color: $tertiary;
 	}
 
 	&.small {
@@ -54,54 +54,26 @@ a {
 
 	&.large {
 		font-size: $font-size-large;
-	}
-
-	&.primary {
-		color: var(--primary-color);
-	}
-
-	&.secondary {
-		color: var(--secondary-color);
 	}
 
 	&.success {
-		color: var(--success-color);
+		color: $success;
 	}
 
 	&.danger {
-		color: var(--danger-color);
+		color: $danger;
 	}
 
 	&.warning {
-		color: var(--warning-color);
-	}
-
-	&.info {
-		color: var(--info-color);
+		color: $warning;
 	}
 
 	&.light {
-		color: var(--light-color);
+		color: $light;
 	}
 
 	&.dark {
-		color: var(--dark-color);
-	}
-
-	&.disabled {
-		color: var(--disabled-color);
-	}
-
-	&.small {
-		font-size: $font-size-small;
-	}
-
-	&.medium {
-		font-size: $font-size-medium;
-	}
-
-	&.large {
-		font-size: $font-size-large;
+		color: $dark;
 	}
 
 	span.ui-link-text {

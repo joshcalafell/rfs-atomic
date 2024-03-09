@@ -30,7 +30,7 @@ describe('UiComponent', () => {
 					provide: ActivatedRoute,
 					useValue: {
 						snapshot: {
-							data: { path: '/primary' },
+							data: { path: '/home' },
 						},
 					},
 				},
@@ -39,6 +39,7 @@ describe('UiComponent', () => {
 
 		fixture = TestBed.createComponent(UiComponent)
 		component = fixture.componentInstance
+
 		component.button = {
 			label: 'Click me',
 			palleteColor: 'primary',
@@ -46,6 +47,7 @@ describe('UiComponent', () => {
 			size: 'medium',
 			type: 'animated-arrow',
 		}
+
 		component.hashes = [
 			'rock',
 			'pop',
@@ -98,41 +100,156 @@ describe('UiComponent', () => {
 			},
 		}
 
+		component.chips = [
+			{
+				label: 'small',
+				color: 'primary',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'primary',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'primary',
+				size: 'large',
+			},
+			{
+				label: 'small',
+				color: 'secondary',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'secondary',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'secondary',
+				size: 'large',
+			},
+			{
+				label: 'small',
+				color: 'tertiary',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'tertiary',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'tertiary',
+				size: 'large',
+			},
+			{
+				label: 'small',
+				color: 'danger',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'danger',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'danger',
+				size: 'large',
+			},
+			{
+				label: 'small',
+				color: 'warning',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'warning',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'warning',
+				size: 'large',
+			},
+			{
+				label: 'small',
+				color: 'success',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'success',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'success',
+				size: 'large',
+			},
+			{
+				label: 'small',
+				color: 'info',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'info',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'info',
+				size: 'large',
+			},
+			{
+				label: 'small',
+				color: 'light',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'light',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'light',
+				size: 'large',
+			},
+			{
+				label: 'small',
+				color: 'dark',
+				size: 'small',
+			},
+			{
+				label: 'medium',
+				color: 'dark',
+				size: 'medium',
+			},
+			{
+				label: 'large',
+				color: 'dark',
+				size: 'large',
+			},
+		]
+
 		component.menuItems = [
 			{
-				label: 'Dashboard',
-				path: '/primary',
-				paletteColor: 'primary',
-				icon: 'dashboard',
-				children: [],
+				label: 'Home',
+				path: '/home',
 			},
 			{
-				label: 'Inventory',
-				path: '/inventory',
-				paletteColor: 'primary',
-				icon: 'dashboard',
-				children: [],
+				label: 'About',
+				path: '/about',
 			},
 			{
-				label: 'Orders',
-				path: '/orders',
-				paletteColor: 'primary',
-				icon: 'dashboard',
-				children: [],
-			},
-			{
-				label: 'Wishlist',
-				path: '/wishlist',
-				paletteColor: 'primary',
-				icon: 'dashboard',
-				children: [],
-			},
-			{
-				label: 'Settings',
-				path: '/settings',
-				paletteColor: 'primary',
-				icon: 'dashboard',
-				children: [],
+				label: 'Contact',
+				path: '/contact',
 			},
 		]
 

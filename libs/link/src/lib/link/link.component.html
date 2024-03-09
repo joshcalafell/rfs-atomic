@@ -1,6 +1,12 @@
 <a
 	class="ui-link"
-	href="#"
+	(click)="onClick()"
+	[routerLink]="link.path"
+	[routerLinkActive]="'active'"
+	[routerLinkActiveOptions]="{ exact: true }"
+	[href]="link.href"
+	[target]="link.target"
+	[download]="link.download"
 	[ngClass]="[
 		isActive ? 'active' : '',
 		link.palleteColor === 'primary' ? 'primary' : '',

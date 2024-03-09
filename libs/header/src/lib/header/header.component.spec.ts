@@ -21,16 +21,6 @@ describe('HeaderComponent', () => {
 				HeaderComponent,
 				ButtonComponent,
 			],
-			providers: [
-				{
-					provide: ActivatedRoute,
-					useValue: {
-						snapshot: {
-							data: { path: 'home' },
-						},
-					},
-				},
-			],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(HeaderComponent)
@@ -38,7 +28,7 @@ describe('HeaderComponent', () => {
 		component = fixture.componentInstance
 
 		// title of the header
-		component.title = 'INVENTORY'
+		component.title = 'Header Title'
 		// IPeson
 		component.user = <IPerson>{
 			name: {
@@ -74,9 +64,9 @@ describe('HeaderComponent', () => {
 		// IDesktopMenuItem
 		component.menuItems = [
 			{
-				label: 'Dashboard',
+				label: 'Home',
 				paletteColor: 'primary',
-				path: '/primary',
+				path: '/home',
 			},
 			{
 				label: 'Inventory',
@@ -110,8 +100,8 @@ describe('HeaderComponent', () => {
 		expect(component.menuItems).toBeTruthy()
 	})
 
-	it('should have a link to Dashboard', () => {
-		const link = component.menuItems.find((l) => l.label === 'Dashboard')
+	it('should have a link to Home', () => {
+		const link = component.menuItems?.find((l) => l.label === 'Home')
 		expect(link).toBeTruthy()
 	})
 
