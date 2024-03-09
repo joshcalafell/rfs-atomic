@@ -38,19 +38,7 @@ export interface IAtomicLink {
 	styleUrl: './link.component.scss',
 })
 export class LinkComponent implements OnInit {
-	@Input() link: IAtomicLink = {
-		label: 'Home',
-		path: '/home',
-		target: '_blank',
-		href: '/home',
-		color: 'black',
-		download: '',
-		isActive: false,
-		rel: 'noopener noreferrer',
-		onClick: () => {
-			console.log('Link clicked')
-		},
-	}
+	@Input() link: IAtomicLink = {} as IAtomicLink
 
 	private _isActive = false
 

@@ -1,1 +1,12 @@
-<p>product-ratings works!</p>
+<div class="stars">
+	<div class="ui-star">
+		<div class="ui-star--container">
+			<rfs-atomic-product-ratings-star
+				[icon]="{ icon: 'star', size: 'medium' }"
+			></rfs-atomic-product-ratings-star>
+		</div>
+	</div>
+
+	<span class="reviews">({{ product.reviews }})</span>
+	<a class="reviews-link" href="#reviews">See all reviews</a>
+</div>

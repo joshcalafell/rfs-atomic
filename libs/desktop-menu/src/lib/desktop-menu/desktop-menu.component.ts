@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common'
 import { Component, Input } from '@angular/core'
 import { ActivatedRoute, RouterModule } from '@angular/router'
 import { IAtomicLink, LinkComponent } from '@rfs-atomic/link'
+import { IDesktopMenuItem } from './IDesktopMenuItem'
 
 @Component({
 	selector: 'rfs-atomic-desktop-menu',
@@ -12,5 +13,5 @@ import { IAtomicLink, LinkComponent } from '@rfs-atomic/link'
 	styleUrl: './desktop-menu.component.scss',
 })
 export class DesktopMenuComponent {
-	@Input() menuItems: IAtomicLink[] = [] as IAtomicLink[]
+	@Input() menuItems: IDesktopMenuItem[] = []
 }

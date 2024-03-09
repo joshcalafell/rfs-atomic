@@ -23,6 +23,7 @@
 			"@rfs-atomic/footer": ["libs/footer/src/index.ts"],
 			"@rfs-atomic/hashes": ["libs/hashes/src/index.ts"],
 			"@rfs-atomic/header": ["libs/header/src/index.ts"],
+			"@rfs-atomic/icon": ["libs/icon/src/index.ts"],
 			"@rfs-atomic/link": ["libs/link/src/index.ts"],
 			"@rfs-atomic/product-card": ["libs/product-card/src/index.ts"],
 			"@rfs-atomic/product-card-header": [
@@ -32,6 +33,10 @@
 				"libs/product-description-list/src/index.ts"
 			],
 			"@rfs-atomic/product-ratings": ["libs/product-ratings/src/index.ts"],
+			"@rfs-atomic/product-ratings-star": [
+				"libs/product-ratings-star/src/index.ts"
+			],
+			"@rfs-atomic/products": ["libs/products/src/index.ts"],
 			"@rfs-atomic/sort-table": ["libs/sort-table/src/index.ts"],
 			"@rfs-atomic/ui": ["libs/ui/src/index.ts"]
 		}
