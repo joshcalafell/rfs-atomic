@@ -1,1 +1,56 @@
-<p>product-card works!</p>
+<div class="card" *ngIf="product">
+	<div class="card-content">
+		<div class="flex-between">
+			<div class="card-header">
+				<h2>{{ product.entity.title }}</h2>
+
+				<rfs-atomic-chip
+					[label]="
+						product.stock > 0 ? '$' + product.entity.price : 'Out of Stock'
+					"
+					[color]="product.stock > 0 ? 'tertiary' : 'secondary'"
+				></rfs-atomic-chip>
+
+				<!-- Chip component -->
+			</div>
+			<div class="product-description">"{{ product.entity.description }}"</div>
+
+			<div class="card-image">
+				<img [src]="cardImage" alt="Candle Image" />
+			</div>
+
+			<div class="row flex-row-centered">
+				<div class="col flex-column-centered">
+					<ul>
+						<li>Thing 1</li>
+						<li>Thing 2</li>
+						<li>Thing 3</li>
+					</ul>
+				</div>
+				<div class="col spacer"></div>
+			</div>
+			<div class="flex-row stars">
+				<div class="ui-star">
+					<div class="ui-star--container">
+						<rfs-atomic-product-ratings-star
+							[star]="{ icon: 'star', size: 'medium' }"
+						></rfs-atomic-product-ratings-star>
+					</div>
+				</div>
+				<span class="reviews">({{ product.reviews }})</span>
+				<a class="reviews-link" href="#reviews">See all reviews</a>
+			</div>
+			<div class="ui-buton-row-container">
+				<rfs-atomic-button-row
+					[buttons]="[
+						{ label: 'Add to Cart', palleteColor: 'primary', size: 'medium' },
+						{ label: 'Wishlist', palleteColor: 'secondary', size: 'medium' }
+					]"
+				></rfs-atomic-button-row>
+			</div>
+			<div class="card-tags" *ngIf="product?.tags">
+				<rfs-atomic-hashes [hashes]="product.tags"></rfs-atomic-hashes>
+			</div>
+		</div>
+	</div>
+</div>

@@ -10,5 +10,5 @@ import { IconComponent } from '@rfs-atomic/icon'
 	styleUrl: './product-ratings-star.component.scss',
 })
 export class ProductRatingsStarComponent {
-	@Input() icon!: { icon: string; size: string; color?: string | undefined }
+	@Input() star!: { icon: string; size: string; color?: string | undefined }
 }

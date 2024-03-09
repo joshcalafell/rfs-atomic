@@ -16,6 +16,7 @@
 		"baseUrl": ".",
 		"paths": {
 			"@rfs-atomic/button": ["libs/button/src/index.ts"],
+			"@rfs-atomic/button-row": ["libs/button-row/src/index.ts"],
 			"@rfs-atomic/chip": ["libs/chip/src/index.ts"],
 			"@rfs-atomic/description-list": ["libs/description-list/src/index.ts"],
 			"@rfs-atomic/desktop-menu": ["libs/desktop-menu/src/index.ts"],

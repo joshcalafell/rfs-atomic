@@ -4,6 +4,21 @@ import { ProductRatingsComponent } from './product-ratings.component'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
 
+const buttons = [
+	{
+		label: 'Cart',
+		palleteColor: 'primary',
+		size: 'medium',
+		disabled: false,
+	},
+	{
+		label: 'Wishlist',
+		palleteColor: 'secondary',
+		size: 'medium',
+		disabled: false,
+	},
+]
+
 const meta: Meta<ProductRatingsComponent> = {
 	component: ProductRatingsComponent,
 	title: 'ProductRatingsComponent',
@@ -13,14 +28,40 @@ type Story = StoryObj<ProductRatingsComponent>
 
 export const Primary: Story = {
 	args: {
+		stars: [
+			{
+				icon: 'star',
+				color: 'black',
+				size: 'medium',
+			},
+		],
 		product: {
-			id: '1',
-			name: 'Cedarwood & Vanilla',
-			description: 'A warm, woody scent with a hint of sweetness.',
-			price: 24.99,
-			sku: 'C1',
-			rating: 5,
-			reviews: 100,
+			entity: {
+				id: '2',
+				name: 'Cinnamon & Clove',
+				description: 'A warm, spicy scent with a hint of sweetness.',
+				price: 24.99,
+				sku: 'C2',
+			},
+			buttons,
+			brand: 'RFS',
+			color: 'Brown',
+			material: 'Soy Wax',
+			dimensions: '3.5" x 3.5" x 3.5"',
+			weight: '12 oz',
+			fragrance: 'Cinnamon & Clove',
+			size: '3.5" x 3.5" x 3.5"',
+			burnTime: '60 hours',
+			scent: 'Spicy, Sweet',
+			type: 'Candle',
+			shape: 'Cylinder',
+			wickType: 'Cotton',
+			wickMaterial: 'Cotton',
+			category: 'Candles',
+			subCategory: 'Candle',
+			tags: ['Cinnamon', 'Clove', 'Soy Wax', 'Brown', 'Candle'],
+			rating: 2.5,
+			reviews: 23,
 			stock: 100,
 			isOnSale: false,
 			saleStart: '',
@@ -38,6 +79,23 @@ export const Primary: Story = {
 			isSoldOut: false,
 			isBackOrder: false,
 			isPreOrder: false,
+			isGift: false,
+			isWishListed: false,
+			cartQty: 1,
+			image:
+				'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cinnamon-clove-candle.jpg',
+
+			subscription: {
+				type: 'One-Time Purchase',
+				isRecurring: true,
+				entity: {
+					id: '2',
+					name: 'Cinnamon & Clove',
+					description: 'A warm, spicy scent with a hint of sweetness.',
+					price: 24.99,
+					sku: 'C2',
+				},
+			},
 		},
 	},
 }
@@ -45,13 +103,32 @@ export const Primary: Story = {
 export const Heading: Story = {
 	args: {
 		product: {
-			id: '1',
-			name: 'Cedarwood & Vanilla',
-			description: 'A warm, woody scent with a hint of sweetness.',
-			price: 24.99,
-			sku: 'C1',
-			rating: 5,
-			reviews: 100,
+			entity: {
+				id: '2',
+				name: 'Cinnamon & Clove',
+				description: 'A warm, spicy scent with a hint of sweetness.',
+				price: 24.99,
+				sku: 'C2',
+			},
+			buttons,
+			brand: 'RFS',
+			color: 'Brown',
+			material: 'Soy Wax',
+			dimensions: '3.5" x 3.5" x 3.5"',
+			weight: '12 oz',
+			fragrance: 'Cinnamon & Clove',
+			size: '3.5" x 3.5" x 3.5"',
+			burnTime: '60 hours',
+			scent: 'Spicy, Sweet',
+			type: 'Candle',
+			shape: 'Cylinder',
+			wickType: 'Cotton',
+			wickMaterial: 'Cotton',
+			category: 'Candles',
+			subCategory: 'Candle',
+			tags: ['Cinnamon', 'Clove', 'Soy Wax', 'Brown', 'Candle'],
+			rating: 2.5,
+			reviews: 23,
 			stock: 100,
 			isOnSale: false,
 			saleStart: '',
@@ -69,6 +146,23 @@ export const Heading: Story = {
 			isSoldOut: false,
 			isBackOrder: false,
 			isPreOrder: false,
+			isGift: false,
+			isWishListed: false,
+			cartQty: 1,
+			image:
+				'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cinnamon-clove-candle.jpg',
+
+			subscription: {
+				type: 'One-Time Purchase',
+				isRecurring: true,
+				entity: {
+					id: '2',
+					name: 'Cinnamon & Clove',
+					description: 'A warm, spicy scent with a hint of sweetness.',
+					price: 24.99,
+					sku: 'C2',
+				},
+			},
 		},
 	},
 	play: async ({ canvasElement }) => {

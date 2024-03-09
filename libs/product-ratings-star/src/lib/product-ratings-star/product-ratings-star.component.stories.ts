@@ -3,6 +3,7 @@ import { ProductRatingsStarComponent } from './product-ratings-star.component'
 
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
+import * as exp from 'constants'
 
 const meta: Meta<ProductRatingsStarComponent> = {
 	component: ProductRatingsStarComponent,
@@ -12,13 +13,33 @@ export default meta
 type Story = StoryObj<ProductRatingsStarComponent>
 
 export const Primary: Story = {
-	args: {},
+	args: {
+		star: {
+			icon: 'star',
+			color: 'black',
+			size: 'medium',
+		},
+	},
+	play: async ({ comp }) => {
+		const { getByTestId } = within(comp.$el)
+		const star = getByTestId('star')
+		expect(star).toHaveStyle('color: black')
+		expect(star).toHaveStyle('font-size: 1.5rem')
+	},
 }
 
-export const Heading: Story = {
-	args: {},
-	play: async ({ canvasElement }) => {
-		const canvas = within(canvasElement)
-		expect(canvas.getByText(/product-ratings-star works!/gi)).toBeTruthy()
+export const BlackMediumStar: Story = {
+	args: {
+		star: {
+			icon: 'star',
+			color: 'black',
+			size: 'medium',
+		},
+	},
+	play: async ({ comp }) => {
+		const { getByTestId } = within(comp.$el)
+		const star = getByTestId('star')
+		expect(star).toHaveStyle('color: black')
+		expect(star).toHaveStyle('font-size: 1.5rem')
 	},
 }

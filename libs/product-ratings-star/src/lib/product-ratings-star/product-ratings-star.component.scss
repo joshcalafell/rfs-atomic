@@ -1,4 +1,7 @@
-.ui-icon {
-	text-align: left;
-	color: #333333;
+$primary-color: #a164d3;
+$primary-color-border: #aaa1df;
+
+.rating-stars {
+	display: flex;
+	margin-bottom: 16px;
 }

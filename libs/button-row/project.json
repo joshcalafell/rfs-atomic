@@ -1,7 +1,7 @@
 {
-	"name": "products",
+	"name": "button-row",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
-	"sourceRoot": "libs/products/src",
+	"sourceRoot": "libs/button-row/src",
 	"prefix": "rfs-atomic",
 	"tags": [],
 	"projectType": "library",
@@ -10,8 +10,8 @@
 			"executor": "@storybook/angular:start-storybook",
 			"options": {
 				"port": 4400,
-				"configDir": "libs/products/.storybook",
-				"browserTarget": "products:build-storybook",
+				"configDir": "libs/button-row/.storybook",
+				"browserTarget": "button-row:build-storybook",
 				"compodoc": false
 			},
 			"configurations": {
@@ -24,9 +24,9 @@
 			"executor": "@storybook/angular:build-storybook",
 			"outputs": ["{options.outputDir}"],
 			"options": {
-				"outputDir": "dist/storybook/products",
-				"configDir": "libs/products/.storybook",
-				"browserTarget": "products:build-storybook",
+				"outputDir": "dist/storybook/button-row",
+				"configDir": "libs/button-row/.storybook",
+				"browserTarget": "button-row:build-storybook",
 				"compodoc": false
 			},
 			"configurations": {
@@ -38,18 +38,18 @@
 		"test-storybook": {
 			"executor": "nx:run-commands",
 			"options": {
-				"command": "test-storybook -c libs/products/.storybook --url=http://localhost:4400"
+				"command": "test-storybook -c libs/button-row/.storybook --url=http://localhost:4400"
 			}
 		},
 		"static-storybook": {
 			"executor": "@nx/web:file-server",
 			"options": {
-				"buildTarget": "products:build-storybook",
-				"staticFilePath": "dist/storybook/products"
+				"buildTarget": "button-row:build-storybook",
+				"staticFilePath": "dist/storybook/button-row"
 			},
 			"configurations": {
 				"ci": {
-					"buildTarget": "products:build-storybook:ci"
+					"buildTarget": "button-row:build-storybook:ci"
 				}
 			}
 		}

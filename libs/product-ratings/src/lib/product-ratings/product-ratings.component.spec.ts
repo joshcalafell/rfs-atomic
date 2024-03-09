@@ -2,6 +2,21 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ProductRatingsComponent } from './product-ratings.component'
 import { ProductRatingsStarComponent } from '@rfs-atomic/product-ratings-star'
 
+const buttons = [
+	{
+		label: 'Cart',
+		palleteColor: 'primary',
+		size: 'medium',
+		disabled: false,
+	},
+	{
+		label: 'Wishlist',
+		palleteColor: 'secondary',
+		size: 'medium',
+		disabled: false,
+	},
+]
+
 describe('ProductRatingsComponent', () => {
 	let component: ProductRatingsComponent
 	let fixture: ComponentFixture<ProductRatingsComponent>
@@ -14,13 +29,32 @@ describe('ProductRatingsComponent', () => {
 		fixture = TestBed.createComponent(ProductRatingsComponent)
 		component = fixture.componentInstance
 		component.product = {
-			id: '1',
-			name: 'Cedarwood & Vanilla',
-			description: 'A warm, woody scent with a hint of sweetness.',
-			price: 24.99,
-			sku: 'C1',
-			rating: 5,
-			reviews: 100,
+			entity: {
+				id: '2',
+				name: 'Cinnamon & Clove',
+				description: 'A warm, spicy scent with a hint of sweetness.',
+				price: 24.99,
+				sku: 'C2',
+			},
+			buttons,
+			brand: 'RFS',
+			color: 'Brown',
+			material: 'Soy Wax',
+			dimensions: '3.5" x 3.5" x 3.5"',
+			weight: '12 oz',
+			fragrance: 'Cinnamon & Clove',
+			size: '3.5" x 3.5" x 3.5"',
+			burnTime: '60 hours',
+			scent: 'Spicy, Sweet',
+			type: 'Candle',
+			shape: 'Cylinder',
+			wickType: 'Cotton',
+			wickMaterial: 'Cotton',
+			category: 'Candles',
+			subCategory: 'Candle',
+			tags: ['Cinnamon', 'Clove', 'Soy Wax', 'Brown', 'Candle'],
+			rating: 2.5,
+			reviews: 23,
 			stock: 100,
 			isOnSale: false,
 			saleStart: '',
@@ -38,6 +72,23 @@ describe('ProductRatingsComponent', () => {
 			isSoldOut: false,
 			isBackOrder: false,
 			isPreOrder: false,
+			isGift: false,
+			isWishListed: false,
+			cartQty: 1,
+			image:
+				'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cinnamon-clove-candle.jpg',
+
+			subscription: {
+				type: 'One-Time Purchase',
+				isRecurring: true,
+				entity: {
+					id: '2',
+					name: 'Cinnamon & Clove',
+					description: 'A warm, spicy scent with a hint of sweetness.',
+					price: 24.99,
+					sku: 'C2',
+				},
+			},
 		}
 
 		fixture.detectChanges()

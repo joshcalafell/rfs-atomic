@@ -13,7 +13,7 @@ describe('ProductRatingsStarComponent', () => {
 		fixture = TestBed.createComponent(ProductRatingsStarComponent)
 		component = fixture.componentInstance
 
-		component.icon = {
+		component.star = {
 			icon: 'star',
 			color: 'black',
 			size: 'medium',

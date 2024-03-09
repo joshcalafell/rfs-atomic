@@ -1,1 +1,13 @@
-<p>products works!</p>
+<div class="product-list" *ngIf="products && products?.length">
+	<div *ngFor="let product of products" class="product">
+		<rfs-atomic-product-card
+			class="product-card"
+			[product]="product"
+			(addToCartEmitter)="addToCart(product)"
+		></rfs-atomic-product-card>
+	</div>
+</div>
+
+<div *ngIf="!products || !products?.length">
+	<p>No products found</p>
+</div>
