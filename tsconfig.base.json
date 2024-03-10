@@ -20,6 +20,7 @@
 			"@rfs-atomic/chip": ["libs/chip/src/index.ts"],
 			"@rfs-atomic/description-list": ["libs/description-list/src/index.ts"],
 			"@rfs-atomic/desktop-menu": ["libs/desktop-menu/src/index.ts"],
+			"@rfs-atomic/detail-group": ["libs/detail-group/src/index.ts"],
 			"@rfs-atomic/drag-drop": ["libs/drag-drop/src/index.ts"],
 			"@rfs-atomic/footer": ["libs/footer/src/index.ts"],
 			"@rfs-atomic/hashes": ["libs/hashes/src/index.ts"],

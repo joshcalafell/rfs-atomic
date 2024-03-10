@@ -48,6 +48,70 @@ describe('UiComponent', () => {
 			type: 'animated-arrow',
 		}
 
+		component.product = {
+			entity: {
+				id: '2',
+				currency: 'USD',
+				name: 'Cinnamon & Clove',
+				description: 'A warm, spicy scent with a hint of sweetness.',
+				price: 24.99,
+				sku: 'C2',
+			},
+			brand: 'RFS',
+			color: 'Brown',
+			image:
+				'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cinnamon-clove-candle.jpg',
+			buttons: [
+				{
+					label: 'Cart',
+					palleteColor: 'primary',
+					size: 'medium',
+					disabled: false,
+				},
+				{
+					label: 'Wishlist',
+					palleteColor: 'secondary',
+					size: 'medium',
+					disabled: false,
+				},
+			],
+
+			material: 'Soy Wax',
+			dimensions: '3.5" x 3.5" x 3.5"',
+			weight: '12 oz',
+			fragrance: 'Cinnamon & Clove',
+			size: '3.5" x 3.5" x 3.5"',
+			burnTime: '60 hours',
+			scent: 'Spicy, Sweet',
+
+			type: 'Candle',
+			shape: 'Cylinder',
+			wickType: 'Cotton',
+			wickMaterial: 'Cotton',
+			category: 'Candles',
+			subCategory: 'Candle',
+			tags: ['Cinnamon', 'Clove', 'Soy Wax', 'Brown', 'Candle'],
+			rating: 2.5,
+			reviews: 23,
+			stock: 100,
+			isOnSale: false,
+			saleStart: '',
+			saleEnd: '',
+			isFeatured: false,
+			isTopSeller: false,
+			isNew: false,
+			isBestSeller: false,
+			isBackOrder: false,
+			isPreOrder: false,
+			isSale: false,
+			isAvailable: true,
+			isOutOfStock: false,
+			isComingSoon: false,
+			isDiscontinued: false,
+			isLimited: false,
+			isSoldOut: false,
+		}
+
 		component.hashes = [
 			'rock',
 			'pop',

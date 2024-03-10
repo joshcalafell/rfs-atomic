@@ -9,6 +9,7 @@ import {
 
 import { HashesComponent } from '@rfs-atomic/hashes'
 import { HeaderComponent } from '@rfs-atomic/header'
+import { ProductDescriptionListComponent } from '@rfs-atomic/product-description-list'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { IDesktopMenuItem } from 'libs/desktop-menu/src/lib/desktop-menu/IDesktopMenuItem'
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -24,6 +25,7 @@ import { IPerson } from 'libs/header/src/lib/header/IPerson'
 		DescriptionListComponent,
 		ChipComponent,
 		HeaderComponent,
+		ProductDescriptionListComponent,
 	],
 	templateUrl: './ui.component.html',
 	styleUrl: './ui.component.scss',
@@ -137,6 +139,70 @@ export class UiComponent implements OnInit {
 	menuItems!: IDesktopMenuItem[]
 
 	user!: IPerson
+
+	product: any = {
+		entity: {
+			id: '2',
+			currency: 'USD',
+			name: 'Cinnamon & Clove',
+			description: 'A warm, spicy scent with a hint of sweetness.',
+			price: 24.99,
+			sku: 'C2',
+		},
+		brand: 'RFS',
+		color: 'Brown',
+		image:
+			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cinnamon-clove-candle.jpg',
+		buttons: [
+			{
+				label: 'Cart',
+				palleteColor: 'primary',
+				size: 'medium',
+				disabled: false,
+			},
+			{
+				label: 'Wishlist',
+				palleteColor: 'secondary',
+				size: 'medium',
+				disabled: false,
+			},
+		],
+
+		material: 'Soy Wax',
+		dimensions: '3.5" x 3.5" x 3.5"',
+		weight: '12 oz',
+		fragrance: 'Cinnamon & Clove',
+		size: '3.5" x 3.5" x 3.5"',
+		burnTime: '60 hours',
+		scent: 'Spicy, Sweet',
+
+		type: 'Candle',
+		shape: 'Cylinder',
+		wickType: 'Cotton',
+		wickMaterial: 'Cotton',
+		category: 'Candles',
+		subCategory: 'Candle',
+		tags: ['Cinnamon', 'Clove', 'Soy Wax', 'Brown', 'Candle'],
+		rating: 2.5,
+		reviews: 23,
+		stock: 100,
+		isOnSale: false,
+		saleStart: '',
+		saleEnd: '',
+		isFeatured: false,
+		isTopSeller: false,
+		isNew: false,
+		isBestSeller: false,
+		isBackOrder: false,
+		isPreOrder: false,
+		isSale: false,
+		isAvailable: true,
+		isOutOfStock: false,
+		isComingSoon: false,
+		isDiscontinued: false,
+		isLimited: false,
+		isSoldOut: false,
+	}
 
 	onButtonClick(event: unknown) {
 		console.log('Button clicked', event)
