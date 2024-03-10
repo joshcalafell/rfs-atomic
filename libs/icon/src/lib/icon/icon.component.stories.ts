@@ -21,11 +21,11 @@ export const Primary: Story = {
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas).toBeTruthy()
+		expect(canvas.getByText(/product-description-list works!/gi)).toBeTruthy()
 	},
 }
 
-export const Heading: Story = {
+export const star: Story = {
 	args: {
 		icon: {
 			icon: 'star',
@@ -35,6 +35,20 @@ export const Heading: Story = {
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas).toBeTruthy()
+		expect(canvas.getByText(/★/gi)).toBeTruthy()
+	},
+}
+
+export const EmptyStar: Story = {
+	args: {
+		icon: {
+			icon: 'empty-star',
+			color: 'black',
+			size: 'medium',
+		},
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas.getByText(/☆/gi)).toBeTruthy()
 	},
 }

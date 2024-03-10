@@ -6,8 +6,12 @@ import { CommonModule } from '@angular/common'
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: './icon.component.html',
-	styleUrl: './icon.component.css',
+	styleUrl: './icon.component.scss',
 })
 export class IconComponent {
-	@Input() icon!: { icon: string; size: string; color?: string | undefined }
+	@Input() icon = {
+		icon: 'star',
+		color: 'black',
+		size: 'medium',
+	}
 }
