@@ -28,13 +28,6 @@ type Story = StoryObj<ProductRatingsComponent>
 
 export const Primary: Story = {
 	args: {
-		stars: [
-			{
-				icon: 'star',
-				color: 'black',
-				size: 'medium',
-			},
-		],
 		product: {
 			entity: {
 				id: '2',
@@ -60,8 +53,8 @@ export const Primary: Story = {
 			category: 'Candles',
 			subCategory: 'Candle',
 			tags: ['Cinnamon', 'Clove', 'Soy Wax', 'Brown', 'Candle'],
-			rating: 2.5,
-			reviews: 23,
+			rating: 5,
+			reviews: 10,
 			stock: 100,
 			isOnSale: false,
 			saleStart: '',
@@ -97,6 +90,10 @@ export const Primary: Story = {
 				},
 			},
 		},
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas.getByText(/★★★★★/gi)).toBeTruthy()
 	},
 }
 
@@ -167,6 +164,6 @@ export const Heading: Story = {
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/product-ratings works!/gi)).toBeTruthy()
+		expect(canvas.getByText(/★★★☆☆/gi)).toBeTruthy()
 	},
 }

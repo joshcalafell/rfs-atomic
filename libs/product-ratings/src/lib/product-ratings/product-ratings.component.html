@@ -1,10 +1,9 @@
 <div class="stars">
-	<div class="ui-star">
-		<div class="ui-star--container">
-			<rfs-atomic-product-ratings-star
-				[star]="{ icon: 'star', size: 'medium', color: 'black' }"
-			></rfs-atomic-product-ratings-star>
-		</div>
+	<div class="ui-star--container">
+		<rfs-atomic-product-ratings-star
+			*ngFor="let star of stars"
+			[star]="{ icon: star.icon, size: star.size, color: star.color }"
+		></rfs-atomic-product-ratings-star>
 	</div>
 
 	<span class="reviews">({{ product.reviews }})</span>

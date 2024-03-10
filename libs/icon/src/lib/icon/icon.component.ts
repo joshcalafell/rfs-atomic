@@ -9,9 +9,5 @@ import { CommonModule } from '@angular/common'
 	styleUrl: './icon.component.scss',
 })
 export class IconComponent {
-	@Input() icon = {
-		icon: 'star',
-		color: 'black',
-		size: 'medium',
-	}
+	@Input() icon!: { icon: string; color: string; size: string }
 }

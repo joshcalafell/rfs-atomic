@@ -3,6 +3,7 @@
 $primary: #ff6666;
 $secondary: #333333;
 $tertiary: #17a2b8;
+
 .stars {
 	display: flex;
 	flex-direction: row;
@@ -11,6 +12,15 @@ $tertiary: #17a2b8;
 	gap: 4px;
 	margin-top: 0;
 	margin-bottom: 16px;
+	font-family: 'Inter', sans-serif;
+}
+
+.ui-star--container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+
 	font-family: 'Inter', sans-serif;
 }
 

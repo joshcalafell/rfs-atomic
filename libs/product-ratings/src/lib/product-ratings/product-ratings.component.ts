@@ -87,25 +87,28 @@ export class ProductRatingsComponent implements OnInit {
 		},
 	}
 
-	stars: { icon: string; color?: string; size: string }[] = []
+	stars: { icon: string; color: string; size: string }[] = []
 
 	ngOnInit(): void {
 		this.stars = this.getStars(this.product)
 	}
 
 	public getStars(
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		product: any
-	): { icon: string; color?: string; size: string }[] {
+	): { icon: string; color: string; size: string }[] {
 		const rounded = Math.ceil(Number(product.rating))
 
-		return [
-			...Array(rounded).fill({ icon: 'star', color: 'black', size: 'small' }),
-			...Array(5 - rounded).fill({
-				icon: 'empty-star',
-				color: 'black',
-				size: 'small',
-			}),
-		]
+		if (rounded === 5) {
+			return Array(5).fill({ icon: 'star', color: 'black', size: 'small' })
+		} else {
+			return [
+				...Array(rounded).fill({ icon: 'star', color: 'black', size: 'small' }),
+				...Array(5 - rounded).fill({
+					icon: 'empty-star',
+					color: 'black',
+					size: 'small',
+				}),
+			]
+		}
 	}
 }
