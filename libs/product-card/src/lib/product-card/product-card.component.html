@@ -2,7 +2,9 @@
 	<div class="card-content">
 		<div class="flex-between">
 			<div class="card-header">
-				<h2>{{ product.entity.title }}</h2>
+				<div class="title">
+					{{ product.entity.name }}
+				</div>
 
 				<rfs-atomic-chip
 					[label]="
@@ -20,32 +22,18 @@
 			</div>
 
 			<div class="row flex-row-centered">
-				<div class="col flex-column-centered">
-					<ul>
-						<li>Thing 1</li>
-						<li>Thing 2</li>
-						<li>Thing 3</li>
-					</ul>
-				</div>
-				<div class="col spacer"></div>
+				<rfs-atomic-detail-group [items]="getProductDetailsGroup1(product)">
+				</rfs-atomic-detail-group>
+				<rfs-atomic-detail-group [items]="getProductDetailsGroup2(product)">
+				</rfs-atomic-detail-group>
 			</div>
 			<div class="flex-row stars">
-				<div class="ui-star">
-					<div class="ui-star--container">
-						<rfs-atomic-product-ratings-star
-							[star]="{ icon: 'star', size: 'medium', color: 'black' }"
-						></rfs-atomic-product-ratings-star>
-					</div>
-				</div>
-				<span class="reviews">({{ product.reviews }})</span>
-				<a class="reviews-link" href="#reviews">See all reviews</a>
+				<rfs-atomic-product-ratings [product]="product">
+				</rfs-atomic-product-ratings>
 			</div>
 			<div class="ui-buton-row-container">
 				<rfs-atomic-button-row
-					[buttons]="[
-						{ label: 'Add to Cart', palleteColor: 'primary', size: 'medium' },
-						{ label: 'Wishlist', palleteColor: 'secondary', size: 'medium' }
-					]"
+					[buttons]="product.buttons"
 				></rfs-atomic-button-row>
 			</div>
 			<div class="card-tags" *ngIf="product?.tags">

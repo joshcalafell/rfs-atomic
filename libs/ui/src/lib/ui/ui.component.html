@@ -1,3 +1,9 @@
+<rfs-atomic-header
+	[title]="'Header Title'"
+	[menuItems]="menuItems"
+	[user]="user"
+></rfs-atomic-header>
+
 <section
 	class="section-wrapper"
 	style="margin: 8px 16px; vertical-align: baseline"
@@ -25,14 +31,6 @@
 	class="section-wrapper"
 	style="margin: 8px 16px; vertical-align: baseline"
 >
-	<h2>Description List</h2>
-	<rfs-atomic-description-list [item]="product"></rfs-atomic-description-list>
-</section>
-
-<section
-	class="section-wrapper"
-	style="margin: 8px 16px; vertical-align: baseline"
->
 	<h2>Chips</h2>
 	<div *ngFor="let chip of chips">
 		<rfs-atomic-chip
@@ -46,11 +44,4 @@
 <section
 	class="section-wrapper"
 	style="margin: 8px 16px; vertical-align: baseline"
->
-	<h2>Header</h2>
-	<rfs-atomic-header
-		[title]="'Header Title'"
-		[menuItems]="menuItems"
-		[user]="user"
-	></rfs-atomic-header>
-</section>
+></section>

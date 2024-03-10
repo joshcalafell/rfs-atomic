@@ -4,10 +4,44 @@ import { DescriptionListComponent } from './description-list.component'
 import { expect } from '@storybook/jest'
 import { within } from '@storybook/testing-library'
 
-const item: { label: string; value: string | number } = {
-	label: 'Name',
-	value: 'John Doe',
-}
+const items = [
+	{
+		label: 'Name',
+		value: 'Ada Lovalace',
+	},
+	{
+		label: 'Email',
+		value: 'aloveless@something.com',
+	},
+	{
+		label: 'Phone',
+		value: '123-456-7890',
+	},
+	{
+		label: 'Address',
+		value: '1234 Elm St',
+	},
+	{
+		label: 'City',
+		value: 'Springfield',
+	},
+	{
+		label: 'State',
+		value: 'Oregon',
+	},
+	{
+		label: 'Zip',
+		value: '62704',
+	},
+	{
+		label: 'Country',
+		value: 'USA',
+	},
+	{
+		label: 'Date of Birth',
+		value: 'Jan 1, 1970',
+	},
+]
 
 const meta: Meta<DescriptionListComponent> = {
 	component: DescriptionListComponent,
@@ -17,21 +51,10 @@ export default meta
 type Story = StoryObj<DescriptionListComponent>
 
 export const Primary: Story = {
-	args: { item },
+	args: { items: items },
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		// Name
-		expect(canvas.getByText(/Name/gi)).toBeTruthy()
-		expect(canvas.getByText(/John Doe/gi)).toBeTruthy()
-		// Email
-	},
-}
 
-export const UserValues: Story = {
-	args: { item },
-	play: async ({ canvasElement }) => {
-		const canvas = within(canvasElement)
-		// Name
 		expect(canvas.getByText(/Name/gi)).toBeTruthy()
 		expect(canvas.getByText(/John Doe/gi)).toBeTruthy()
 	},

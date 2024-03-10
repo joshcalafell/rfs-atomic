@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { Component, Input } from '@angular/core'
 import { ButtonComponent, IAtomicUiButton } from '@rfs-atomic/button'
 
 @Component({
@@ -9,16 +9,6 @@ import { ButtonComponent, IAtomicUiButton } from '@rfs-atomic/button'
 	templateUrl: './button-row.component.html',
 	styleUrl: './button-row.component.scss',
 })
-export class ButtonRowComponent implements OnInit {
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	@Input() buttons!: any[]
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-
-	constructor() {
-		console.log('UiButtonRowComponent')
-	}
-
-	ngOnInit() {
-		console.log('UiButtonRowComponent')
-	}
+export class ButtonRowComponent {
+	@Input() buttons!: IAtomicUiButton[]
 }

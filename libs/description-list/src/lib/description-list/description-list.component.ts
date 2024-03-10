@@ -35,8 +35,5 @@ export interface IDescriptionListItem {
 	styleUrl: './description-list.component.scss',
 })
 export class DescriptionListComponent {
-	@Input() item: { label: string; value: string | number } = {
-		label: '',
-		value: '',
-	}
+	@Input() items!: IDescriptionListItem[] | any[]
 }

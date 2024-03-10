@@ -19,4 +19,9 @@ describe('DetailGroupComponent', () => {
 	it('should create', () => {
 		expect(component).toBeTruthy()
 	})
+
+	it('should render description list', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('.description-list')).toBeTruthy()
+	})
 })

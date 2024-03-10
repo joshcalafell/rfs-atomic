@@ -1,4 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { ButtonRowComponent } from '@rfs-atomic/button-row'
+import { ChipComponent } from '@rfs-atomic/chip'
+import { DetailGroupComponent } from '@rfs-atomic/detail-group'
+import { HashesComponent } from '@rfs-atomic/hashes'
+import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 import { ProductCardComponent } from './product-card.component'
 
 describe('ProductCardComponent', () => {
@@ -7,7 +12,14 @@ describe('ProductCardComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [ProductCardComponent],
+			imports: [
+				ProductCardComponent,
+				ChipComponent,
+				ButtonRowComponent,
+				HashesComponent,
+				ProductRatingsComponent,
+				DetailGroupComponent,
+			],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(ProductCardComponent)

@@ -17,7 +17,7 @@ describe('DescriptionListComponent', () => {
 
 		fixture = TestBed.createComponent(DescriptionListComponent)
 		component = fixture.componentInstance
-		component.item = testItems[0]
+		component.items = testItems
 		fixture.detectChanges()
 	})
 

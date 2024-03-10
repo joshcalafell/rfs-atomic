@@ -1,6 +1,6 @@
 <div class="card-details" *ngIf="items">
 	<rfs-atomic-description-list
-		*ngFor="let item of items; let i = index"
-		[item]="item"
+		class="description-list"
+		[items]="items"
 	></rfs-atomic-description-list>
 </div>

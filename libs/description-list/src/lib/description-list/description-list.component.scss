@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&Inter:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap');
 
 $primary: #a164d3;
 $secondary: #a164d3;
-;
 $tertiary: #17a2b8;
 $danger: #dc3545;
 $warning: #ffc107;
@@ -16,43 +15,34 @@ $transparent: transparent;
 $black: #000000;
 $gray: #6c757d;
 
-.card-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 16px;
-  margin: 8px 4px;
-  width: 100%;
-  height: 100%;
+p {
+	font-family: 'Inter', sans-serif;
+	font-size: 1rem;
+	color: $dark;
+	font-weight: 400;
+	text-decoration: none;
+}
 
-  .detail-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    font-weight: 400;
-    font-size: 0.897rem;
-    text-align: center;
-    margin: 2px 0;
+.detail-item {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 4px 0;
 
-    .detail-item-label {
-      font-family: 'Popins', sans-serif;
-      font-size: 1rem;
-      font-weight: 500;
-      color: $dark;
-    }
+	.detail-item-label {
+		text-decoration: none;
+	}
 
-    .detail-item-value {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-      color: #636363;
-      font-weight: 300;
-      text-decoration: underline;
-    }
+	.detail-item-value {
+		font-size: 0.95rem;
+		color: #636363;
+		font-weight: 400;
+		text-decoration: underline;
+	}
 
-    span + span {
-      margin-left: 8px;
-    }
-  }
+	span + span {
+		margin-left: 8px;
+	}
 }

@@ -5,15 +5,7 @@
 	align-items: center;
 }
 
-:host {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-}
-
-::ng-deep .ui-button-row {
+.ui-button-row {
 	@include button-row;
 	padding: 16px 0px;
 	border-top: solid 1px #666;

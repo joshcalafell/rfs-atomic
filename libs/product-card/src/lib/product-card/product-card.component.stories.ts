@@ -88,6 +88,10 @@ export const Primary: Story = {
 			},
 		},
 	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas).toBeTruthy()
+	},
 }
 
 export const Heading: Story = {

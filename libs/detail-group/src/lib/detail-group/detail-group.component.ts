@@ -1,6 +1,9 @@
-import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { DescriptionListComponent } from '@rfs-atomic/description-list'
+import { Component, Input } from '@angular/core'
+import {
+	DescriptionListComponent,
+	IDescriptionListItem,
+} from '@rfs-atomic/description-list'
 @Component({
 	selector: 'rfs-atomic-detail-group',
 	standalone: true,
@@ -9,5 +12,5 @@ import { DescriptionListComponent } from '@rfs-atomic/description-list'
 	styleUrl: './detail-group.component.scss',
 })
 export class DetailGroupComponent {
-	@Input() items: { label: string; value: string | number }[] = []
+	@Input() items: IDescriptionListItem[] = []
 }
