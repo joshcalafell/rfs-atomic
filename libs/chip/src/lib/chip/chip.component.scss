@@ -2,7 +2,7 @@
 
 //
 $primary: #26bfcd;
-$secondary: #a164d3;
+$secondary: #333333;
 $tertiary: #333333;
 $danger: #dc3545;
 $warning: #ffc107;
@@ -16,133 +16,133 @@ $black: #000000;
 $gray: #6c757d;
 
 @mixin flex-row-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .ui-chip {
-  border-radius: 5px;;
-  cursor: inherit;
-  padding: 8px 8px;
-  margin: 8px 16px;
-  text-align: left;
-  text-decoration: underline;
-  transition: all 0.15s ease-in-out;
-  user-select: none;
-  white-space: nowrap;
-  text-decoration: none;
-  text-align: center;
-  font-family: 'Inter', sans-serif;
+	border-radius: 5px;
+	cursor: inherit;
+	padding: 8px 8px;
+	margin: 8px 16px;
+	text-align: left;
+	text-decoration: underline;
+	transition: all 0.15s ease-in-out;
+	user-select: none;
+	white-space: nowrap;
+	text-decoration: none;
+	text-align: center;
+	font-family: 'Inter', sans-serif;
 
-  @include flex-row-center;
+	@include flex-row-center;
 
-  @mixin chip-color($color, $background) {
-    background-color: $color;
-    color: scale-color(
-      $color:  $background,
-      $saturation: 0%,
-      $lightness: 0%,
-      $alpha: 0.5%
-    );
-    border: solid scale-color(
-      $color:  $background,
-      $saturation: 0%,
-      $lightness: 0%,
-      $alpha: 1%
-    ) 1px;
-  }
+	@mixin chip-color($color, $background) {
+		background-color: $color;
+		color: scale-color(
+			$color: $background,
+			$saturation: 0%,
+			$lightness: 0%,
+			$alpha: 0.5%
+		);
+		border: solid
+			scale-color(
+				$color: $background,
+				$saturation: 0%,
+				$lightness: 0%,
+				$alpha: 1%
+			)
+			1px;
+	}
 
-  .ui-chip-text {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.5;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-    vertical-align: baseline;
-    cursor: inherit;
-    user-select: none;
-  }
+	.ui-chip-text {
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 1.5;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+		vertical-align: baseline;
+		cursor: inherit;
+		user-select: none;
+	}
 
+	&--small {
+		display: flex;
+		align-items: center;
+		.ui-chip-text {
+			font-size: 0.66rem;
+		}
+		padding: 6px 8px;
+		vertical-align: middle;
+	}
 
+	&--medium {
+		display: flex;
+		align-items: center;
+		.ui-chip-text {
+			font-size: 1rem;
+		}
+		padding: 6px 10px;
+		vertical-align: middle;
+	}
 
-  &--small {
-    display: flex;
-    align-items: center;
-    .ui-chip-text {
-      font-size: 0.66rem;
-    }
-    padding: 6px 8px;
-    vertical-align: middle;
-  }
+	&--large {
+		display: flex;
+		align-items: center;
+		.ui-chip-text {
+			font-size: 1.5rem;
+		}
+		padding: 10px 14px;
+		vertical-align: middle;
+	}
 
-  &--medium {
-   display: flex;
-    align-items: center;
-    .ui-chip-text {
-      font-size: 1rem;
-    }
-    padding: 6px 10px;
-    vertical-align: middle;
-  }
+	&--primary {
+		@include chip-color($primary, $white);
+	}
 
-  &--large {
-    display: flex;
-     align-items: center;
-     .ui-chip-text {
-       font-size: 1.5rem;
-     }
-     padding: 10px 14px;
-     vertical-align: middle;
-   }
+	&--secondary {
+		@include chip-color($secondary, $white);
+	}
 
-  &--primary {
-   @include chip-color($primary, $white);
-  }
+	&--tertiary {
+		@include chip-color($tertiary, $white);
+	}
 
-  &--secondary {
-   @include chip-color($secondary, $white);
-  }
+	&--danger {
+		@include chip-color($danger, $white);
+	}
 
-  &--tertiary {
-    @include chip-color($tertiary, $white);
-  }
+	&--warning {
+		@include chip-color($warning, $white);
+	}
 
-  &--danger {
-    @include chip-color($danger, $white);
-  }
+	&--success {
+		@include chip-color($success, $white);
+	}
 
-  &--warning {
-    @include chip-color($warning, $white);
-  }
+	&--info {
+		@include chip-color($info, $white);
+	}
 
-  &--success {
-    @include chip-color($success, $white);
-  }
+	&--light {
+		@include chip-color($light, $dark);
+	}
 
-  &--info {
-    @include chip-color($info, $white);
-  }
+	&--dark {
+		@include chip-color($dark, $white);
+	}
 
-  &--light {
-    @include chip-color($light, $dark);
-  }
+	&--disabled {
+		@include chip-color($disabled, $white);
+		cursor: not-allowed; // <--- Add this line
+	}
 
-  &--dark {
-    @include chip-color($dark, $white);
-  }
-
-  &--disabled {
-    @include chip-color($disabled, $white);
-    cursor: not-allowed; // <--- Add this line
-  }
-
-  .ui-chip-close {
-    cursor: pointer;
-    font-size: 1rem;
-    margin-left: 8px;
-    padding: 0;
-    user-select: none;
-  }
+	.ui-chip-close {
+		cursor: pointer;
+		font-size: 1rem;
+		margin-left: 8px;
+		padding: 0;
+		user-select: none;
+	}
 }

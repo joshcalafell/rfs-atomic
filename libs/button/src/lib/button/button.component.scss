@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
 $primary: #26bfcd;
-$secondary: #a164d3;
-;
+$secondary: #333333;
 $tertiary: #333333;
 
 $danger: #dc3545;
@@ -38,207 +37,207 @@ $padding-right-base: 22px;
 $psuedoclass-offset-base: 18px;
 
 @mixin font() {
-  font-family: $font-family;
-  font-weight: $font-weight;
+	font-family: $font-family;
+	font-weight: $font-weight;
 }
 
 @mixin arrow-animation($scale: 1) {
-  span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: calc(20px * $scale);
-    transition: 0.3s;
-  }
+	span:after {
+		content: '\00bb';
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: calc(20px * $scale);
+		transition: 0.3s;
+	}
 
-  &:hover span {
-    padding-right: calc(26px * $scale);
-  }
+	&:hover span {
+		padding-right: calc(26px * $scale);
+	}
 }
 
 @mixin ui-button-base() {
-  margin: 8px 8px;
-  display: inline-block;
-  border-radius: 0;
-  background-color: $transparent;
-  border: solid 1px $transparent;
-  text-align: center;
-  transition: all 0.25s;
-  cursor: pointer;
+	margin: 8px 8px;
+	display: inline-block;
+	border-radius: 0;
+	background-color: $transparent;
+	border: solid 1px $transparent;
+	text-align: center;
+	transition: all 0.25s;
+	cursor: pointer;
 }
 
 .ui-button {
-  @include font();
-  @include ui-button-base();
+	@include font();
+	@include ui-button-base();
 }
 
 .ui-button {
-  span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: $transition-duration;
-  }
+	span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: $transition-duration;
+	}
 
-  &:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+	&:hover span:after {
+		opacity: 1;
+		right: 0;
+	}
 
-  &--small {
-    font-size: $font-size-small;
-    padding: $padding-button-small;
-    width: calc($width-base * 0.5);
-    height: calc($height-base * 0.5);
-    &--animated-arrow {
-      @include arrow-animation(0.75);
-    }
-  }
+	&--small {
+		font-size: $font-size-small;
+		padding: $padding-button-small;
+		width: calc($width-base * 0.5);
+		height: calc($height-base * 0.5);
+		&--animated-arrow {
+			@include arrow-animation(0.75);
+		}
+	}
 
-  &--medium {
-    font-size: $font-size-medium;
-    padding: $padding-button-medium;
-    width: calc($width-base * 0.75);
-    height: calc($height-base * 0.75);
-    &--animated-arrow {
-      @include arrow-animation(0.75);
-    }
-  }
+	&--medium {
+		font-size: $font-size-medium;
+		padding: $padding-button-medium;
+		width: calc($width-base * 0.75);
+		height: calc($height-base * 0.75);
+		&--animated-arrow {
+			@include arrow-animation(0.75);
+		}
+	}
 
-  &--large {
-    font-size: $font-size-large;
-    padding: $padding-button-large;
-    width: calc($width-base * 1);
-    height: calc($height-base * 1);
-    &--animated-arrow {
-      @include arrow-animation(0.75);
-    }
-  }
+	&--large {
+		font-size: $font-size-large;
+		padding: $padding-button-large;
+		width: calc($width-base * 1);
+		height: calc($height-base * 1);
+		&--animated-arrow {
+			@include arrow-animation(0.75);
+		}
+	}
 
-  &--primary {
-    border-color: $primary;
-    background-color: $primary;
-    color: $white;
+	&--primary {
+		border-color: $primary;
+		background-color: $primary;
+		color: $white;
 
-    &:hover {
-      border: solid 1px $primary;
-      background-color: $light;
-      color: $primary;
-    }
+		&:hover {
+			border: solid 1px $primary;
+			background-color: $light;
+			color: $primary;
+		}
 
-    .dark-theme {
-      background-color: $dark;
-      color: $white;
-    }
-  }
+		.dark-theme {
+			background-color: $dark;
+			color: $white;
+		}
+	}
 
-  &--secondary {
-    border-color: $secondary;
-    background-color: $secondary;
-    color: $white;
+	&--secondary {
+		border-color: $secondary;
+		background-color: $secondary;
+		color: $white;
 
-    &:hover {
-      border: solid 1px $secondary;
-      background-color: $light;
-      color: $secondary;
-    }
-  }
+		&:hover {
+			border: solid 1px $secondary;
+			background-color: $light;
+			color: $secondary;
+		}
+	}
 
-  &--tertiary {
-    border-color: $tertiary;
-    background-color: $tertiary;
-    color: $white;
+	&--tertiary {
+		border-color: $tertiary;
+		background-color: $tertiary;
+		color: $white;
 
-    &:hover {
-      border: solid 1px $tertiary;
-      background-color: $light;
-      color: $tertiary;
-    }
-  }
+		&:hover {
+			border: solid 1px $tertiary;
+			background-color: $light;
+			color: $tertiary;
+		}
+	}
 
-  &--danger {
-    border-color: $danger;
-    background-color: $danger;
-    color: $white;
+	&--danger {
+		border-color: $danger;
+		background-color: $danger;
+		color: $white;
 
-    &:hover {
-      border: solid 1px $danger;
-      background-color: $light;
-      color: $danger;
-    }
-  }
+		&:hover {
+			border: solid 1px $danger;
+			background-color: $light;
+			color: $danger;
+		}
+	}
 
-  &--warning {
-    border-color: $warning;
-    background-color: $warning;
-    color: $dark;
+	&--warning {
+		border-color: $warning;
+		background-color: $warning;
+		color: $dark;
 
-    &:hover {
-      border: solid 1px $warning;
-      background-color: $transparent;
-      color: $warning;
-    }
-  }
+		&:hover {
+			border: solid 1px $warning;
+			background-color: $transparent;
+			color: $warning;
+		}
+	}
 
-  &--success {
-    border-color: $success;
-    background-color: $success;
-    color: $white;
+	&--success {
+		border-color: $success;
+		background-color: $success;
+		color: $white;
 
-    &:hover {
-      border: solid 1px $success;
-      background-color: $transparent;
-      color: $success;
-    }
-  }
+		&:hover {
+			border: solid 1px $success;
+			background-color: $transparent;
+			color: $success;
+		}
+	}
 
-  &--info {
-    border-color: $info;
-    background-color: $info;
-    color: $dark;
+	&--info {
+		border-color: $info;
+		background-color: $info;
+		color: $dark;
 
-    &:hover {
-      border: solid 1px $info;
-      background-color: $transparent;
-      color: $info;
-    }
-  }
+		&:hover {
+			border: solid 1px $info;
+			background-color: $transparent;
+			color: $info;
+		}
+	}
 
-  &--light {
-    border-color: $dark;
-    background-color: $light;
-    color: $dark;
+	&--light {
+		border-color: $dark;
+		background-color: $light;
+		color: $dark;
 
-    &:hover {
-      border: solid 1px $dark;
-      background-color: $light;
-      color: $dark;
-    }
-  }
+		&:hover {
+			border: solid 1px $dark;
+			background-color: $light;
+			color: $dark;
+		}
+	}
 
-  &--dark {
-    border-color: $dark;
-    background-color: $dark;
-    color: $white;
+	&--dark {
+		border-color: $dark;
+		background-color: $dark;
+		color: $white;
 
-    &:hover {
-      border: solid 1px $dark;
-      background-color: $light;
-      color: $dark;
-    }
-  }
+		&:hover {
+			border: solid 1px $dark;
+			background-color: $light;
+			color: $dark;
+		}
+	}
 
-  &--disabled {
-    border-color: $disabled;
-    background-color: $disabled;
-    color: $white;
-    cursor: not-allowed; // <!!> This is unique to the disabled state
+	&--disabled {
+		border-color: $disabled;
+		background-color: $disabled;
+		color: $white;
+		cursor: not-allowed; // <!!> This is unique to the disabled state
 
-    &:hover {
-      border: solid 1px $disabled;
-      background-color: $light;
-      color: $disabled;
-    }
-  }
+		&:hover {
+			border: solid 1px $disabled;
+			background-color: $light;
+			color: $disabled;
+		}
+	}
 }

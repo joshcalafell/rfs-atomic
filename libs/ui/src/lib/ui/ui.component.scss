@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
 $primary: #26bfcd;
-$secondary: #a164d3;
-;
+$secondary: #333333;
 $tertiary: #333333;
 
 $danger: #dc3545;
@@ -38,27 +37,27 @@ $padding-right-base: 22px;
 $psuedoclass-offset-base: 18px;
 
 @mixin font() {
-  font-family: $font-family;
-  font-weight: $font-weight;
+	font-family: $font-family;
+	font-weight: $font-weight;
 }
 
 h2 {
-  font-family: $font-family;
-  font-weight: $font-weight;
-  font-size: $font-size-large;
+	font-family: $font-family;
+	font-weight: $font-weight;
+	font-size: $font-size-large;
 }
 
 .section-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 16px;
-  margin: 8px 4px;
-  width: 100%;
-  height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 16px;
+	margin: 8px 4px;
+	width: 100%;
+	height: 100%;
 
-  button {
-    margin: 0 16px;
-  }
+	button {
+		margin: 0 16px;
+	}
 }
