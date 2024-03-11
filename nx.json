@@ -83,16 +83,18 @@
 		"data:json"
 	],
 	"nxCloud": true,
-	"nxCloudAccessToken": "NzgwMjA2NjktOTE5Yy00MmVlLThhNzctYTQ2NTEwZjcxZWMwfHJlYWQ=",
+	"nxCloudAccessToken": "ZmZjNGMzMzUtMDdhMS00YTBjLWE0YWYtY2NlMGRkMDAxZGNkfHJlYWQtd3JpdGU=",
 	"tasksRunnerOptions": {
 		"default": {
 			"options": {
-				"workspaces": {
-					"runLocal": true,
-					"useWorkspaces": true
-				},
-				"accessToken": "NzgwMjA2NjktOTE5Yy00MmVlLThhNzctYTQ2NTEwZjcxZWMwfHJlYWQ=",
-				"cacheableOperations": ["build-storybook"]
+				"cacheableOperations": [
+					"build",
+					"lint",
+					"test",
+					"e2e",
+					"component-test",
+					"build-storybook"
+				]
 			}
 		}
 	}

@@ -1,4 +1,98 @@
-<p *ngFor="let item of items" class="detail-item">
-	<span class="detail-item-label">{{ item.label }}:</span>
-	<span class="detail-item-value">{{ item.value }}</span>
-</p>
+<p *ngFor="let item of items" class="detail-item"></p>
+
+<!--
+
+
+	| 'text'
+	| 'date'
+	| 'currency'
+	| 'number'
+	| 'percentage'
+	| 'address'
+
+-->
+<div *ngFor="let item of items; let i = index" [ngSwitch]="item.valueType">
+	<p *ngSwitchCase="'phone'" class="detail-item">
+		<!-- Phone specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{
+			item.value | phoneNumber
+		}}</span>
+	</p>
+	<p *ngSwitchCase="'email'" class="detail-item">
+		<!-- Email specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{
+			item.value | emailFormatter
+		}}</span>
+	</p>
+	<p *ngSwitchCase="'text'" class="detail-item">
+		<!-- Email specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{ item.value }}</span>
+	</p>
+	<p *ngSwitchCase="'date-short'" class="detail-item">
+		<!-- Email specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{
+			item.value | date : 'short'
+		}}</span>
+	</p>
+	<p *ngSwitchCase="'date-medium'" class="detail-item">
+		<!-- Email specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{
+			item.value | date : 'medium'
+		}}</span>
+	</p>
+	<p *ngSwitchCase="'date-long'" class="detail-item">
+		<!-- Email specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{
+			item.value | date : 'long'
+		}}</span>
+	</p>
+	<p *ngSwitchCase="'date-full'" class="detail-item">
+		<!-- Email specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{
+			item.value | date : 'long'
+		}}</span>
+	</p>
+	<p *ngSwitchCase="'date-custom'" class="detail-item">
+		<!-- Email specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{
+			item.value | date : 'yyyy-MM-dd'
+		}}</span>
+	</p>
+	<p *ngSwitchCase="'currency-usd'" class="detail-item">
+		<!-- Email specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{
+			item.value | currency : 'USD'
+		}}</span>
+	</p>
+	<p *ngSwitchCase="'number'" class="detail-item">
+		<!-- Email specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{ item.value | number }}</span>
+	</p>
+	<p *ngSwitchCase="'percentage'" class="detail-item">
+		<!-- Email specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{ item.value | percent }}</span>
+		<!-- Add more cases as needed -->
+	</p>
+	<p *ngSwitchCase="'addressFormat'" class="detail-item">
+		<!-- Email specific formatting -->
+		<span class="detail-item-label-${{ i }}">{{ item.label }}:</span>
+		<span class="detail-item-value-${{ i }}">{{
+			item.value | addressFormat
+		}}</span>
+	</p>
+	<!-- 	<p *ngSwitchDefault class="detail-item">
+		<span class="detail-item-label">{{ item.label }}:</span>
+		<span class="detail-item-value">{{ item.value }}</span>
+	</p> -->
+</div>

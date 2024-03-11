@@ -125,11 +125,11 @@ export class UiComponent implements OnInit {
 		{ label: 'Name', value: 'John Doe', valueType: 'text' },
 		{ label: 'Email', value: 'johndoe@email.com', valueType: 'email' },
 		{ label: 'Phone', value: '+1 (303) 674-8856', valueType: 'phone' },
-		{ label: 'Country', value: 'United States', valueType: 'location' },
-		{ label: 'Date of Birth', value: '01/01/1970', valueType: 'date' },
-		{ label: 'Dimensions', value: '3x4x6', valueType: 'dimensions' },
-		{ label: 'SKU', value: '#2330009738763', valueType: 'dimensions' },
-		{ label: 'Weight', value: '3.5 lbs', valueType: 'weight' },
+		{ label: 'Country', value: 'United States', valueType: 'text' },
+		{ label: 'Date of Birth', value: '01/01/1970', valueType: 'date-custom' },
+		{ label: 'Dimensions', value: '3x4x6', valueType: 'text' },
+		{ label: 'SKU', value: '#2330009738763', valueType: 'text' },
+		{ label: 'Weight', value: '3.5 lbs', valueType: 'text' },
 	]
 
 	chips: IChip[] = []

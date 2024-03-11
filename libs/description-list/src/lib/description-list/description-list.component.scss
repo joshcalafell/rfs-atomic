@@ -1,48 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
-$primary: #a164d3;
-$secondary: #333333;
-$tertiary: #ff6666;
-$danger: #dc3545;
-$warning: #ffc107;
-$success: #28a745;
-$info: #f5de5e;
-$light: #f8f9fa;
 $dark: #343a40;
-$white: #ffffff;
-$disabled: #6c757d;
-$transparent: transparent;
-$black: #000000;
-$gray: #6c757d;
+$font-weight-normal: 400;
+$font-size: 1rem;
 
-p {
-	font-family: 'Inter', sans-serif;
-	font-size: 1rem;
-	color: $dark;
-	font-weight: 400;
-	text-decoration: none;
-}
-
-.detail-item {
-	width: 100%;
+@mixin flex-row-start {
 	display: flex;
+	align-items: center;
 	flex-direction: row;
 	justify-content: flex-start;
-	align-items: center;
+}
+
+@mixin detail-item {
+	color: $dark;
+	font-family: 'Inter', sans-serif;
+	font-size: 1rem;
+	font-weight: $font-weight-normal;
 	margin: 4px 0;
+	padding: 4px 0;
+	text-decoration: none;
+	width: 100%;
+}
 
-	.detail-item-label {
-		text-decoration: none;
+@mixin label {
+	color: black;
+	font-size: $font-size;
+	font-weight: 500;
+}
+
+@mixin value {
+	color: #555;
+	font-size: scale($font-size, 0.9);
+	font-weight: 400;
+	margin-left: 8px;
+	text-decoration: underline;
+}
+
+p.detail-item {
+	@include detail-item;
+	@include flex-row-start;
+	span.detail-item-label {
+		@include label;
 	}
-
-	.detail-item-value {
-		font-size: 0.95rem;
-		color: #636363;
-		font-weight: 400;
-		text-decoration: underline;
-	}
-
-	span + span {
-		margin-left: 8px;
+	span.detail-item-value {
+		@include value;
 	}
 }
