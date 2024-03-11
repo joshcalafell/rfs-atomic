@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&Inter:wght@300;400;600&display=swap');
+
+.section-title {
+	font-family: 'Poppins', sans-serif;
+}
+
 .product-list {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 	gap: 16px;
 	padding: 16px;
-	margin-top: 32px;
-	.product {
-		padding: 8px;
-	}
 
 	.product-image {
 		img {

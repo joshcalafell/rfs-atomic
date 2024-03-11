@@ -1,13 +1,16 @@
-<div class="product-list" *ngIf="products && products?.length">
-	<div *ngFor="let product of products" class="product">
-		<rfs-atomic-product-card
-			class="product-card"
-			[product]="product"
-			(addToCartEmitter)="addToCart(product)"
-		></rfs-atomic-product-card>
+<section class="section">
+	<h2 class="section-title">Products</h2>
+	<div class="product-list" *ngIf="products && products?.length">
+		<div *ngFor="let product of products" class="product">
+			<rfs-atomic-product-card
+				class="product-card"
+				[product]="product"
+				(addToCartEmitter)="addToCart(product)"
+			></rfs-atomic-product-card>
+		</div>
 	</div>
-</div>
 
-<div *ngIf="!products || !products?.length">
-	<p>No products found</p>
-</div>
+	<div *ngIf="!products || !products?.length">
+		<p>No products found</p>
+	</div>
+</section>

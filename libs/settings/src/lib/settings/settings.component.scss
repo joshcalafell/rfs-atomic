@@ -1,89 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Inter&family=Poppins:wght@100;200&display=swap');
-
-$primary: #ff6666;
-$secondary: #333333;
-$tertiary: #ff6666;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&Inter:wght@300;400;600&display=swap');
+$primary: #26bfcd;
+$secondary: #a164d3;
+$tertiary: #333333;
 
 .section {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	height: 100%;
 	width: 100%;
-	background-color: #f5f5f5;
-	padding: 20px;
-	box-sizing: border-box;
+	margin: 24px 16px;
 	font-family: 'Inter', sans-serif;
+
 	.section__title {
 		font-family: 'Poppins', sans-serif;
 		font-size: 24px;
+		vertical-align: middle;
+		padding: 8px auto;
 		margin-bottom: 20px;
 	}
-	.section__form {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		.section__form-group {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			width: 100%;
-			margin-bottom: 20px;
-			.section__form-label {
-				font-size: 18px;
-				margin-bottom: 10px;
+
+	p {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		li {
+			margin-bottom: 10px;
+			color: $primary;
+			&:visited {
+				color: $primary;
 			}
-			.section__form-input {
-				width: 100%;
-				padding: 10px;
-				font-size: 16px;
-				border: 1px solid #ccc;
-				border-radius: 5px;
-				box-sizing: border-box;
+			&:active {
+				color: $primary;
+			}
+			&:hover {
+				color: $primary;
 			}
 		}
-	}
-	.section__button {
-		padding: 10px 20px;
-		font-size: 18px;
-		border: none;
-		border-radius: 5px;
-		background-color: #007bff;
-		color: #fff;
-		cursor: pointer;
-	}
-	.section__button--cancel {
-		margin-right: 10px;
-		background-color: #dc3545;
-	}
-	.section__button--save {
-		background-color: #28a745;
-	}
-	.section__button--delete {
-		margin-top: 20px;
-		background-color: #dc3545;
-	}
-	.section__button--logout {
-		margin-top: 20px;
-		background-color: #007bff;
-	}
-	.section__button--logout:hover {
-		background-color: #0056b3;
-	}
-	.section__button--delete:hover {
-		background-color: #c82333;
-	}
-	.section__button--cancel:hover {
-		background-color: #bd2130;
-	}
-	.section__button--save:hover {
-		background-color: #218838;
-	}
-	.section__error {
-		color: #dc3545;
 	}
 }

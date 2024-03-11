@@ -39,6 +39,11 @@ export class AppComponent {
 
 	menuItems = [
 		{
+			label: 'About',
+			path: '/about',
+			paletteColor: 'primary',
+		},
+		{
 			label: 'Products',
 			path: '/products',
 			paletteColor: 'primary',

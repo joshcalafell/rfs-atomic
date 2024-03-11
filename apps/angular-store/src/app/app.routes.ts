@@ -3,8 +3,13 @@ import { Route } from '@angular/router'
 export const appRoutes: Route[] = [
 	{
 		path: '',
-		redirectTo: 'home',
+		redirectTo: 'about',
 		pathMatch: 'full',
+	},
+	{
+		path: 'about',
+		loadComponent: () =>
+			import('@rfs-atomic/about').then((m) => m.AboutComponent),
 	},
 	{
 		path: 'products',

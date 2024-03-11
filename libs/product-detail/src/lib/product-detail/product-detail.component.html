@@ -1,3 +1,7 @@
+<section class="section">
+	<h2 class="section-title">Product Detail</h2>
+</section>
+
 <div class="product-card" *ngIf="product$ | async as product">
 	<div class="product-image">
 		<img src="{{ product.image }}" alt="{{ product.entity.name }}" />

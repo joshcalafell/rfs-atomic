@@ -17,6 +17,6 @@ export class NotFoundComponent {
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	onButtonClick() {
 		// eslint-disable-next-line no-console
-		this.router.navigate([this.redirectUrl])
+		this.router.navigate(['/', this.redirectUrl || 'about'])
 	}
 }

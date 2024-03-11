@@ -15,6 +15,7 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
+			"@rfs-atomic/about": ["libs/about/src/index.ts"],
 			"@rfs-atomic/button": ["libs/button/src/index.ts"],
 			"@rfs-atomic/button-row": ["libs/button-row/src/index.ts"],
 			"@rfs-atomic/chip": ["libs/chip/src/index.ts"],
