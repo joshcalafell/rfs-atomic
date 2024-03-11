@@ -9,9 +9,8 @@ $tertiary: #ff6666;
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-start;
-	gap: 4px;
-	margin-top: 0;
-	margin-bottom: 16px;
+	margin-top: 8px;
+	margin-bottom: 8px;
 	font-family: 'Inter', sans-serif;
 }
 
@@ -27,7 +26,7 @@ $tertiary: #ff6666;
 .reviews {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	gap: 4px;
 	margin-top: 0;

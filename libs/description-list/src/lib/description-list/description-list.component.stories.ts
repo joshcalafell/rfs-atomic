@@ -51,7 +51,7 @@ export default meta
 type Story = StoryObj<DescriptionListComponent>
 
 export const Primary: Story = {
-	args: { items: items },
+	args: { items },
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 

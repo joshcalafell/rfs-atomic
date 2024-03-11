@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
 $primary: #26bfcd;
-$secondary: #333333;
+$secondary: #a164d3;
 $tertiary: #333333;
 
 $danger: #dc3545;
@@ -49,13 +49,14 @@ li {
 ul.hash-group {
 	display: flex;
 	flex-wrap: wrap;
+	padding: 4px;
 
 	li.hash-group__item {
 		margin-top: 8px;
 		background-color: #e0e0e0;
 
-		padding: 6px;
-		margin-right: 6px;
+		padding: 8px;
+		margin-right: 8px;
 		border-radius: 3px;
 		list-style: none;
 

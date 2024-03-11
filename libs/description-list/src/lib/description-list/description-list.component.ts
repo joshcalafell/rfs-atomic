@@ -35,5 +35,5 @@ export interface IDescriptionListItem {
 	styleUrl: './description-list.component.scss',
 })
 export class DescriptionListComponent {
-	@Input() items!: IDescriptionListItem[] | any[]
+	@Input() items!: IDescriptionListItem[]
 }
