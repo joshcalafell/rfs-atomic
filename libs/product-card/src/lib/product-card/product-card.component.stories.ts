@@ -16,6 +16,88 @@ export const Primary: Story = {
 		product: {
 			entity: {
 				id: '1',
+				name: 'Title',
+				description: 'A description.',
+				price: 1.99,
+				sku: 'C1',
+			},
+			buttons: [
+				{
+					label: 'Cart',
+					palleteColor: 'primary',
+					disabled: false,
+					size: 'medium',
+				},
+				{
+					label: 'Wishlist',
+					palleteColor: 'secondary',
+					disabled: false,
+					size: 'medium',
+				},
+			],
+			brand: 'Value',
+			color: 'Value',
+			material: 'Value',
+			dimensions: 'Value',
+			weight: 'Value',
+			fragrance: 'Value',
+			size: 'Value',
+			burnTime: 'Value',
+			scent: 'Value',
+			type: 'Value',
+			shape: 'Value',
+			wickType: 'Value',
+			wickMaterial: 'Value',
+			category: 'Value',
+			subCategory: 'Value',
+			tags: ['Tag', 'Tag', 'Tag', 'Tag', 'Tag'],
+			rating: 5,
+			reviews: 100,
+			stock: 100,
+			isOnSale: false,
+			saleStart: '',
+			saleEnd: '',
+			isFeatured: false,
+			isTopSeller: false,
+			isNew: false,
+			isBestSeller: false,
+			isSale: false,
+			isAvailable: true,
+			isOutOfStock: false,
+			isComingSoon: false,
+			isDiscontinued: false,
+			isLimited: false,
+			isSoldOut: false,
+			isBackOrder: false,
+			isPreOrder: false,
+			isGift: false,
+			isWishListed: false,
+			cartQty: 1,
+			image: 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=',
+			subscription: {
+				type: 'One-Time Purchase',
+				isRecurring: true,
+				entity: {
+					id: '1',
+					name: 'Title',
+					description: 'A description...',
+					price: 24.99,
+					sku: '1234',
+				},
+			},
+		},
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas).toBeTruthy()
+	},
+}
+
+export const ProductCard: Story = {
+	args: {
+		product: {
+			entity: {
+				id: '1',
 				name: 'Cedarwood & Vanilla',
 				description: 'A warm, woody scent with a hint of sweetness.',
 				price: 24.99,
@@ -94,7 +176,7 @@ export const Primary: Story = {
 	},
 }
 
-export const Heading: Story = {
+export const ProductCardSmallButtons: Story = {
 	args: {
 		product: {
 			entity: {
@@ -109,13 +191,13 @@ export const Heading: Story = {
 					label: 'Cart',
 					palleteColor: 'primary',
 					disabled: false,
-					size: 'medium',
+					size: 'small',
 				},
 				{
 					label: 'Wishlist',
 					palleteColor: 'secondary',
 					disabled: false,
-					size: 'medium',
+					size: 'small',
 				},
 			],
 			brand: 'RFS',
