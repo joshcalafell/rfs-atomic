@@ -12,21 +12,22 @@
 		<p class="product-price">{{ product.entity.price | currency }}</p>
 		<div class="stars">
 			<rfs-atomic-product-ratings
+				id="product-ratings"
 				[product]="product"
 			></rfs-atomic-product-ratings>
 			<div class="flex-row">
-				<div class="flex-col product-details">
-					<h3>Details</h3>
+				<div class="flex-col product-details product-details-1">
+					<h3 id="details-header">Details</h3>
 					<rfs-atomic-detail-group [items]="getProductDetailsGroup1(product)">
 					</rfs-atomic-detail-group>
 				</div>
-				<div class="flex-col product-attributes">
-					<h3>Attributes</h3>
+				<div class="flex-col product-details product-details-2">
+					<h3 id="attributes-header">Attributes</h3>
 					<rfs-atomic-detail-group [items]="getProductDetailsGroup2(product)">
 					</rfs-atomic-detail-group>
 				</div>
-				<div class="flex-col product-details">
-					<h3>Subsciption</h3>
+				<div class="flex-col product-details product-details-3">
+					<h3 id="subscription-header">Subscription</h3>
 					<rfs-atomic-detail-group [items]="getProductDetailsGroup3(product)">
 					</rfs-atomic-detail-group>
 				</div>
