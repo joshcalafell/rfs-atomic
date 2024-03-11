@@ -1,5 +1,15 @@
 <div class="ui-star" *ngIf="star">
 	<div class="ui-star--container">
-		<rfs-atomic-icon [icon]="star"></rfs-atomic-icon>
+		<span
+			class="ui-icon"
+			[ngClass]="{
+				'ui-icon--small': star.size === 'small',
+				'ui-icon--medium': star.size === 'medium',
+				'ui-icon--large': star.size === 'large'
+			}"
+		>
+			<span *ngIf="star.icon === 'star'">★</span>
+			<span *ngIf="star.icon === 'empty-star'">☆</span>
+		</span>
 	</div>
 </div>

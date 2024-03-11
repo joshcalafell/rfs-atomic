@@ -1,14 +1,14 @@
 import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { IconComponent } from '@rfs-atomic/icon'
 
 @Component({
 	selector: 'rfs-atomic-product-ratings-star',
 	standalone: true,
-	imports: [CommonModule, IconComponent],
+	imports: [CommonModule],
 	templateUrl: './product-ratings-star.component.html',
 	styleUrl: './product-ratings-star.component.scss',
 })
 export class ProductRatingsStarComponent {
-	@Input() star!: { icon: string; color: string; size: string }
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	@Input() star!: any
 }

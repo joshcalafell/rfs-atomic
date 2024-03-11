@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ProductRatingsStarComponent } from './product-ratings-star.component'
-import { IconComponent } from '@rfs-atomic/icon'
 
 describe('ProductRatingsStarComponent', () => {
 	let component: ProductRatingsStarComponent
@@ -8,7 +7,7 @@ describe('ProductRatingsStarComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [ProductRatingsStarComponent, IconComponent],
+			imports: [ProductRatingsStarComponent],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(ProductRatingsStarComponent)
@@ -25,5 +24,10 @@ describe('ProductRatingsStarComponent', () => {
 
 	it('should create', () => {
 		expect(component).toBeTruthy()
+	})
+
+	it('should render star', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('.ui-icon')).toBeTruthy()
 	})
 })

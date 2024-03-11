@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular'
-import { ProductRatingsStarComponent } from './product-ratings-star.component'
-
 import { expect } from '@storybook/jest'
+import { ProductRatingsStarComponent } from './product-ratings-star.component'
 
 const meta: Meta<ProductRatingsStarComponent> = {
 	component: ProductRatingsStarComponent,
@@ -23,10 +22,10 @@ export const Primary: Story = {
 	},
 }
 
-export const BlackMediumStar: Story = {
+export const Empty: Story = {
 	args: {
 		star: {
-			icon: 'star',
+			icon: 'empty-star',
 			color: 'black',
 			size: 'medium',
 		},

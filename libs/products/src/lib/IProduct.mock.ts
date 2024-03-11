@@ -1,3 +1,5 @@
+import { IProduct } from './IProduct.model'
+
 const buttons = [
 	{
 		label: 'Cart',
@@ -13,7 +15,7 @@ const buttons = [
 	},
 ]
 
-export const productsMock = [
+export const productsMock = <IProduct[]>[
 	{
 		entity: {
 			id: '1',
@@ -45,21 +47,6 @@ export const productsMock = [
 		isOnSale: false,
 		saleStart: '',
 		saleEnd: '',
-		isFeatured: false,
-		isTopSeller: false,
-		isNew: false,
-		isBestSeller: false,
-		isSale: false,
-		isAvailable: true,
-		isOutOfStock: false,
-		isComingSoon: false,
-		isDiscontinued: false,
-		isLimited: false,
-		isSoldOut: false,
-		isBackOrder: false,
-		isPreOrder: false,
-		isGift: false,
-		isWishListed: true,
 		cartQty: 1,
 		image:
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cedarwood-vanilla-candle.jpg',
