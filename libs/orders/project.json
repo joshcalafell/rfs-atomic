@@ -1,0 +1,9 @@
+{
+	"name": "orders",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/orders/src",
+	"prefix": "rfs-atomic",
+	"tags": [],
+	"projectType": "library",
+	"targets": {}
+}

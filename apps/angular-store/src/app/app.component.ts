@@ -39,20 +39,20 @@ export class AppComponent {
 
 	menuItems = [
 		{
-			label: 'Dashboard',
-			path: '/primary',
+			label: 'Welcome',
+			path: '/welcome',
 		},
 		{
-			label: 'Inventory',
-			path: '/inventory',
-		},
-		{
-			label: 'Orders',
-			path: '/orders',
+			label: 'Products',
+			path: '/products',
 		},
 		{
 			label: 'Wishlist',
 			path: '/wishlist',
+		},
+		{
+			label: 'Orders',
+			path: '/orders',
 		},
 		{
 			label: 'Settings',
