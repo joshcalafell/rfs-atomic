@@ -13,19 +13,22 @@ type Story = StoryObj<AppComponent>
 
 export const Primary: Story = {
 	args: {
-		title: 'Angular Store',
+		title: 'Candle Store',
 		menuItems: [
 			{
 				label: 'Home',
 				path: '/home',
+				paletteColor: 'primary',
 			},
 			{
 				label: 'About',
 				path: '/about',
+				paletteColor: 'primary',
 			},
 			{
 				label: 'Contact',
 				path: '/contact',
+				paletteColor: 'primary',
 			},
 		],
 		colorScheme: 'light',
@@ -65,19 +68,22 @@ export const Primary: Story = {
 
 export const Heading: Story = {
 	args: {
-		title: 'Angular Store',
+		title: 'Candle Store',
 		menuItems: [
 			{
 				label: 'Home',
 				path: '/home',
+				paletteColor: 'primary',
 			},
 			{
 				label: 'About',
 				path: '/about',
+				paletteColor: 'primary',
 			},
 			{
 				label: 'Contact',
 				path: '/contact',
+				paletteColor: 'primary',
 			},
 		],
 		colorScheme: 'light',
@@ -115,6 +121,6 @@ export const Heading: Story = {
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/Angular Store/gi)).toBeTruthy()
+		expect(canvas.getByText(/Candle Store/gi)).toBeTruthy()
 	},
 }

@@ -5,5 +5,53 @@
 	"prefix": "rfs-atomic",
 	"tags": [],
 	"projectType": "library",
-	"targets": {}
+	"targets": {
+		"storybook": {
+			"executor": "@storybook/angular:start-storybook",
+			"options": {
+				"port": 4400,
+				"configDir": "libs/orders/.storybook",
+				"browserTarget": "orders:build-storybook",
+				"compodoc": false
+			},
+			"configurations": {
+				"ci": {
+					"quiet": true
+				}
+			}
+		},
+		"build-storybook": {
+			"executor": "@storybook/angular:build-storybook",
+			"outputs": ["{options.outputDir}"],
+			"options": {
+				"outputDir": "dist/storybook/orders",
+				"configDir": "libs/orders/.storybook",
+				"browserTarget": "orders:build-storybook",
+				"compodoc": false
+			},
+			"configurations": {
+				"ci": {
+					"quiet": true
+				}
+			}
+		},
+		"test-storybook": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "test-storybook -c libs/orders/.storybook --url=http://localhost:4400"
+			}
+		},
+		"static-storybook": {
+			"executor": "@nx/web:file-server",
+			"options": {
+				"buildTarget": "orders:build-storybook",
+				"staticFilePath": "dist/storybook/orders"
+			},
+			"configurations": {
+				"ci": {
+					"buildTarget": "orders:build-storybook:ci"
+				}
+			}
+		}
+	}
 }

@@ -19,5 +19,5 @@ export class HeaderComponent {
 
 	@Input() title = 'INVENTORY'
 
-	@Input() menuItems: IDesktopMenuItem[] = [] as IDesktopMenuItem[]
+	@Input() menuItems!: IDesktopMenuItem[]
 }

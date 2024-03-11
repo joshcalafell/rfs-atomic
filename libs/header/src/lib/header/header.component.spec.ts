@@ -1,13 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { DesktopMenuComponent } from '@rfs-atomic/desktop-menu'
-import { HeaderComponent } from './header.component'
-
 import { RouterTestingModule } from '@angular/router/testing'
-
 import { ButtonComponent } from '@rfs-atomic/button'
-import exp = require('constants')
+import { DesktopMenuComponent } from '@rfs-atomic/desktop-menu'
 import { IPerson } from './IPerson'
-import { ActivatedRoute } from '@angular/router'
+import { HeaderComponent } from './header.component'
 
 describe('HeaderComponent', () => {
 	let component: HeaderComponent

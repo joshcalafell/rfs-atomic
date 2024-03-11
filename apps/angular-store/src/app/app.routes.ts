@@ -1,44 +1,46 @@
 import { Route } from '@angular/router'
 
-import { NotFoundComponent } from '@rfs-atomic/not-found'
-import { OrdersComponent } from '@rfs-atomic/orders'
-import { ProductsComponent } from '@rfs-atomic/products'
-import { SettingsComponent } from '@rfs-atomic/settings'
-import { WishlistComponent } from '@rfs-atomic/wishlist'
-import { NxWelcomeComponent } from './nx-welcome.component'
-
 export const appRoutes: Route[] = [
 	{
 		path: '',
-		redirectTo: 'products',
+		redirectTo: 'home',
 		pathMatch: 'full',
 	},
 	{
-		path: '/welcome',
-		component: NxWelcomeComponent,
+		path: 'products',
+		loadComponent: () =>
+			import('@rfs-atomic/products').then((m) => m.ProductsComponent),
 	},
 	{
-		path: 'products',
-		component: ProductsComponent,
+		path: 'products/:id',
+		loadComponent: () =>
+			import('@rfs-atomic/product-detail').then(
+				(m) => m.ProductDetailComponent
+			),
 	},
 	{
 		path: 'wishlist',
-		component: WishlistComponent,
+		loadComponent: () =>
+			import('@rfs-atomic/wishlist').then((m) => m.WishlistComponent),
 	},
 	{
 		path: 'orders',
-		component: OrdersComponent,
+		loadComponent: () =>
+			import('@rfs-atomic/orders').then((m) => m.OrdersComponent),
 	},
 	{
 		path: 'settings',
-		component: SettingsComponent,
+		loadComponent: () =>
+			import('@rfs-atomic/settings').then((m) => m.SettingsComponent),
+	},
+	{
+		path: '404',
+		loadComponent: () =>
+			import('@rfs-atomic/not-found').then((m) => m.NotFoundComponent),
 	},
 	{
 		path: '**',
-		redirectTo: '/404',
-	},
-	{
-		path: '/404',
-		component: NotFoundComponent,
+		redirectTo: '404',
+		pathMatch: 'full',
 	},
 ]

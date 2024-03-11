@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Monoton&family=Poppins:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Inter&family=Poppins:wght@100;200&display=swap');
 
 $primary: #ff6666;
 $secondary: #333333;
 $tertiary: #ff6666;
 
-.orders {
+.section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -15,29 +15,29 @@ $tertiary: #ff6666;
 	padding: 20px;
 	box-sizing: border-box;
 	font-family: 'Inter', sans-serif;
-	.orders__title {
+	.section__title {
 		font-family: 'Poppins', sans-serif;
 		font-size: 24px;
 		margin-bottom: 20px;
 	}
-	.orders__form {
+	.section__form {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		.orders__form-group {
+		.section__form-group {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			width: 100%;
 			margin-bottom: 20px;
-			.orders__form-label {
+			.section__form-label {
 				font-size: 18px;
 				margin-bottom: 10px;
 			}
-			.orders__form-input {
+			.section__form-input {
 				width: 100%;
 				padding: 10px;
 				font-size: 16px;
@@ -47,7 +47,7 @@ $tertiary: #ff6666;
 			}
 		}
 	}
-	.orders__button {
+	.section__button {
 		padding: 10px 20px;
 		font-size: 18px;
 		border: none;
@@ -56,34 +56,34 @@ $tertiary: #ff6666;
 		color: #fff;
 		cursor: pointer;
 	}
-	.orders__button--cancel {
+	.section__button--cancel {
 		margin-right: 10px;
 		background-color: #dc3545;
 	}
-	.orders__button--save {
+	.section__button--save {
 		background-color: #28a745;
 	}
-	.orders__button--delete {
+	.section__button--delete {
 		margin-top: 20px;
 		background-color: #dc3545;
 	}
-	.orders__button--logout {
+	.section__button--logout {
 		margin-top: 20px;
 		background-color: #007bff;
 	}
-	.orders__button--logout:hover {
+	.section__button--logout:hover {
 		background-color: #0056b3;
 	}
-	.orders__button--delete:hover {
+	.section__button--delete:hover {
 		background-color: #c82333;
 	}
-	.orders__button--cancel:hover {
+	.section__button--cancel:hover {
 		background-color: #bd2130;
 	}
-	.orders__button--save:hover {
+	.section__button--save:hover {
 		background-color: #218838;
 	}
-	.orders__error {
+	.section__error {
 		color: #dc3545;
 	}
 }

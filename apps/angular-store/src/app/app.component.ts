@@ -35,32 +35,32 @@ import { NxWelcomeComponent } from './nx-welcome.component'
 	styleUrl: './app.component.scss',
 })
 export class AppComponent {
-	title = 'Angular Store'
+	title = 'Candle Store'
 
 	menuItems = [
 		{
-			label: 'Welcome',
-			path: '/welcome',
-		},
-		{
 			label: 'Products',
 			path: '/products',
+			paletteColor: 'primary',
 		},
 		{
 			label: 'Wishlist',
 			path: '/wishlist',
+			paletteColor: 'primary',
 		},
 		{
 			label: 'Orders',
 			path: '/orders',
+			paletteColor: 'primary',
 		},
 		{
 			label: 'Settings',
 			path: '/settings',
+			paletteColor: 'primary',
 		},
 	]
 
-	colorScheme = 'light'
+	colorScheme = 'dark'
 
 	user = (<IPerson>{
 		name: {

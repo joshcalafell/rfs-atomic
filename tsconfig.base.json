@@ -36,6 +36,7 @@
 			"@rfs-atomic/product-description-list": [
 				"libs/product-description-list/src/index.ts"
 			],
+			"@rfs-atomic/product-detail": ["libs/product-detail/src/index.ts"],
 			"@rfs-atomic/product-ratings": ["libs/product-ratings/src/index.ts"],
 			"@rfs-atomic/product-ratings-star": [
 				"libs/product-ratings-star/src/index.ts"

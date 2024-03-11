@@ -23,13 +23,13 @@ describe('NotFoundComponent', () => {
 
 	it('should render a not found message', () => {
 		const compiled = fixture.nativeElement
-		expect(compiled.querySelector('.not-found')).toBeTruthy()
+		expect(compiled.querySelector('h2')).toBeTruthy()
 	})
 
 	it('should render a not found message with the correct text', () => {
 		const compiled = fixture.nativeElement
-		compiled.querySelector('.not-found').textContent = '404 - Page Not Found'
-		expect(compiled.querySelector('.not-found').textContent).toContain(
+		compiled.querySelector('h2').textContent = '404 - Page Not Found'
+		expect(compiled.querySelector('h2').textContent).toContain(
 			'404 - Page Not Found'
 		)
 	})

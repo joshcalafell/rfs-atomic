@@ -10,5 +10,6 @@ import { ButtonComponent, IAtomicUiButton } from '@rfs-atomic/button'
 	styleUrl: './button-row.component.scss',
 })
 export class ButtonRowComponent {
-	@Input() buttons!: IAtomicUiButton[]
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	@Input() buttons!: IAtomicUiButton[] | any[]
 }
