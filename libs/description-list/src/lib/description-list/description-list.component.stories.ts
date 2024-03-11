@@ -19,7 +19,7 @@ const testItems: IDescriptionListItem[] = [
 	},
 	{
 		label: 'Phone',
-		value: '123-456-7890',
+		value: '+18005557777',
 		valueType: 'phone',
 	},
 	{
@@ -50,7 +50,7 @@ const testItems: IDescriptionListItem[] = [
 	{
 		label: 'Date of Birth',
 		value: '1970/01/01',
-		valueType: 'date-custom',
+		valueType: 'date-short',
 	},
 ]
 
@@ -66,6 +66,10 @@ export const Primary: Story = {
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 		expect(canvas.getByText(/Name/gi)).toBeTruthy()
-		expect(canvas.getByText(/John Doe/gi)).toBeTruthy()
+		expect(canvas.getByText(/Email/gi)).toBeTruthy()
+		expect(canvas.getByText(/Phone/gi)).toBeTruthy()
+		expect(canvas.getByText(/Country/gi)).toBeTruthy()
+		expect(canvas.getByText(/Date of Birth/gi)).toBeTruthy()
+		expect(canvas.getByText(/United States/gi)).toBeTruthy()
 	},
 }
