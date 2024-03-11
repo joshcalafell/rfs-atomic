@@ -72,7 +72,7 @@
 			"style": "css"
 		}
 	},
-	"nxVersion": "12.9.0",
+	"nxVersion": "18.0.6",
 	"projectType": "application",
 	"tags": [
 		"type:app",
@@ -83,7 +83,7 @@
 		"data:json"
 	],
 	"nxCloud": true,
-	"nxCloudAccessToken": "YTI1OTZjYzktNWExMi00MmJmLWIyZDMtODJhNDgzNDIzNjRifHJlYWQtd3JpdGU=",
+	"nxCloudAccessToken": "YWU5YWQxNmMtNDJkMC00NDJmLTk5MTgtMmEyNzQxZmFjZWYxfHJlYWQ=",
 	"tasksRunnerOptions": {
 		"default": {
 			"options": {
