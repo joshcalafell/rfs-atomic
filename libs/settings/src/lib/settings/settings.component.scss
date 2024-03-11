@@ -1,46 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&Inter:wght@300;400;600&display=swap');
-$primary: #26bfcd;
-$secondary: #a164d3;
-$tertiary: #333333;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
 .section {
+	margin-top: 88px;
+	gap: 16px;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
-	height: 100%;
-	width: 100%;
-	margin: 24px 16px;
-	font-family: 'Inter', sans-serif;
 
-	.section__title {
-		font-family: 'Poppins', sans-serif;
-		font-size: 24px;
-		vertical-align: middle;
-		padding: 8px auto;
-		margin-bottom: 20px;
-	}
+	.section-title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
-	p {
-		font-size: 18px;
-		margin-bottom: 20px;
-	}
-
-	ul {
-		list-style: none;
-		padding: 0;
-		li {
-			margin-bottom: 10px;
-			color: $primary;
-			&:visited {
-				color: $primary;
-			}
-			&:active {
-				color: $primary;
-			}
-			&:hover {
-				color: $primary;
-			}
-		}
+		width: 100%;
+		font-family: 'Inter', sans-serif;
 	}
 }
