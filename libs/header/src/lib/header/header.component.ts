@@ -15,9 +15,8 @@ import { RouterModule } from '@angular/router'
 	styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+	@Input() title = ''
 	@Input() user: IPerson = {} as IPerson
-
-	@Input() title = 'INVENTORY'
-
 	@Input() menuItems!: IDesktopMenuItem[]
+	@Input() hasLogin = false
 }

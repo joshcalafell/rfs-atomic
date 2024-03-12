@@ -11,6 +11,7 @@
 			></rfs-atomic-desktop-menu>
 		</nav>
 		<rfs-atomic-button
+			*ngIf="hasLogin"
 			[label]="'Login'"
 			[palleteColor]="'primary'"
 			[size]="'medium'"

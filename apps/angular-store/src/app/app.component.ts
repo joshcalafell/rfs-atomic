@@ -7,7 +7,6 @@ import { HeaderComponent } from '@rfs-atomic/header'
 import { ButtonComponent } from 'libs/button/src'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { IPerson } from 'libs/header/src/lib/header/IPerson'
-import { NxWelcomeComponent } from './nx-welcome.component'
 
 @Component({
 	standalone: true,
@@ -17,7 +16,6 @@ import { NxWelcomeComponent } from './nx-welcome.component'
 		HeaderComponent,
 		FooterComponent,
 		RouterModule,
-		NxWelcomeComponent,
 	],
 
 	providers: [
