@@ -10,24 +10,7 @@ import { IPerson } from 'libs/header/src/lib/header/IPerson'
 
 @Component({
 	standalone: true,
-	imports: [
-		CommonModule,
-		ButtonComponent,
-		HeaderComponent,
-		FooterComponent,
-		RouterModule,
-	],
-
-	providers: [
-		{
-			provide: ActivatedRoute,
-			useValue: {
-				snapshot: {
-					data: { path: 'home' },
-				},
-			},
-		},
-	],
+	imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule],
 	selector: 'rfs-atomic-root',
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.scss',

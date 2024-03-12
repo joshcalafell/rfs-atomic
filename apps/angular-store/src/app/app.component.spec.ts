@@ -23,7 +23,7 @@ describe('AppComponent', () => {
 					provide: ActivatedRoute,
 					useValue: {
 						snapshot: {
-							data: { path: 'home' },
+							data: { path: '/' },
 						},
 					},
 				},
