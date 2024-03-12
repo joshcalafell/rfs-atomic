@@ -12,13 +12,19 @@ export default meta
 type Story = StoryObj<SettingsComponent>
 
 export const Primary: Story = {
-	args: {},
-}
-
-export const Heading: Story = {
-	args: {},
+	args: {
+		title: 'Settings',
+	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/settings works!/gi)).toBeTruthy()
+		expect(canvas.getByText(/Settings/gi)).toBeTruthy()
+	},
+}
+
+export const Default: Story = {
+	args: { title: 'Settings' },
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas.getByText(/Settings/gi)).toBeTruthy()
 	},
 }
