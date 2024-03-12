@@ -299,7 +299,7 @@ import { CommonModule } from '@angular/common'
 				background-color: #ffd700;
 			}
 			#nx-repo svg {
-				color: #ffd700;
+				color: #333;
 			}
 			#nx-cloud {
 				margin-bottom: 2rem;
@@ -852,7 +852,8 @@ nx affected:e2e</pre>
 					</details>
 				</div>
 				<p id="love">
-					Carefully crafted with
+					Carefully crafted by
+					<a target="_blank" href="https://joshuamichael.me">J.C.</a> with
 					<svg
 						fill="currentColor"
 						stroke="none"
