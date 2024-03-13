@@ -1,19 +1,19 @@
 <ul class="hash-group">
-  <li
-    [ngClass]="{
-      'hash-group__item--primary': paletteColor === 'primary',
-      'hash-group__item--secondary': paletteColor === 'secondary',
-      'hash-group__item--tertiary': paletteColor === 'tertiary',
-      'hash-group__item--danger': paletteColor === 'danger',
-      'hash-group__item--warning': paletteColor === 'warning',
-      'hash-group__item--success': paletteColor === 'success',
-      'hash-group__item--info': paletteColor === 'info',
-      'hash-group__item--light': paletteColor === 'light',
-      'hash-group__item--dark': paletteColor === 'dark'
-    }"
-    *ngFor="let hash of hashes"
-    class="hash-group__item"
-  >
-    <span class="hash__label">#{{ hash | titlecase }}</span>
-  </li>
+	<li
+		[ngClass]="{
+			'hash-group__item--primary': paletteColor === 'primary',
+			'hash-group__item--secondary': paletteColor === 'secondary',
+			'hash-group__item--tertiary': paletteColor === 'tertiary',
+			'hash-group__item--danger': paletteColor === 'danger',
+			'hash-group__item--warning': paletteColor === 'warning',
+			'hash-group__item--success': paletteColor === 'success',
+			'hash-group__item--info': paletteColor === 'info',
+			'hash-group__item--light': paletteColor === 'light',
+			'hash-group__item--dark': paletteColor === 'dark'
+		}"
+		*ngFor="let hash of hashes"
+		class="hash-group__item"
+	>
+		<span class="hash__label">#{{ hash | titlecase }}</span>
+	</li>
 </ul>

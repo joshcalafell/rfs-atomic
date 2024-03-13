@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core'
+import { CommonModule } from '@angular/common'
 
 @Component({
-  selector: 'rfs-atomic-sort-table',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './sort-table.component.html',
-  styleUrl: './sort-table.component.scss',
+	selector: 'rfs-atomic-sort-table',
+	standalone: true,
+	imports: [CommonModule],
+	templateUrl: './sort-table.component.html',
+	styleUrl: './sort-table.component.scss',
 })
 export class SortTableComponent {}
