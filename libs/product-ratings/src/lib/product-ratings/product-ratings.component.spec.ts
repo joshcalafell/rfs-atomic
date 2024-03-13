@@ -24,13 +24,13 @@ describe('ProductRatingsComponent', () => {
 			buttons: [
 				{
 					label: 'Cart',
-					palleteColor: 'primary',
+					paletteColor: 'primary',
 					size: 'medium',
 					disabled: false,
 				},
 				{
 					label: 'Wishlist',
-					palleteColor: 'secondary',
+					paletteColor: 'secondary',
 					size: 'medium',
 					disabled: false,
 				},
@@ -127,8 +127,8 @@ describe('ProductRatingsComponent', () => {
 		expect(component.product.buttons[0].label).toEqual('Cart')
 	})
 
-	it('should have a primary button with palleteColor primary', () => {
-		expect(component.product.buttons[0].palleteColor).toEqual('primary')
+	it('should have a primary button with paletteColor primary', () => {
+		expect(component.product.buttons[0].paletteColor).toEqual('primary')
 	})
 
 	it('should have a primary button with size medium', () => {
@@ -143,8 +143,8 @@ describe('ProductRatingsComponent', () => {
 		expect(component.product.buttons[1].label).toEqual('Wishlist')
 	})
 
-	it('should have a secondary button with palleteColor secondary', () => {
-		expect(component.product.buttons[1].palleteColor).toEqual('secondary')
+	it('should have a secondary button with paletteColor secondary', () => {
+		expect(component.product.buttons[1].paletteColor).toEqual('secondary')
 	})
 
 	it('should have a secondary button with size medium', () => {

@@ -42,7 +42,7 @@ describe('UiComponent', () => {
 
 		component.button = {
 			label: 'Click me',
-			palleteColor: 'primary',
+			paletteColor: 'primary',
 			disabled: false,
 			size: 'medium',
 			type: 'animated-arrow',
@@ -64,13 +64,13 @@ describe('UiComponent', () => {
 			buttons: [
 				{
 					label: 'Cart',
-					palleteColor: 'primary',
+					paletteColor: 'primary',
 					size: 'medium',
 					disabled: false,
 				},
 				{
 					label: 'Wishlist',
-					palleteColor: 'secondary',
+					paletteColor: 'secondary',
 					size: 'medium',
 					disabled: false,
 				},

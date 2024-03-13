@@ -24,13 +24,13 @@ export const Primary: Story = {
 			buttons: [
 				{
 					label: 'Cart',
-					palleteColor: 'primary',
+					paletteColor: 'primary',
 					disabled: false,
 					size: 'medium',
 				},
 				{
 					label: 'Wishlist',
-					palleteColor: 'secondary',
+					paletteColor: 'secondary',
 					disabled: false,
 					size: 'medium',
 				},
@@ -92,13 +92,13 @@ export const ProductCard: Story = {
 			buttons: [
 				{
 					label: 'Cart',
-					palleteColor: 'primary',
+					paletteColor: 'primary',
 					disabled: false,
 					size: 'medium',
 				},
 				{
 					label: 'Wishlist',
-					palleteColor: 'secondary',
+					paletteColor: 'secondary',
 					disabled: false,
 					size: 'medium',
 				},
@@ -161,13 +161,13 @@ export const ProductCardSmallButtons: Story = {
 			buttons: [
 				{
 					label: 'Cart',
-					palleteColor: 'primary',
+					paletteColor: 'primary',
 					disabled: false,
 					size: 'small',
 				},
 				{
 					label: 'Wishlist',
-					palleteColor: 'secondary',
+					paletteColor: 'secondary',
 					disabled: false,
 					size: 'small',
 				},

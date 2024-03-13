@@ -3,13 +3,13 @@ import { IProduct } from './IProduct.model'
 const buttons = [
 	{
 		label: 'Cart',
-		palleteColor: 'primary',
+		paletteColor: 'primary',
 		size: 'medium',
 		disabled: false,
 	},
 	{
 		label: 'Wishlist',
-		palleteColor: 'secondary',
+		paletteColor: 'secondary',
 		size: 'medium',
 		disabled: false,
 	},

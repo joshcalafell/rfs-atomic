@@ -33,7 +33,7 @@ import { IPerson } from 'libs/header/src/lib/header/IPerson'
 export class UiComponent implements OnInit {
 	button: IAtomicUiButton = {
 		label: 'Click me',
-		palleteColor: 'primary',
+		paletteColor: 'primary',
 		disabled: false,
 		size: 'medium',
 		type: 'animated-arrow',
@@ -156,13 +156,13 @@ export class UiComponent implements OnInit {
 		buttons: [
 			{
 				label: 'Cart',
-				palleteColor: 'primary',
+				paletteColor: 'primary',
 				size: 'medium',
 				disabled: false,
 			},
 			{
 				label: 'Wishlist',
-				palleteColor: 'secondary',
+				paletteColor: 'secondary',
 				size: 'medium',
 				disabled: false,
 			},
@@ -229,7 +229,7 @@ export class UiComponent implements OnInit {
 				for (const type of types) {
 					this.buttons.push({
 						label: `${color} ${size} ${type}`,
-						palleteColor: color.toString() as
+						paletteColor: color.toString() as
 							| 'primary'
 							| 'secondary'
 							| 'tertiary'

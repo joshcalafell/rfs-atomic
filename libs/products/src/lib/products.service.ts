@@ -19,7 +19,7 @@ interface IProductSubscription {
 
 interface IProductButton {
 	label: string
-	palleteColor?:
+	paletteColor?:
 		| 'primary'
 		| 'secondary'
 		| 'tertiary'

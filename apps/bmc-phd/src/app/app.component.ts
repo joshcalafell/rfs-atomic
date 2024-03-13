@@ -64,28 +64,28 @@ const person = {
 
 const menuItems = [
 	{
+		label: 'Home',
+		path: 'home',
+	},
+	{
+		label: 'About',
+		path: 'about',
+	},
+	{
 		label: 'Research',
-		path: '/research',
+		path: 'research',
 	},
 	{
 		label: 'Teaching',
-		path: '/teaching',
+		path: 'teaching-and-mentoring',
 	},
 	{
-		label: 'Service',
-		path: '/service',
+		label: 'Media',
+		path: 'media-appearances', //
 	},
 	{
-		label: 'Books',
-		path: '/books',
-	},
-	{
-		label: 'CV',
-		path: '/cv',
-	},
-	{
-		label: 'Contact',
-		path: '/contact',
+		label: 'Speaking',
+		path: 'speaking-engagements', //
 	},
 ]
 

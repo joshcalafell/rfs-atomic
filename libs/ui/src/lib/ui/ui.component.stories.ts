@@ -16,21 +16,21 @@ export const Primary: Story = {
 		buttons: [
 			{
 				label: 'small',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				disabled: false,
 				size: 'small',
 				type: 'animated-arrow',
 			},
 			{
 				label: 'medium',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				disabled: false,
 				size: 'medium',
 				type: 'animated-arrow',
 			},
 			{
 				label: 'large',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				disabled: false,
 				size: 'large',
 				type: 'animated-arrow',
@@ -112,21 +112,21 @@ export const SecondaryButtons: Story = {
 		buttons: [
 			{
 				label: 'small',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				disabled: false,
 				size: 'small',
 				type: 'animated-arrow',
 			},
 			{
 				label: 'medium',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				disabled: false,
 				size: 'medium',
 				type: 'animated-arrow',
 			},
 			{
 				label: 'large',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				disabled: false,
 				size: 'large',
 				type: 'animated-arrow',
@@ -208,21 +208,21 @@ export const TertiaryButtons: Story = {
 		buttons: [
 			{
 				label: 'small',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				disabled: false,
 				size: 'small',
 				type: 'animated-arrow',
 			},
 			{
 				label: 'medium',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				disabled: false,
 				size: 'medium',
 				type: 'animated-arrow',
 			},
 			{
 				label: 'large',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				disabled: false,
 				size: 'large',
 				type: 'animated-arrow',

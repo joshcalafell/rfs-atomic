@@ -16,19 +16,19 @@ export const Primary: Story = {
 		buttons: [
 			{
 				label: 'Button 1',
-				palleteColor: 'primary',
+				paletteColor: 'primary',
 				size: 'medium',
 				disabled: false,
 			},
 			{
 				label: 'Button 2',
-				palleteColor: 'secondary',
+				paletteColor: 'secondary',
 				size: 'medium',
 				disabled: false,
 			},
 			{
 				label: 'Button 3',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				size: 'medium',
 				disabled: false,
 			},
@@ -46,21 +46,21 @@ export const PrimaryArrows: Story = {
 		buttons: [
 			{
 				label: 'Button 1',
-				palleteColor: 'primary',
+				paletteColor: 'primary',
 				size: 'medium',
 				disabled: false,
 				type: 'animated-arrow',
 			},
 			{
 				label: 'Button 2',
-				palleteColor: 'secondary',
+				paletteColor: 'secondary',
 				size: 'medium',
 				disabled: false,
 				type: 'animated-arrow',
 			},
 			{
 				label: 'Button 3',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				size: 'medium',
 				disabled: false,
 				type: 'animated-arrow',
@@ -79,19 +79,19 @@ export const Small: Story = {
 		buttons: [
 			{
 				label: 'Button 1',
-				palleteColor: 'primary',
+				paletteColor: 'primary',
 				size: 'small',
 				disabled: false,
 			},
 			{
 				label: 'Button 2',
-				palleteColor: 'secondary',
+				paletteColor: 'secondary',
 				size: 'small',
 				disabled: false,
 			},
 			{
 				label: 'Button 2',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				size: 'small',
 				disabled: false,
 			},
@@ -109,19 +109,19 @@ export const Medium: Story = {
 		buttons: [
 			{
 				label: 'Button 4',
-				palleteColor: 'primary',
+				paletteColor: 'primary',
 				size: 'medium',
 				disabled: false,
 			},
 			{
 				label: 'Button 5',
-				palleteColor: 'secondary',
+				paletteColor: 'secondary',
 				size: 'medium',
 				disabled: false,
 			},
 			{
 				label: 'Button 6',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				size: 'medium',
 				disabled: false,
 			},
@@ -139,19 +139,19 @@ export const Large: Story = {
 		buttons: [
 			{
 				label: 'Button 7',
-				palleteColor: 'primary',
+				paletteColor: 'primary',
 				size: 'large',
 				disabled: false,
 			},
 			{
 				label: 'Button 8',
-				palleteColor: 'secondary',
+				paletteColor: 'secondary',
 				size: 'large',
 				disabled: false,
 			},
 			{
 				label: 'Button 9',
-				palleteColor: 'tertiary',
+				paletteColor: 'tertiary',
 				size: 'large',
 				disabled: false,
 			},

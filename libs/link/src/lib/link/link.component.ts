@@ -16,11 +16,11 @@ type IAtomicLinkPaletteColor =
 type IAtomicLinkSize = 'small' | 'medium' | 'large'
 
 export interface IAtomicLink {
-	label: string
+	label?: string
 	path?: string
 	disabled?: boolean
 	size?: IAtomicLinkSize
-	palleteColor?: IAtomicLinkPaletteColor
+	paletteColor?: IAtomicLinkPaletteColor
 	target?: string
 	href?: string
 	download?: string
@@ -38,7 +38,8 @@ export interface IAtomicLink {
 	styleUrl: './link.component.scss',
 })
 export class LinkComponent implements OnInit {
-	@Input() link: IAtomicLink = {} as IAtomicLink
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	@Input() link!: any
 
 	private _isActive = false
 

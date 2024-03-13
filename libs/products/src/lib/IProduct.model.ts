@@ -11,13 +11,13 @@ export interface IProduct {
 	buttons: [
 		{
 			label: 'Cart'
-			palleteColor: 'primary'
+			paletteColor: 'primary'
 			disabled: false
 			size: 'medium'
 		},
 		{
 			label: 'Wishlist'
-			palleteColor: 'secondary'
+			paletteColor: 'secondary'
 			disabled: false
 			size: 'medium'
 		}
