@@ -1,0 +1,9 @@
+{
+	"name": "card-list",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/card-list/src",
+	"prefix": "rfs-atomic",
+	"tags": [],
+	"projectType": "library",
+	"targets": {}
+}

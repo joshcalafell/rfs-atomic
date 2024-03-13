@@ -1,0 +1,9 @@
+{
+	"name": "card-cta",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/card-cta/src",
+	"prefix": "rfs-atomic",
+	"tags": [],
+	"projectType": "library",
+	"targets": {}
+}
