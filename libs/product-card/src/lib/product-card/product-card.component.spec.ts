@@ -5,6 +5,7 @@ import { DetailGroupComponent } from '@rfs-atomic/detail-group'
 import { HashesComponent } from '@rfs-atomic/hashes'
 import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 import { ProductCardComponent } from './product-card.component'
+import { RouterTestingModule } from '@angular/router/testing'
 
 describe('ProductCardComponent', () => {
 	let component: ProductCardComponent
@@ -19,6 +20,7 @@ describe('ProductCardComponent', () => {
 				HashesComponent,
 				ProductRatingsComponent,
 				DetailGroupComponent,
+				RouterTestingModule,
 			],
 		}).compileComponents()
 

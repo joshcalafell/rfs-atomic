@@ -1,16 +1,5 @@
 <p *ngFor="let item of items" class="detail-item"></p>
 
-<!--
-
-
-	| 'text'
-	| 'date'
-	| 'currency'
-	| 'number'
-	| 'percentage'
-	| 'address'
-
--->
 <div *ngFor="let item of items; let i = index" [ngSwitch]="item.valueType">
 	<p *ngSwitchCase="'phone'" class="detail-item">
 		<!-- Phone specific formatting -->
@@ -79,8 +68,8 @@
 		<span class="detail-item-label">{{ item.label }}:</span>
 		<span class="detail-item-value">{{ item.value | addressFormat }}</span>
 	</p>
-	<!-- 	<p *ngSwitchDefault class="detail-item">
+	<p *ngSwitchDefault class="detail-item">
 		<span class="detail-item-label">{{ item.label }}:</span>
 		<span class="detail-item-value">{{ item.value }}</span>
-	</p> -->
+	</p>
 </div>

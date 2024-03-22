@@ -53,9 +53,7 @@ export class LinkComponent implements OnInit {
 
 	constructor(private router: Router) {
 		this.router.events.subscribe((event) => {
-			console.log(event, this.link.path)
 			if (event instanceof NavigationEnd) {
-				console.log(event.url, this.link.path)
 				this.isActive = event.url === this.link.path
 			}
 		})

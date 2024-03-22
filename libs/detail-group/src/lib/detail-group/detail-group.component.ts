@@ -13,4 +13,8 @@ import {
 })
 export class DetailGroupComponent {
 	@Input() items: IDescriptionListItem[] = []
+
+	constructor() {
+		console.log('DetailGroupComponent', this.items)
+	}
 }

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { Component, EventEmitter, Input, Output } from '@angular/core'
-import { Router } from '@angular/router'
+import { Router, RouterModule } from '@angular/router'
 import { ButtonRowComponent } from '@rfs-atomic/button-row'
 import { ChipComponent } from '@rfs-atomic/chip'
 import { IDescriptionListItem } from '@rfs-atomic/description-list'
@@ -18,6 +18,7 @@ import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 		HashesComponent,
 		ProductRatingsComponent,
 		DetailGroupComponent,
+		RouterModule,
 	],
 	templateUrl: './product-card.component.html',
 	styleUrl: './product-card.component.scss',
@@ -25,7 +26,7 @@ import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 export class ProductCardComponent {
 	@Output() addToCartEmitter = new EventEmitter()
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	@Input() product!: any
+	@Input() product: any
 
 	cardImage = 'https://i.imgur.com/vL2h90y.jpg'
 
@@ -49,6 +50,10 @@ export class ProductCardComponent {
 			{
 				label: 'Fragrance',
 				value: product.scent,
+			},
+			{
+				label: 'size',
+				value: product.size,
 			},
 			{
 				label: 'Availability',
