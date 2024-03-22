@@ -3,6 +3,8 @@ import { ProductCardHeaderComponent } from './product-card-header.component'
 
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { candleMock } from 'libs/product-detail/src/lib/product-detail/product.mock'
 
 const meta: Meta<ProductCardHeaderComponent> = {
 	component: ProductCardHeaderComponent,
@@ -12,13 +14,21 @@ export default meta
 type Story = StoryObj<ProductCardHeaderComponent>
 
 export const Primary: Story = {
-	args: {},
+	args: {
+		product: candleMock,
+	},
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas.getByText(/Cedarwood & Vanilla/gi)).toBeTruthy()
+	},
 }
 
 export const Heading: Story = {
-	args: {},
+	args: {
+		product: candleMock,
+	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/product-card-header works!/gi)).toBeTruthy()
+		expect(canvas.getByText(/Cedarwood & Vanilla/gi)).toBeTruthy()
 	},
 }

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500600&display=swap');
+
+//
+$primary: #26bfcd;
+$secondary: #ff6347;
+$tertiary: #333333;
+$danger: #dc3545;
+$warning: #ffc107;
+$success: #28a745;
+$info: #f1ee3e;
+$light: #f8f9fa;
+$dark: #343a40;
+$white: #ffffff;
+$disabled: #6c757d;
+$black: #000000;
+$gray: #6c757d;
+
+$price-tag-background: #ff6347;
+$price-tag-color: #fff;
+$price-tag-height: 24px;
+$price-tag-corner: 4px;
+$price-tag-dot-radius: 6px;
+$price-tag-dot-background: #fff;
+
+.price-tag {
+	position: relative;
+	display: inline-flex;
+	flex-direction: column;
+	height: $price-tag-height;
+	margin-left: calc($price-tag-height / 2);
+	padding: 0px 5px 0 10px;
+	color: $price-tag-color;
+	border-radius: 0 $price-tag-corner $price-tag-corner 0;
+	background-color: $price-tag-background;
+	line-height: 1.23rem;
+	justify-content: center;
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: '';
+	}
+
+	&::before {
+		$price-tag-side: round($price-tag-height / 1.428);
+
+		left: calc(-1 * $price-tag-side / 2);
+		width: $price-tag-side;
+		height: $price-tag-side;
+		transform: rotate(45deg);
+		border-radius: 0 0 0 $price-tag-corner;
+		background-color: $price-tag-background;
+	}
+
+	&::after {
+		z-index: 1;
+		top: 50%;
+		left: calc(-1 * $price-tag-height / 2);
+		width: $price-tag-dot-radius;
+		height: $price-tag-dot-radius;
+		transform: translate(-50%, -50%) translateX(calc($price-tag-height / 2));
+		border-radius: calc($price-tag-dot-radius / 2);
+		background-color: $price-tag-dot-background;
+	}
+
+	&__main {
+		font-size: 1.15em;
+		font-weight: bold;
+
+		~ * {
+			opacity: 0.85;
+		}
+	}
+
+	span {
+		position: relative;
+		z-index: 1;
+		font-family: 'Inter', sans-serif;
+	}
+
+	&--two-lines {
+		$price-tag-side: round($price-tag-height / 1.428) * 2;
+		margin-left: $price-tag-height;
+		height: $price-tag-height * 2;
+
+		&::before {
+			left: calc(-1 * $price-tag-side / 2);
+			width: $price-tag-side;
+			height: $price-tag-side;
+		}
+
+		&::after {
+			transform: translate(-50%, -50%) translateX(calc($price-tag-height / 2))
+				scale(2);
+		}
+	}
+
+	&--one-line {
+		flex-direction: row;
+		align-items: center;
+
+		span {
+			&:not(:first-child) {
+				&::before {
+					content: ', ';
+				}
+			}
+		}
+	}
+}

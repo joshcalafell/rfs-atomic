@@ -6,6 +6,7 @@ import { ChipComponent } from '@rfs-atomic/chip'
 import { IDescriptionListItem } from '@rfs-atomic/description-list'
 import { DetailGroupComponent } from '@rfs-atomic/detail-group'
 import { HashesComponent } from '@rfs-atomic/hashes'
+import { ProductCardHeaderComponent } from '@rfs-atomic/product-card-header'
 import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 
 @Component({
@@ -19,6 +20,7 @@ import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 		ProductRatingsComponent,
 		DetailGroupComponent,
 		RouterModule,
+		ProductCardHeaderComponent,
 	],
 	templateUrl: './product-card.component.html',
 	styleUrl: './product-card.component.scss',
@@ -50,6 +52,10 @@ export class ProductCardComponent {
 			{
 				label: 'Fragrance',
 				value: product.scent,
+			},
+			{
+				label: 'Color',
+				value: product.color,
 			},
 			{
 				label: 'size',

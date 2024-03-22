@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&Inter:wght@300;400;600&display=swap');
+
+$primary: #a164d3;
+$secondary: #333333;
+$tertiary: #ff6666;
+$danger: #dc3545;
+$warning: #ffc107;
+$success: #28a745;
+$info: #f5de5e;
+$light: #f8f9fa;
+$dark: #343a40;
+$white: #ffffff;
+$disabled: #6c757d;
+$transparent: transparent;
+$black: #000000;
+$gray: #6c757d;
+
+.card-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+
+	.title {
+		margin: 0;
+		font-size: 1.23em;
+		font-family: 'Poppins', sans-serif;
+	}
+}

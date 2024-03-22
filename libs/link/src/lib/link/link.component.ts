@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { NavigationEnd, Router, RouterModule } from '@angular/router'
+import { Component, Input } from '@angular/core'
+import { RouterLinkActive, RouterModule } from '@angular/router'
 
 type IAtomicLinkPaletteColor =
 	| 'primary'
@@ -33,35 +33,13 @@ export interface IAtomicLink {
 @Component({
 	selector: 'rfs-atomic-link',
 	standalone: true,
-	imports: [CommonModule, RouterModule],
+	imports: [CommonModule, RouterModule, RouterLinkActive],
 	templateUrl: './link.component.html',
 	styleUrl: './link.component.scss',
 })
-export class LinkComponent implements OnInit {
+export class LinkComponent {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	@Input() link!: any
-
-	private _isActive = false
-
-	public get isActive() {
-		return this._isActive
-	}
-
-	public set isActive(value) {
-		this._isActive = value
-	}
-
-	constructor(private router: Router) {
-		this.router.events.subscribe((event) => {
-			if (event instanceof NavigationEnd) {
-				this.isActive = event.url === this.link.path
-			}
-		})
-	}
-
-	ngOnInit() {
-		this.isActive = this.router.url === this.link.path
-	}
 
 	onClick() {
 		// this.link.onClick()

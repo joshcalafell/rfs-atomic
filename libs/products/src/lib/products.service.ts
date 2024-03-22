@@ -94,9 +94,14 @@ export class ProductsService {
 		},
 
 		cart: (<never>[]) as ICandleProduct[],
+		wishlist: (<never>[]) as ICandleProduct[],
 
 		addToCart(product: ICandleProduct) {
 			this.cart.push(product)
+		},
+
+		addToWishlist(product: ICandleProduct) {
+			console.log('Added to wishlist', product)
 		},
 	}
 

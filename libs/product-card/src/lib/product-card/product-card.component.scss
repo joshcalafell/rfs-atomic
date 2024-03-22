@@ -24,20 +24,6 @@ $gray: #6c757d;
 		padding: 16px;
 		font-family: 'Inter', sans-serif;
 
-		.card-header {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-			margin-bottom: 8px;
-
-			.title {
-				margin: 0;
-				font-size: 1.5em;
-				font-family: 'Poppins', sans-serif;
-			}
-		}
-
 		.card-image {
 			img {
 				width: 100%;

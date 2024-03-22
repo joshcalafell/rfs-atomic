@@ -7,6 +7,10 @@ header {
 		text-decoration: none;
 	}
 
+	.header-title-link {
+		cursor: pointer;
+	}
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

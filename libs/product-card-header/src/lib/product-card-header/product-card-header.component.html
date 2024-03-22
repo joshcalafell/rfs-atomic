@@ -1,1 +1,20 @@
-<p>product-card-header works!</p>
+<div class="card-header">
+	<div class="title">
+		{{ product.entity.name }}
+	</div>
+
+	<rfs-atomic-chip
+		*ngIf="product.stock === 0"
+		id="product-card-header-chip"
+		[label]="'Out of Stock'"
+		[color]="'tertiary'"
+	></rfs-atomic-chip>
+
+	<rfs-atomic-sale-tag
+		id="product-card-header-sales-tag"
+		*ngIf="product.stock > 0"
+		[label]="product.entity.price"
+	></rfs-atomic-sale-tag>
+
+	<!-- Chip component -->
+</div>

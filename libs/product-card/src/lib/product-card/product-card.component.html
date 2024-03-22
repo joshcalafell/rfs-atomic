@@ -1,20 +1,10 @@
 <div class="card" *ngIf="product" (click)="navToDetail()">
 	<div class="card-content">
 		<div class="flex-between">
-			<div class="card-header">
-				<div class="title">
-					{{ product.entity.name }}
-				</div>
+			<rfs-atomic-product-card-header
+				[product]="product"
+			></rfs-atomic-product-card-header>
 
-				<rfs-atomic-chip
-					[label]="
-						product.stock > 0 ? '$' + product.entity.price : 'Out of Stock'
-					"
-					[color]="product.stock > 0 ? 'tertiary' : 'secondary'"
-				></rfs-atomic-chip>
-
-				<!-- Chip component -->
-			</div>
 			<div class="product-description">"{{ product.entity.description }}"</div>
 
 			<div class="card-image">

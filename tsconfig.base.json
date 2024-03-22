@@ -45,6 +45,7 @@
 				"libs/product-ratings-star/src/index.ts"
 			],
 			"@rfs-atomic/products": ["libs/products/src/index.ts"],
+			"@rfs-atomic/sale-tag": ["libs/sale-tag/src/index.ts"],
 			"@rfs-atomic/settings": ["libs/settings/src/index.ts"],
 			"@rfs-atomic/sort-table": ["libs/sort-table/src/index.ts"],
 			"@rfs-atomic/ui": ["libs/ui/src/index.ts"],
