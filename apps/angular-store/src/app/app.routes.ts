@@ -39,13 +39,13 @@ export const appRoutes: Route[] = [
 			import('@rfs-atomic/settings').then((m) => m.SettingsComponent),
 	},
 	{
-		path: '404',
-		loadComponent: () =>
-			import('@rfs-atomic/not-found').then((m) => m.NotFoundComponent),
-	},
-	{
 		path: '**',
 		redirectTo: '404',
 		pathMatch: 'full',
+	},
+	{
+		path: '404',
+		loadComponent: () =>
+			import('@rfs-atomic/not-found').then((m) => m.NotFoundComponent),
 	},
 ]

@@ -29,7 +29,9 @@ export class ProductCardComponent {
 
 	cardImage = 'https://i.imgur.com/vL2h90y.jpg'
 
-	constructor(private router: Router) {}
+	constructor(private router: Router) {
+		console.log('ProductCardComponent', this.product)
+	}
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	addToCart(product: any) {
@@ -38,7 +40,7 @@ export class ProductCardComponent {
 
 	navToDetail() {
 		console.log('Navigating to product detail')
-		this.router.navigate(['/products', this.product.id])
+		this.router.navigate(['/products', this.product.entity.id])
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
