@@ -85,6 +85,13 @@ h3 {
 	align-items: flex-start;
 }
 
+.top-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .product-details {
 	margin-bottom: 32px;
 }
@@ -100,6 +107,14 @@ h3 {
 .flex-col {
 	margin-left: 16px;
 	margin-right: 16px;
+}
+
+.details-area {
+	width: 100%;
+	border: solid 1px #555;
+	border-radius: 6px;
+	padding: 16px;
+	background: white;
 }
 
 .flex-col:first-child {

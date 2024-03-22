@@ -4,15 +4,23 @@
 			<img src="{{ product.image }}" alt="{{ product.entity.name }}" />
 		</div>
 		<div class="product-info">
-			<h2 class="product-name">{{ product.entity.name }}</h2>
+			<div class="top-row">
+				<h2 class="product-name">{{ product.entity.name }}</h2>
+				<rfs-atomic-button-row [buttons]="[backButton]" (click)="goBack()">
+				</rfs-atomic-button-row>
+			</div>
+
 			<p class="product-description">{{ product.entity.description }}</p>
-			<p class="product-price">{{ product.entity.price | currency }}</p>
+			<p class="product-price">
+				{{ product.stock > 0 ? '$' + product.entity.price : 'Out of Stock' }}
+			</p>
 			<div class="stars">
 				<rfs-atomic-product-ratings
 					[product]="product"
 				></rfs-atomic-product-ratings>
+				<br />
 				<div class="flex-row">
-					<div class="flex-col product-details">
+					<div class="flex-col details-area product-details">
 						<h3>Details</h3>
 						<p>
 							Brand: <span class="value-cell">{{ product.brand }}</span>
@@ -31,7 +39,7 @@
 							Weight: <span class="value-cell">{{ product.weight }}</span>
 						</p>
 					</div>
-					<div class="flex-col product-attributes">
+					<div class="flex-col details-area product-attributes">
 						<h3>Attributes</h3>
 						<p>
 							Fragrance: <span class="value-cell">{{ product.fragrance }}</span>
@@ -49,7 +57,7 @@
 							Type: <span class="value-cell">{{ product.type }}</span>
 						</p>
 					</div>
-					<div class="flex-col product-details">
+					<div class="flex-col details-area product-details">
 						<h3>Subsciption</h3>
 						<p>
 							Type:
@@ -86,7 +94,7 @@
 					</rfs-atomic-button-row>
 				</div>
 
-				<div class="card-tags" *ngIf="product?.tags">
+				<div class="card-tags details-area" *ngIf="product?.tags">
 					<h3>Tags</h3>
 					<rfs-atomic-hashes [hashes]="product.tags"></rfs-atomic-hashes>
 				</div>

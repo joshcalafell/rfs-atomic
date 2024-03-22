@@ -1,4 +1,8 @@
-<div class="card" *ngIf="product" (click)="navToDetail()">
+<div
+	class="card"
+	*ngIf="product"
+	(click)="$event.preventDefault(); navToDetail()"
+>
 	<div class="card-content">
 		<div class="flex-between">
 			<rfs-atomic-product-card-header

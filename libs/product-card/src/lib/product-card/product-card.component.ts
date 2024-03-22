@@ -28,7 +28,7 @@ import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 export class ProductCardComponent {
 	@Output() addToCartEmitter = new EventEmitter()
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	@Input() product: any
+	@Input() product!: any
 
 	cardImage = 'https://i.imgur.com/vL2h90y.jpg'
 
@@ -42,7 +42,6 @@ export class ProductCardComponent {
 	}
 
 	navToDetail() {
-		console.log('Navigating to product detail')
 		this.router.navigate(['/products', this.product.entity.id])
 	}
 

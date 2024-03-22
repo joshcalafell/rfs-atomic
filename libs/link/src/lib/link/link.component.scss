@@ -28,10 +28,6 @@ a {
 	transition: all 0.333s ease-in-out;
 	color: white;
 
-	&.active {
-		color: $primary;
-	}
-
 	&.primary {
 		color: $white;
 	}
@@ -74,6 +70,10 @@ a {
 
 	&.dark {
 		color: $dark;
+	}
+
+	&.active {
+		color: $primary;
 	}
 
 	span.ui-link-text {

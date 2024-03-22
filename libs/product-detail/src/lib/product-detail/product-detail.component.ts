@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
+import { Component, inject } from '@angular/core'
 import { ButtonRowComponent } from '@rfs-atomic/button-row'
 import { HashesComponent } from '@rfs-atomic/hashes'
 import { DetailGroupComponent } from '@rfs-atomic/detail-group'
 import { of } from 'rxjs'
 import { candleMock } from './product.mock'
 import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
+import { Router } from '@angular/router'
 
 @Component({
 	selector: 'rfs-atomic-product-detail',
@@ -23,8 +24,15 @@ import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 export class ProductDetailComponent {
 	product$ = of(candleMock)
 
-	constructor() {
+	backButton
+
+	constructor(private router: Router) {
 		console.log('ProductDetailComponent')
+		this.backButton = {
+			label: '<- Back ',
+			icon: 'arrow-left',
+			clickEmitter: () => this.router.navigate(['/products']),
+		}
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -81,5 +89,9 @@ export class ProductDetailComponent {
 				value: product.color,
 			},
 		]
+	}
+
+	goBack() {
+		this.router.navigate(['/products'])
 	}
 }

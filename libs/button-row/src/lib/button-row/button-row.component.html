@@ -6,5 +6,6 @@
 		[paletteColor]="button.paletteColor"
 		[disabled]="button.disabled"
 		[size]="button.size"
+		(clickEmitter)="button.clickEmitter.emit()"
 	></rfs-atomic-button>
 </div>

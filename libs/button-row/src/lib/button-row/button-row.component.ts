@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common'
-import { Component, Input } from '@angular/core'
+import { Component, Input, Output } from '@angular/core'
 import { ButtonComponent, IAtomicUiButton } from '@rfs-atomic/button'
+import { EventEmitter } from '@angular/core'
 
 @Component({
 	selector: 'rfs-atomic-button-row',
@@ -10,6 +11,7 @@ import { ButtonComponent, IAtomicUiButton } from '@rfs-atomic/button'
 	styleUrl: './button-row.component.scss',
 })
 export class ButtonRowComponent {
+	@Output() clickEmitter: EventEmitter<unknown> = new EventEmitter<unknown>()
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	@Input() buttons!: IAtomicUiButton[] | any[]
 }

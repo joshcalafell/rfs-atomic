@@ -103,6 +103,12 @@ export class ProductsService {
 		addToWishlist(product: ICandleProduct) {
 			console.log('Added to wishlist', product)
 		},
+
+		getProductById(id: number) {
+			return of(
+				productsMock.find((product) => product.entity.id === new String(id))
+			) // eslint-disable-line
+		},
 	}
 
 	// Mock the GET request for a single Product
