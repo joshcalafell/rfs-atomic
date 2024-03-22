@@ -6,7 +6,11 @@
 		<div class="product-info">
 			<div class="top-row">
 				<h2 class="product-name">{{ product.entity.name }}</h2>
-				<rfs-atomic-button-row [buttons]="[backButton]" (click)="goBack()">
+				<rfs-atomic-button-row
+					class="margin-right"
+					[buttons]="[backButton]"
+					(click)="goBack()"
+				>
 				</rfs-atomic-button-row>
 			</div>
 
@@ -19,6 +23,8 @@
 					[product]="product"
 				></rfs-atomic-product-ratings>
 				<br />
+			</div>
+			<div class="card-content">
 				<div class="flex-row">
 					<div class="flex-col details-area product-details">
 						<h3>Details</h3>

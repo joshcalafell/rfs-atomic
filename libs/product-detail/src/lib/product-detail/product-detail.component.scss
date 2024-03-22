@@ -17,6 +17,7 @@ $tertiary: #17a2b8;
 	}
 }
 .product-card {
+	width: calc(100% - 48px);
 	background: white;
 	display: flex;
 	border-radius: 10px;
@@ -105,20 +106,25 @@ h3 {
 }
 
 .flex-col {
+	width: 100%;
 	margin-left: 16px;
 	margin-right: 16px;
 }
 
 .details-area {
-	width: 100%;
-	border: solid 1px #555;
+	width: calc(100% - 28px);
+	border: solid 1px #aaa;
 	border-radius: 6px;
-	padding: 16px;
+	padding: 8px 0px 16px 16px;
 	background: white;
 }
 
 .flex-col:first-child {
 	margin-left: 0;
+	margin-right: 16px;
+}
+
+.margin-right {
 	margin-right: 16px;
 }
 
