@@ -34,6 +34,11 @@ export const appRoutes: Route[] = [
 			import('@rfs-atomic/orders').then((m) => m.OrdersComponent),
 	},
 	{
+		path: 'orders/:id',
+		loadComponent: () =>
+			import('@rfs-atomic/orders-detail').then((m) => m.OrdersDetailComponent),
+	},
+	{
 		path: 'settings',
 		loadComponent: () =>
 			import('@rfs-atomic/settings').then((m) => m.SettingsComponent),

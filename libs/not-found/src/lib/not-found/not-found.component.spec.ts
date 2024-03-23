@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { NotFoundComponent } from './not-found.component'
-import { ButtonComponent } from '@rfs-atomic/button'
 import { RouterTestingModule } from '@angular/router/testing'
+import { ButtonRowComponent } from '@rfs-atomic/button-row'
 
 describe('NotFoundComponent', () => {
 	let component: NotFoundComponent
@@ -9,7 +9,7 @@ describe('NotFoundComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [NotFoundComponent, ButtonComponent, RouterTestingModule],
+			imports: [NotFoundComponent, ButtonRowComponent, RouterTestingModule],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(NotFoundComponent)

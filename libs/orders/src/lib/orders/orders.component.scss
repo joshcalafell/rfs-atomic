@@ -1,20 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
-.section {
-	margin-top: 88px;
-	gap: 16px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+$primary: #26bfcd;
+$secondary: #333333;
+$tertiary: #333333;
+
+$danger: #dc3545;
+$warning: #ffc107;
+$success: #28a745;
+$info: #dcda68;
+$light: #f8f9fa;
+$dark: #343a40;
+$white: #ffffff;
+$disabled: #6c757d;
+$black: #000000;
+$gray: #6c757d;
+
+$transparent: transparent;
+
+$font-family: 'Inter', sans-serif;
+$font-weight: 400;
+$font-size-medium: 1rem;
+$font-size-small: 0.75rem;
+$font-size-large: 1.23rem;
+
+$padding-button-small: 4px 8px;
+$padding-button-medium: 8px 16px;
+$padding-button-large: 12px 20px;
+
+$button-border: solid 1px $dark;
+$transition-duration: 0.3s;
+$transition-style: 0.3s ease-in-out;
+
+.section-wrapper {
+	margin: 24px;
+	margin-top: 124px;
+	text-align: center;
+	font-family: 'Inter', sans-serif;
 
 	.section-title {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		width: 100%;
-		font-family: 'Inter', sans-serif;
+		font-family: 'Poppins', sans-serif;
+		font-size: 24px;
+		margin-bottom: 20px;
 	}
+}
+
+tr:hover td {
+	background-color: #efefef;
+}
+
+table th:last-child,
+table td:last-child {
+	text-align: center;
+}
+
+.sort {
+	margin-left: 4px;
+	cursor: pointer;
+}
+
+tr td {
+	background-color: #ffffff;
+	padding: 12px 16px;
+	border: solid #333 1px;
+}
+
+tr td:last-child {
+	text-align: center;
+}
+
+.btn-primary {
+	background-color: #e0e0e0;
+	color: #333 !important;
+	padding: 16;
+	border-radius: 20px;
+	width: 100px;
+	font-weight: 400;
+}
+
+.sort-last {
+	color: #ff6766;
 }

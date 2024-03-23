@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { SortTableComponent } from './sort-table.component'
+import { RouterTestingModule } from '@angular/router/testing'
 
 describe('SortTableComponent', () => {
 	let component: SortTableComponent
@@ -7,7 +8,7 @@ describe('SortTableComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [SortTableComponent],
+			imports: [SortTableComponent, RouterTestingModule],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(SortTableComponent)
