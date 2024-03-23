@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { ActivatedRoute } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
 import { ButtonRowComponent } from '@rfs-atomic/button-row'
 import { DetailGroupComponent } from '@rfs-atomic/detail-group'
@@ -7,6 +8,8 @@ import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 import { of } from 'rxjs'
 import { ProductDetailComponent } from './product-detail.component'
 import { candleMock } from './product.mock'
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { ProductsService } from '@rfs-atomic/products'
 
 describe('ProductDetailComponent', () => {
 	let component: ProductDetailComponent
@@ -20,14 +23,21 @@ describe('ProductDetailComponent', () => {
 				ButtonRowComponent,
 				DetailGroupComponent,
 				ProductRatingsComponent,
-				RouterTestingModule,
+				RouterTestingModule.withRoutes([]),
+			],
+			providers: [
+				{
+					provide: ProductsService,
+					useValue: {
+						mockProductService: { getProductById: () => of(candleMock) },
+					},
+				},
+				{ provide: ActivatedRoute, useValue: { params: of({ id: '1' }) } },
 			],
 		}).compileComponents()
-
 		fixture = TestBed.createComponent(ProductDetailComponent)
 		component = fixture.componentInstance
 
-		component.product$ = of(candleMock)
 		fixture.detectChanges()
 	})
 

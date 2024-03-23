@@ -1,5 +1,5 @@
 <section class="section">
-	<div class="product-card" *ngIf="product$ | async as product">
+	<div class="product-card" *ngIf="product">
 		<div class="product-image">
 			<img src="{{ product.image }}" alt="{{ product.entity.name }}" />
 		</div>

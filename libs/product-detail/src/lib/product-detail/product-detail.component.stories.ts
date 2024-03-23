@@ -14,7 +14,7 @@ export default meta
 type Story = StoryObj<ProductDetailComponent>
 
 export const Primary: Story = {
-	args: { product$: of(candleMock) },
+	args: { product: of(candleMock) },
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 		expect(canvas.getByText(/Cedarwood & Vanilla/gi)).toBeTruthy()
@@ -22,7 +22,7 @@ export const Primary: Story = {
 }
 
 export const Heading: Story = {
-	args: { product$: of(candleMock) },
+	args: { product: of(candleMock) },
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 		expect(canvas.getByText(/Cedarwood & Vanilla!/gi)).toBeTruthy()

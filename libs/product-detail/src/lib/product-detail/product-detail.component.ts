@@ -1,12 +1,19 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
-import { ButtonRowComponent } from '@rfs-atomic/button-row'
-import { HashesComponent } from '@rfs-atomic/hashes'
-import { DetailGroupComponent } from '@rfs-atomic/detail-group'
-import { Observable } from 'rxjs'
-import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
+import { Component, OnDestroy, OnInit, inject } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
-import { IAtomicUiButton } from '@rfs-atomic/button'
+import { ButtonRowComponent } from '@rfs-atomic/button-row'
+import { DetailGroupComponent } from '@rfs-atomic/detail-group'
+import { HashesComponent } from '@rfs-atomic/hashes'
+import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
+import {
+	BehaviorSubject,
+	Subscription,
+	catchError,
+	map,
+	switchMap,
+	throwError,
+} from 'rxjs'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ProductsService } from '@rfs-atomic/products'
 
@@ -23,31 +30,46 @@ import { ProductsService } from '@rfs-atomic/products'
 	templateUrl: './product-detail.component.html',
 	styleUrl: './product-detail.component.scss',
 })
-export class ProductDetailComponent {
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	product$: Observable<any> = new Observable<any>()
-
-	backButton: IAtomicUiButton
+export class ProductDetailComponent implements OnInit, OnDestroy {
+	product: any
+	backButton: {
+		label: string
+		paletteColor: string
+		size: string
+		disabled: boolean
+	}
+	subscriptions$ = new Subscription()
 
 	constructor(
 		private router: Router,
-		private ps: ProductsService,
-		private activatedRoute: ActivatedRoute
+		private activatedRoute: ActivatedRoute,
+		private ps: ProductsService
 	) {
-		console.log('ProductDetailComponent')
 		this.backButton = {
 			label: '<- Back ',
 			paletteColor: 'primary',
 			size: 'medium',
 			disabled: false,
 		}
+	}
 
-		this.activatedRoute.params.subscribe((params) => {
-			console.log('params', params)
-			this.product$ = this.ps.mockProductService.getProductById(params['id'])
-		})
+	ngOnInit() {
+		this.subscriptions$.add(
+			this.activatedRoute.params
+				.pipe(
+					map((params) => params['id']),
+					switchMap((id) => this.ps.mockProductService.getProductById(id)),
+					catchError((error) => {
+						console.error('Error fetching product', error)
+						return throwError(error)
+					})
+				)
+				.subscribe((product) => (this.product = product))
+		)
+	}
 
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	ngOnDestroy(): void {
+		this.subscriptions$.unsubscribe()
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
