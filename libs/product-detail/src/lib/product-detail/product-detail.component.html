@@ -15,7 +15,7 @@
 			</div>
 
 			<p class="product-description">{{ product.entity.description }}</p>
-			<p class="product-price">
+			<p class="product-price" id="product-price">
 				{{ product.stock > 0 ? '$' + product.entity.price : 'Out of Stock' }}
 			</p>
 			<div class="stars">
@@ -29,67 +29,98 @@
 					<div class="flex-col details-area product-details">
 						<h3>Details</h3>
 						<p>
-							Brand: <span class="value-cell">{{ product.brand }}</span>
+							Brand:
+							<span class="value-cell" id="product-brand">{{
+								product.brand
+							}}</span>
 						</p>
 						<p>
-							Color: <span class="value-cell">{{ product.color }}</span>
+							Color:
+							<span class="value-cell" id="product-color">{{
+								product.color
+							}}</span>
 						</p>
 						<p>
-							Material: <span class="value-cell">{{ product.material }}</span>
+							Material:
+							<span class="value-cell" id="product-material">{{
+								product.material
+							}}</span>
 						</p>
 						<p>
 							Dimensions:
-							<span class="value-cell">{{ product.dimensions }}</span>
+							<span class="value-cell" id="product-dimensions">{{
+								product.dimensions
+							}}</span>
 						</p>
 						<p>
-							Weight: <span class="value-cell">{{ product.weight }}</span>
+							Weight:
+							<span class="value-cell" id="product-weight">{{
+								product.weight
+							}}</span>
 						</p>
 					</div>
 					<div class="flex-col details-area product-attributes">
 						<h3>Attributes</h3>
 						<p>
-							Fragrance: <span class="value-cell">{{ product.fragrance }}</span>
+							Fragrance:
+							<span class="value-cell" id="product-fragrance">{{
+								product.fragrance
+							}}</span>
 						</p>
 						<p>
-							Size: <span class="value-cell">{{ product.size }}</span>
+							Size:
+							<span class="value-cell" id="product-size">{{
+								product.size
+							}}</span>
 						</p>
 						<p>
-							Burn Time: <span class="value-cell">{{ product.burnTime }}</span>
+							Burn Time:
+							<span class="value-cell" id="product-burn-time">{{
+								product.burnTime
+							}}</span>
 						</p>
 						<p>
-							Scent: <span class="value-cell">{{ product.scent }}</span>
+							Scent:
+							<span class="value-cell" id="product-scent">{{
+								product.scent
+							}}</span>
 						</p>
 						<p>
-							Type: <span class="value-cell">{{ product.type }}</span>
+							Type:
+							<span class="value-cell" id="product-type">{{
+								product.type
+							}}</span>
 						</p>
 					</div>
 					<div class="flex-col details-area product-details">
 						<h3>Subsciption</h3>
 						<p>
 							Type:
-							<span class="value-cell">{{ product.subscription.type }}</span>
+							<span class="value-cell" id="product-type">{{
+								product.subscription.type
+							}}</span>
 						</p>
 						<p>
 							Recurring:
-							<span class="value-cell">{{
+							<span class="value-cell" id="product-recurring">{{
 								product.subscription.isRecurring ? 'Recurring' : 'Not Recurring'
 							}}</span>
 						</p>
 						<p>
 							Frequency:
-							<span class="value-cell">{{
+							<span class="value-cell" id="product-frequency">{{
 								product.subscription.frequency
 							}}</span>
 						</p>
 						<p>
 							Sku:
-							<span class="value-cell">{{
+							<span class="value-cell" id="product-sku">{{
 								product.subscription.entity.sku
 							}}</span>
 						</p>
 						<p>
 							Price:
-							<span class="value-cell"
+							<span class="value-cell" id="product-price"
 								>${{ product.subscription.entity.price }}</span
 							>
 						</p>

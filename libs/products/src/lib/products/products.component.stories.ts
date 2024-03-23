@@ -3,7 +3,8 @@ import { ProductsComponent } from './products.component'
 
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
-import { productsMock } from '../IProduct.mock'
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { candleMock } from 'libs/product-detail/src/lib/product-detail/product.mock'
 
 const meta: Meta<ProductsComponent> = {
 	component: ProductsComponent,
@@ -15,14 +16,14 @@ type Story = StoryObj<ProductsComponent>
 export const Primary: Story = {
 	args: {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		products: [productsMock] as any[],
+		products: [candleMock] as any[],
 	},
 }
 
 export const Heading: Story = {
 	args: {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		products: [productsMock] as any[],
+		products: [candleMock] as any[],
 	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)

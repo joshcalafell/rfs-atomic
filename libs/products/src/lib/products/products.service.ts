@@ -106,7 +106,7 @@ export class ProductsService {
 
 		getProductById(id: number) {
 			return of(
-				productsMock.find((product) => product.entity.id === new String(id))
+				productsMock.find((product) => product.entity.id === id.toString())
 			) // eslint-disable-line
 		},
 	}

@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common'
-import { Component, inject } from '@angular/core'
+import { Component } from '@angular/core'
 import { ButtonRowComponent } from '@rfs-atomic/button-row'
 import { HashesComponent } from '@rfs-atomic/hashes'
 import { DetailGroupComponent } from '@rfs-atomic/detail-group'
-import { of } from 'rxjs'
-import { candleMock } from './product.mock'
+import { Observable } from 'rxjs'
 import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
-import { Router } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
+import { IAtomicUiButton } from '@rfs-atomic/button'
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { ProductsService } from '@rfs-atomic/products'
 
 @Component({
 	selector: 'rfs-atomic-product-detail',
@@ -22,17 +24,30 @@ import { Router } from '@angular/router'
 	styleUrl: './product-detail.component.scss',
 })
 export class ProductDetailComponent {
-	product$ = of(candleMock)
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	product$: Observable<any> = new Observable<any>()
 
-	backButton
+	backButton: IAtomicUiButton
 
-	constructor(private router: Router) {
+	constructor(
+		private router: Router,
+		private ps: ProductsService,
+		private activatedRoute: ActivatedRoute
+	) {
 		console.log('ProductDetailComponent')
 		this.backButton = {
 			label: '<- Back ',
-			icon: 'arrow-left',
-			clickEmitter: () => this.router.navigate(['/products']),
+			paletteColor: 'primary',
+			size: 'medium',
+			disabled: false,
 		}
+
+		this.activatedRoute.params.subscribe((params) => {
+			console.log('params', params)
+			this.product$ = this.ps.mockProductService.getProductById(params['id'])
+		})
+
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any

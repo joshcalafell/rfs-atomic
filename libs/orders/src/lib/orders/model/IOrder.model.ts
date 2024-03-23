@@ -1,5 +1,4 @@
 /* eslint-disable @nx/enforce-module-boundaries */
-import { ICandleProduct } from 'libs/products/src/lib/products.service'
 
 export enum OrderStatus {
 	Processing = 1,

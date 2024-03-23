@@ -6,6 +6,7 @@ import { ChipComponent } from '@rfs-atomic/chip'
 import { IDescriptionListItem } from '@rfs-atomic/description-list'
 import { DetailGroupComponent } from '@rfs-atomic/detail-group'
 import { HashesComponent } from '@rfs-atomic/hashes'
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { ProductCardHeaderComponent } from '@rfs-atomic/product-card-header'
 import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 

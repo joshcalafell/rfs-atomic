@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ProductsComponent } from './products.component'
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { ProductCardComponent } from '@rfs-atomic/product-card'
 import { Observable } from 'rxjs'
 

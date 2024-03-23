@@ -1,7 +1,8 @@
+/* eslint-disable @nx/enforce-module-boundaries */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { ICandleProduct, ProductsService } from '../products.service'
+import { ICandleProduct, ProductsService } from './products.service'
 import { Observable } from 'rxjs'
 import { ProductCardComponent } from '@rfs-atomic/product-card'
 @Component({

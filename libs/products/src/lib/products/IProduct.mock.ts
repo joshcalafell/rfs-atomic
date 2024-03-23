@@ -108,8 +108,7 @@ export const productsMock = <IProduct[]>[
 		isGift: false,
 		isWishListed: false,
 		cartQty: 1,
-		image:
-			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cinnamon-clove-candle.jpg',
+		image: 'https://i.imgur.com/vL2h90y.jpg',
 
 		subscription: {
 			type: 'One-Time Purchase',
@@ -170,8 +169,7 @@ export const productsMock = <IProduct[]>[
 		isGift: false,
 		isWishListed: true,
 		cartQty: 3,
-		image:
-			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/eucalyptus-mint-candle.jpg',
+		image: 'https://i.imgur.com/vL2h90y.jpg',
 		subscription: {
 			type: 'One-Time Purchase',
 			isRecurring: true,
@@ -232,8 +230,7 @@ export const productsMock = <IProduct[]>[
 		isGift: false,
 		isWishListed: false,
 		cartQty: 1,
-		image:
-			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/lavender-sage-candle.jpg',
+		image: 'https://i.imgur.com/vL2h90y.jpg',
 
 		subscription: {
 			type: 'One-Time Purchase',

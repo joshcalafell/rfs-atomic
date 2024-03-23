@@ -6,6 +6,7 @@ import { HashesComponent } from '@rfs-atomic/hashes'
 import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 import { ProductCardComponent } from './product-card.component'
 import { RouterTestingModule } from '@angular/router/testing'
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { ProductCardHeaderComponent } from '@rfs-atomic/product-card-header'
 describe('ProductCardComponent', () => {
 	let component: ProductCardComponent

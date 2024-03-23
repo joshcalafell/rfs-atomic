@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { RouterTestingModule } from '@angular/router/testing'
 import { ButtonRowComponent } from '@rfs-atomic/button-row'
 import { DetailGroupComponent } from '@rfs-atomic/detail-group'
 import { HashesComponent } from '@rfs-atomic/hashes'
@@ -19,6 +20,7 @@ describe('ProductDetailComponent', () => {
 				ButtonRowComponent,
 				DetailGroupComponent,
 				ProductRatingsComponent,
+				RouterTestingModule,
 			],
 		}).compileComponents()
 
@@ -36,5 +38,60 @@ describe('ProductDetailComponent', () => {
 	it('should render product name', () => {
 		const compiled = fixture.nativeElement
 		expect(compiled.querySelector('.product-name')).toBeTruthy()
+	})
+
+	it('should render product description', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('.product-description')).toBeTruthy()
+	})
+
+	it('should render product price', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('#product-price')).toBeTruthy()
+	})
+
+	it('should render product sku', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('#product-sku')).toBeTruthy()
+	})
+
+	it('should render product color', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('#product-color')).toBeTruthy()
+	})
+
+	it('should render product material', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('#product-material')).toBeTruthy()
+	})
+
+	it('should render product dimensions', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('#product-dimensions')).toBeTruthy()
+	})
+
+	it('should render product weight', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('#product-weight')).toBeTruthy()
+	})
+
+	it('should render product fragrance', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('#product-fragrance')).toBeTruthy()
+	})
+
+	it('should render product size', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('#product-size')).toBeTruthy()
+	})
+
+	it('should render product burn time', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('#product-burn-time')).toBeTruthy()
+	})
+
+	it('should render product scent', () => {
+		const compiled = fixture.nativeElement
+		expect(compiled.querySelector('#product-scent')).toBeTruthy()
 	})
 })
