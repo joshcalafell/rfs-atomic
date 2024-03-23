@@ -35,12 +35,11 @@ export class WishlistItemComponent {
 		// You might want to use a service to manage the cart state
 		// For simplicity, I'm emitting an event to the parent component
 		// which should handle the removal logic
-		console.log('[CartItem] removeItemFromCart', item)
+
 		this.removeItemEmitter.emit(item)
 	}
 
 	wishlistItemHandler(item: unknown): void {
-		console.log('[CartItem] wishlistItemHandler', item)
 		this.wishlistItemEmitter.emit(item)
 	}
 }

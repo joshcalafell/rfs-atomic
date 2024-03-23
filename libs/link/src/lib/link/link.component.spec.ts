@@ -23,9 +23,6 @@ describe('LinkComponent', () => {
 			href: '/primary',
 			download: 'primary',
 			isActive: false,
-			onClick: () => {
-				console.log('Link clicked')
-			},
 		}
 
 		fixture.detectChanges()

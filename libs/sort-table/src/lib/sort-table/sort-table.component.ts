@@ -53,8 +53,4 @@ export class SortTableComponent {
 	direction = ''
 	sortedOrders = []
 	lastSortedBy = ''
-
-	constructor() {
-		console.log('SortTableComponent', this.columns)
-	}
 }

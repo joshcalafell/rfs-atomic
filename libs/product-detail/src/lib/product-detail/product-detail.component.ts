@@ -72,9 +72,9 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 		this.subscriptions$.unsubscribe()
 	}
 
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
 	addToCart(product: any) {
-		console.log('product', product)
+		//
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any

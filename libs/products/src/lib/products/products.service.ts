@@ -100,8 +100,9 @@ export class ProductsService {
 			this.cart.push(product)
 		},
 
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 		addToWishlist(product: ICandleProduct) {
-			console.log('Added to wishlist', product)
+			// ...
 		},
 
 		getProductById(id: number) {

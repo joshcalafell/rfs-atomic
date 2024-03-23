@@ -22,9 +22,6 @@ export const Primary: Story = {
 			download: '',
 			isActive: false,
 			rel: 'noopener noreferrer',
-			onClick: () => {
-				console.log('Link clicked')
-			},
 		},
 	},
 	play: async ({ canvasElement }) => {
@@ -44,9 +41,6 @@ export const Heading: Story = {
 			download: '',
 			isActive: false,
 			rel: 'noopener noreferrer',
-			onClick: () => {
-				console.log('Link clicked')
-			},
 		},
 	},
 	play: async ({ canvasElement }) => {

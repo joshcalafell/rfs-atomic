@@ -8,8 +8,4 @@ import { data } from '../model/IOrder.model.mock'
 export class OrdersService {
 	items: Order[] = JSON.parse(data) // Temp for now...
 	cart: Order[] = []
-
-	constructor() {
-		console.log(`'OrderService constructor'`)
-	}
 }

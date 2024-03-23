@@ -34,7 +34,7 @@ export class ProductCardComponent {
 	cardImage = 'https://i.imgur.com/vL2h90y.jpg'
 
 	constructor(private router: Router) {
-		console.log('ProductCardComponent', this.product)
+		// hello
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any

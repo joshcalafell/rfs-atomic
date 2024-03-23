@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { Component, Input } from '@angular/core'
 
 export type IChipVariant =
 	| 'price'
@@ -32,16 +32,13 @@ export interface IChip {
 	templateUrl: './chip.component.html',
 	styleUrl: './chip.component.scss',
 })
-export class ChipComponent implements OnInit {
+export class ChipComponent {
 	@Input() label = ''
 	@Input() color = 'primary'
 	@Input() size = 'medium'
 
-	ngOnInit(): void {
-		console.log('ChipComponent', this.label)
-	}
-
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	onClose(event: unknown) {
-		console.log('Close event', event)
+		// ...
 	}
 }

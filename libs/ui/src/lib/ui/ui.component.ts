@@ -204,8 +204,9 @@ export class UiComponent implements OnInit {
 		isSoldOut: false,
 	}
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	onButtonClick(event: unknown) {
-		console.log('Button clicked', event)
+		//
 	}
 
 	ngOnInit(): void {

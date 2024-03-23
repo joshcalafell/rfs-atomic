@@ -23,9 +23,9 @@ export class WishlistComponent implements OnInit {
 		)
 	}
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	wishlistItemHandler(item: unknown): void {
 		// TODO: Implement
-		console.log('[Cart] addToCart', item)
 	}
 
 	removeItemHandler(item: unknown): void {
@@ -33,7 +33,6 @@ export class WishlistComponent implements OnInit {
 		// You might want to use a service to manage the cart state
 		// For simplicity, I'm emitting an event to the parent component
 		// which should handle the removal logic
-		console.log('[Cart] removeItemFromCart', item)
 		this.removeItemEmitter.emit(item)
 	}
 }
