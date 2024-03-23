@@ -1,1 +1,1 @@
-export const getGreeting = () => cy.get('.header-title-link')
+export const getGreeting = () => cy.get('#header')
