@@ -50,7 +50,8 @@
 			"@rfs-atomic/settings": ["libs/settings/src/index.ts"],
 			"@rfs-atomic/sort-table": ["libs/sort-table/src/index.ts"],
 			"@rfs-atomic/ui": ["libs/ui/src/index.ts"],
-			"@rfs-atomic/wishlist": ["libs/wishlist/src/index.ts"]
+			"@rfs-atomic/wishlist": ["libs/wishlist/src/index.ts"],
+			"@rfs-atomic/wishlist-item": ["libs/wishlist-item/src/index.ts"]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]

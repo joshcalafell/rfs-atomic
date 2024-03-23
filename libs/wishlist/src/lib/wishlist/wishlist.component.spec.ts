@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { WishlistComponent } from './wishlist.component'
+import { WishlistItemComponent } from '@rfs-atomic/wishlist-item'
 
 describe('WishlistComponent', () => {
 	let component: WishlistComponent
@@ -7,7 +8,7 @@ describe('WishlistComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [WishlistComponent],
+			imports: [WishlistComponent, WishlistItemComponent],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(WishlistComponent)
