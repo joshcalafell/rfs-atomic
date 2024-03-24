@@ -7,7 +7,7 @@ import { HashesComponent } from '@rfs-atomic/hashes'
 import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
 import { of } from 'rxjs'
 import { ProductDetailComponent } from './product-detail.component'
-import { candleMock } from './product.mock'
+import { candleMock } from '../products/service/candle.mock'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ProductsService } from '@rfs-atomic/products'
 
@@ -29,7 +29,7 @@ describe('ProductDetailComponent', () => {
 				{
 					provide: ProductsService,
 					useValue: {
-						mockProductService: { getProductById: () => of(candleMock) },
+						mockSingleProductService: { getProductById: () => of(candleMock) },
 					},
 				},
 				{ provide: ActivatedRoute, useValue: { params: of({ id: '1' }) } },

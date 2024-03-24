@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { productsMock } from './IProduct.mock'
+import { productsMock } from './products.mock'
 import { of } from 'rxjs'
 
 interface IEntity {
@@ -116,7 +116,7 @@ export class ProductsService {
 	mockSingleProductService = {
 		getProductById(id: number) {
 			return of(
-				productsMock.find((product) => product.entity.id === new String(id))
+				productsMock.find((product) => product.entity.id === id.toString())
 			) // eslint-disable-line
 		},
 	}

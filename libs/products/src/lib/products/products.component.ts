@@ -1,10 +1,10 @@
 /* eslint-disable @nx/enforce-module-boundaries */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Component, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { ICandleProduct, ProductsService } from './products.service'
-import { Observable } from 'rxjs'
+import { Component, OnInit } from '@angular/core'
 import { ProductCardComponent } from '@rfs-atomic/product-card'
+import { Observable } from 'rxjs'
+import { ICandleProduct, ProductsService } from './service/products.service'
 @Component({
 	selector: 'rfs-atomic-products',
 	standalone: true,
@@ -26,11 +26,15 @@ export class ProductsComponent implements OnInit {
 		})
 	}
 
-	getProducts(): Observable<any[]> {
+	getProducts(): Observable<ICandleProduct[]> {
 		return this.service.mockProductService.getProducts()
 	}
 
 	addToCart(product: ICandleProduct) {
-		this.service.mockProductService.addToCart(product)
+		console.log('Added to Cart', product)
+	}
+
+	addToWishlist(product: ICandleProduct) {
+		console.log('Added to Wishlist', product)
 	}
 }

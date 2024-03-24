@@ -1,3 +1,18 @@
+const buttons = [
+	{
+		label: 'Cart',
+		paletteColor: 'primary',
+		size: 'medium',
+		disabled: false,
+	},
+	{
+		label: 'Wishlist',
+		paletteColor: 'secondary',
+		size: 'medium',
+		disabled: false,
+	},
+]
+
 export const candleMock = {
 	entity: {
 		id: '1',
@@ -12,14 +27,12 @@ export const candleMock = {
 			paletteColor: 'primary',
 			size: 'medium',
 			disabled: false,
-			type: 'animated-arrow',
 		},
 		{
 			label: 'Wishlist',
 			paletteColor: 'secondary',
 			size: 'medium',
 			disabled: false,
-			type: 'animated-arrow',
 		},
 	],
 	brand: 'RFS',
@@ -44,27 +57,12 @@ export const candleMock = {
 	isOnSale: false,
 	saleStart: '',
 	saleEnd: '',
-	isFeatured: false,
-	isTopSeller: false,
-	isNew: false,
-	isBestSeller: false,
-	isSale: false,
-	isAvailable: true,
-	isOutOfStock: false,
-	isComingSoon: false,
-	isDiscontinued: false,
-	isLimited: false,
-	isSoldOut: false,
-	isBackOrder: false,
-	isPreOrder: false,
-	isGift: false,
-	isWishListed: false,
 	cartQty: 1,
-	image: 'https://i.imgur.com/vL2h90y.jpg',
+	image:
+		'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cedarwood-vanilla-candle.jpg',
 	subscription: {
 		type: 'One-Time Purchase',
 		isRecurring: true,
-		frequency: 'Bi-Weekly',
 		entity: {
 			id: '1',
 			name: 'Cedarwood & Vanilla',

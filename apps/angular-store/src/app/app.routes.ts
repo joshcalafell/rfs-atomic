@@ -19,9 +19,7 @@ export const appRoutes: Route[] = [
 	{
 		path: 'products/:id',
 		loadComponent: () =>
-			import('@rfs-atomic/product-detail').then(
-				(m) => m.ProductDetailComponent
-			),
+			import('@rfs-atomic/products').then((m) => m.ProductDetailComponent),
 	},
 	{
 		path: 'wishlist',

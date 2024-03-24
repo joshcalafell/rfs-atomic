@@ -1,19 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { CommonModule } from '@angular/common'
-import { Component, OnDestroy, OnInit, inject } from '@angular/core'
+import { Component, OnDestroy, OnInit } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 import { ButtonRowComponent } from '@rfs-atomic/button-row'
 import { DetailGroupComponent } from '@rfs-atomic/detail-group'
 import { HashesComponent } from '@rfs-atomic/hashes'
 import { ProductRatingsComponent } from '@rfs-atomic/product-ratings'
-import {
-	BehaviorSubject,
-	Subscription,
-	catchError,
-	map,
-	switchMap,
-	throwError,
-} from 'rxjs'
+import { Subscription, map, switchMap } from 'rxjs'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ProductsService } from '@rfs-atomic/products'
 
@@ -58,13 +51,12 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 			this.activatedRoute.params
 				.pipe(
 					map((params) => params['id']),
-					switchMap((id) => this.ps.mockProductService.getProductById(id)),
-					catchError((error) => {
-						console.error('Error fetching product', error)
-						return throwError(error)
-					})
+					switchMap((id) => this.ps.mockSingleProductService.getProductById(id))
 				)
-				.subscribe((product) => (this.product = product))
+				.subscribe((product) => {
+					this.product = product
+					console.log('Product', product)
+				})
 		)
 	}
 

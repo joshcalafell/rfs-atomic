@@ -1,4 +1,4 @@
-import { IProduct } from './IProduct.model'
+import { ICandleProduct } from './products.service'
 
 const buttons = [
 	{
@@ -15,7 +15,7 @@ const buttons = [
 	},
 ]
 
-export const productsMock = <IProduct[]>[
+export const productsMock = <ICandleProduct[]>[
 	{
 		entity: {
 			id: '1',
