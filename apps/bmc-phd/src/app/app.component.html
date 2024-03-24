@@ -1,4 +1,9 @@
-<rfs-atomic-header [menuItems]="menuItems" [hasLogin]="false" [title]="title">
-</rfs-atomic-header>
+<rfs-atomic-header
+	id="header"
+	[title]="title"
+	[menuItems]="menuItems"
+></rfs-atomic-header>
 
-<router-outlet></router-outlet>
+<div class="container">
+	<router-outlet></router-outlet>
+</div>
