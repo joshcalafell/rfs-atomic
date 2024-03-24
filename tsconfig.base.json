@@ -1,5 +1,12 @@
 {
 	"compileOnSave": false,
+	"angularCompilerOptions": {
+		"enableI18nLegacyMessageIdFormat": false,
+		"strictInjectionParameters": true,
+		// ...
+		"disableTypeScriptVersionCheck": true,
+		"strictTemplates": true
+	},
 	"compilerOptions": {
 		"rootDir": ".",
 		"sourceMap": true,
@@ -32,7 +39,6 @@
 			"@rfs-atomic/link": ["libs/link/src/index.ts"],
 			"@rfs-atomic/not-found": ["libs/not-found/src/index.ts"],
 			"@rfs-atomic/orders": ["libs/orders/src/index.ts"],
-			"@rfs-atomic/orders-detail": ["libs/orders-detail/src/index.ts"],
 			"@rfs-atomic/product-card": ["libs/product-card/src/index.ts"],
 			"@rfs-atomic/product-card-header": [
 				"libs/product-card-header/src/index.ts"
