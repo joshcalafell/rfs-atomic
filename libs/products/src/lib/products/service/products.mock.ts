@@ -20,7 +20,7 @@ export const productsMock = <ICandleProduct[]>[
 		entity: {
 			id: '1',
 			name: 'Cedarwood & Vanilla',
-			description: 'A warm, woody scent with a hint of sweetness.',
+			description: 'A warm, woody scent.',
 			price: 24.99,
 			sku: 'C1',
 		},
@@ -56,7 +56,7 @@ export const productsMock = <ICandleProduct[]>[
 			entity: {
 				id: '1',
 				name: 'Cedarwood & Vanilla',
-				description: 'A warm, woody scent with a hint of sweetness.',
+				description: 'A warm, woody scent.',
 				price: 24.99,
 				sku: 'C1',
 			},
@@ -66,7 +66,7 @@ export const productsMock = <ICandleProduct[]>[
 		entity: {
 			id: '2',
 			name: 'Cinnamon & Clove',
-			description: 'A warm, spicy scent with a hint of sweetness.',
+			description: 'A warm, spicy scent.',
 			price: 24.99,
 			sku: 'C2',
 		},
@@ -116,7 +116,7 @@ export const productsMock = <ICandleProduct[]>[
 			entity: {
 				id: '2',
 				name: 'Cinnamon & Clove',
-				description: 'A warm, spicy scent with a hint of sweetness.',
+				description: 'A warm, spicy scent.',
 				price: 24.99,
 				sku: 'C2',
 			},
@@ -126,7 +126,7 @@ export const productsMock = <ICandleProduct[]>[
 		entity: {
 			id: '3',
 			name: 'Eucalyptus & Mint',
-			description: 'A cool, refreshing scent with a hint of sweetness.',
+			description: 'A cool, refreshing scent.',
 			price: 24.99,
 			sku: 'C3',
 		},
@@ -176,7 +176,7 @@ export const productsMock = <ICandleProduct[]>[
 			entity: {
 				id: '3',
 				name: 'Eucalyptus & Mint',
-				description: 'A cool, refreshing scent with a hint of sweetness.',
+				description: 'A cool, refreshing scent.',
 				price: 24.99,
 				sku: 'C3',
 			},
@@ -187,7 +187,7 @@ export const productsMock = <ICandleProduct[]>[
 		entity: {
 			id: '4',
 			name: 'Lavender & Sage',
-			description: 'A calming, herbal scent with a hint of sweetness.',
+			description: 'A calming, herbal scent.',
 			price: 24.99,
 			sku: 'C4',
 		},
@@ -238,7 +238,7 @@ export const productsMock = <ICandleProduct[]>[
 			entity: {
 				id: '4',
 				name: 'Lavender & Sage',
-				description: 'A calming, herbal scent with a hint of sweetness.',
+				description: 'A calming, herbal scent.',
 				price: 24.99,
 				sku: 'C4',
 			},
@@ -248,7 +248,7 @@ export const productsMock = <ICandleProduct[]>[
 		entity: {
 			id: '5',
 			name: 'Lemongrass & Jasmine',
-			description: 'A bright, floral scent with a hint of sweetness.',
+			description: 'A bright, floral scent.',
 			price: 24.99,
 			sku: 'C5',
 		},
@@ -299,7 +299,7 @@ export const productsMock = <ICandleProduct[]>[
 			entity: {
 				id: '6',
 				name: 'Lilac & Rose',
-				description: 'A bright  floral scent with a hint of sweetness.',
+				description: 'A bright  floral scent.',
 				price: 24.99,
 				sku: 'C6',
 			},
@@ -309,7 +309,7 @@ export const productsMock = <ICandleProduct[]>[
 		entity: {
 			id: '6',
 			name: 'Lilac & Rose',
-			description: 'A bright, floral scent with a hint of sweetness.',
+			description: 'A bright, floral scent.',
 			price: 24.99,
 			sku: 'C6',
 		},
@@ -360,7 +360,7 @@ export const productsMock = <ICandleProduct[]>[
 			entity: {
 				id: '6',
 				name: 'Lilac & Rose',
-				description: 'A bright  floral scent with a hint of sweetness.',
+				description: 'A bright  floral scent.',
 				price: 24.99,
 				sku: 'C6',
 			},

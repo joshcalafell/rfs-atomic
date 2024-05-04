@@ -85,7 +85,7 @@ export const ProductCard: Story = {
 			entity: {
 				id: '1',
 				name: 'Cedarwood & Vanilla',
-				description: 'A warm, woody scent with a hint of sweetness.',
+				description: 'A warm, woody scent.',
 				price: 24.99,
 				sku: 'C1',
 			},
@@ -135,7 +135,7 @@ export const ProductCard: Story = {
 				entity: {
 					id: '1',
 					name: 'Cedarwood & Vanilla',
-					description: 'A warm, woody scent with a hint of sweetness.',
+					description: 'A warm, woody scent.',
 					price: 24.99,
 					sku: 'C1',
 				},
@@ -154,7 +154,7 @@ export const ProductCardSmallButtons: Story = {
 			entity: {
 				id: '1',
 				name: 'Cedarwood & Vanilla',
-				description: 'A warm, woody scent with a hint of sweetness.',
+				description: 'A warm, woody scent.',
 				price: 24.99,
 				sku: 'C1',
 			},
@@ -204,7 +204,7 @@ export const ProductCardSmallButtons: Story = {
 				entity: {
 					id: '1',
 					name: 'Cedarwood & Vanilla',
-					description: 'A warm, woody scent with a hint of sweetness.',
+					description: 'A warm, woody scent.',
 					price: 24.99,
 					sku: 'C1',
 				},

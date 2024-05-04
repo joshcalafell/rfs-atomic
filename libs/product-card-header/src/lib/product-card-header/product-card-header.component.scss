@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&Inter:wght@300;400;500;600&display=swap');
 
 $primary: #a164d3;
 $secondary: #333333;
@@ -27,4 +27,13 @@ $gray: #6c757d;
 		font-size: 1.23em;
 		font-family: 'Poppins', sans-serif;
 	}
+}
+
+#product-card-header-chip {
+	background-color: #333;
+	color: $white;
+	font-size: 0.8em;
+	font-weight: 500;
+	padding: 6px 14px;
+	border-radius: 4px;
 }

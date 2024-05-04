@@ -8,7 +8,7 @@ export const candleMock = {
 	entity: {
 		id: '1',
 		name: 'Cedarwood & Vanilla',
-		description: 'A warm, woody scent with a hint of sweetness.',
+		description: 'A warm, woody scent.',
 		price: 24.99,
 		sku: 'C1',
 	},
@@ -57,7 +57,7 @@ export const candleMock = {
 		entity: {
 			id: '1',
 			name: 'Cedarwood & Vanilla',
-			description: 'A warm, woody scent with a hint of sweetness.',
+			description: 'A warm, woody scent.',
 			price: 24.99,
 			sku: 'C1',
 		},

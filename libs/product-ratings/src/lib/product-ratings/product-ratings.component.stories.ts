@@ -8,7 +8,7 @@ const product = {
 	entity: {
 		id: '2',
 		name: 'Cinnamon & Clove',
-		description: 'A warm, spicy scent with a hint of sweetness.',
+		description: 'A warm, spicy scent.',
 		price: 24.99,
 		sku: 'C2',
 	},
@@ -56,7 +56,7 @@ const product = {
 		entity: {
 			id: '2',
 			name: 'Cinnamon & Clove',
-			description: 'A warm, spicy scent with a hint of sweetness.',
+			description: 'A warm, spicy scent.',
 			price: 24.99,
 			sku: 'C2',
 		},

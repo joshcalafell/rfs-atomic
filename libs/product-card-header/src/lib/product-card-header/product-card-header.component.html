@@ -3,12 +3,9 @@
 		{{ product.entity.name }}
 	</div>
 
-	<rfs-atomic-chip
-		*ngIf="product.stock === 0"
-		id="product-card-header-chip"
-		[label]="'Out of Stock'"
-		[color]="'tertiary'"
-	></rfs-atomic-chip>
+	<div *ngIf="product.stock === 0" id="product-card-header-chip">
+		Out of stock
+	</div>
 
 	<rfs-atomic-sale-tag
 		id="product-card-header-sales-tag"

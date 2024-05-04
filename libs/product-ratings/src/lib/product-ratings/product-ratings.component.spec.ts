@@ -17,7 +17,7 @@ describe('ProductRatingsComponent', () => {
 			entity: {
 				id: '2',
 				name: 'Cinnamon & Clove',
-				description: 'A warm, spicy scent with a hint of sweetness.',
+				description: 'A warm, spicy scent.',
 				price: 24.99,
 				sku: 'C2',
 			},
@@ -67,7 +67,7 @@ describe('ProductRatingsComponent', () => {
 				entity: {
 					id: '2',
 					name: 'Cinnamon & Clove',
-					description: 'A warm, spicy scent with a hint of sweetness.',
+					description: 'A warm, spicy scent.',
 					price: 24.99,
 					sku: 'C2',
 				},
@@ -113,10 +113,8 @@ describe('ProductRatingsComponent', () => {
 		expect(component.product.entity.name).toEqual('Cinnamon & Clove')
 	})
 
-	it('should have a description of A warm, spicy scent with a hint of sweetness.', () => {
-		expect(component.product.entity.description).toEqual(
-			'A warm, spicy scent with a hint of sweetness.'
-		)
+	it('should have a description of A warm, spicy scent.', () => {
+		expect(component.product.entity.description).toEqual('A warm, spicy scent.')
 	})
 
 	it('should have a sku of C2', () => {
@@ -265,9 +263,9 @@ describe('ProductRatingsComponent', () => {
 		)
 	})
 
-	it('should have a subscription description of A warm, spicy scent with a hint of sweetness.', () => {
+	it('should have a subscription description of A warm, spicy scent.', () => {
 		expect(component.product.subscription.entity.description).toEqual(
-			'A warm, spicy scent with a hint of sweetness.'
+			'A warm, spicy scent.'
 		)
 	})
 
