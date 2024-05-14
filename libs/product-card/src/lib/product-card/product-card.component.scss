@@ -26,11 +26,8 @@ $gray: #6c757d;
 
 		.card-image {
 			img {
-				width: 100%;
-				max-height: 300px;
-				object-fit: cover;
-				border-top-left-radius: 5px;
-				border-top-right-radius: 5px;
+				width: auto;
+				height: 300px;
 			}
 		}
 	}
